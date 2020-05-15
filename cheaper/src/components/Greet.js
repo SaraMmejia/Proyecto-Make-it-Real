@@ -1,5 +1,9 @@
 import React from 'react';
 
-function Greet() {
-  return <h1>Hello world</h1>;
+class Greet extends React.Component {
+  render() {
+    return (
+      <h1>Hello world</h1>
+    );
+  }
 }
