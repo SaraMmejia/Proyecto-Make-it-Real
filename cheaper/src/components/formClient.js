@@ -3,14 +3,12 @@ import logo from '../images/cheaper.png';
 import './formClient.css';
 
 class FormClient extends React.Component {
-
   render() {
     return (
 
       <div className="formContainer">
 
         <img src={logo} className="logo" alt="Cheaper" />
-
 
         <h1>Ingresa tus datos</h1>
 
@@ -39,15 +37,12 @@ class FormClient extends React.Component {
           // onChange={handleChange}
           // value={lastname}
           />
-
-
           <label htmlFor="location">Tipo de documento:</label>
           <select name="location" id="location">
             <option value="Bogotá">Cédula de ciudadanía</option>
             <option value="Cali">Cédula de extrnjería</option>
             <option value="Medellín">Pasaporte</option>
           </select>
-
 
           <label htmlFor="nit"># de documento</label>
           <input
@@ -110,8 +105,6 @@ class FormClient extends React.Component {
         </form>
         
       </div>
-
-
     );
   }
 }
