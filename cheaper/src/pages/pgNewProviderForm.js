@@ -8,13 +8,12 @@ import "./App.css";
 // 	Redirect,
 // 	Link,
 // } from "react-router-dom";
-import ProductListHome from "./components/productListHome.js";
+import NewProviderForm from "./components/newProviderForm.js";
 
 function App() {
 	return (
 		<div className="App">
-			<ProductListHome />
-
+			<NewProviderForm />
 		</div>
 	);
 }
