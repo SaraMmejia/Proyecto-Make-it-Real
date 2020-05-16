@@ -2,14 +2,14 @@
 	margin: 0;
 	padding: 0;
 }
-.NavBar-container {
+.NavBar-Container {
 	display: flex;
 	justify-content: space-around;
 	text-align: center;
 	background-color: lightcoral;
 	width: 100vw;
 }
-.navBar-parts {
+.NavBar-Parts {
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
@@ -17,12 +17,12 @@
 	color: lightcoral;
 }
 
-.navBar-logo {
+.NavBar-Logo {
 	width: 100px;
 	text-align: center;
 }
 
-.navBar-icons {
+.NavBar-Icons {
 	color: white;
 	cursor: pointer;
 	font-size: 20px;
@@ -35,7 +35,7 @@
 	margin-top: 15px;
 }
 
-.NavBusqueda-busqueda {
+.NavBusqueda-Busqueda {
 	display: block;
 	width: 250px;
 	height: 40px;
@@ -45,24 +45,24 @@
 	cursor: pointer;
 }
 
-.NavBusqueda-icon {
+.NavBusqueda-Icon {
 	color: gray;
 	cursor: pointer;
 }
 
-.ubicacion {
+.Ubicacion {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-top: 15px;
 }
 
-.ubicacion-icon {
+.Ubicacion-Icon {
 	color: gray;
 	margin-left: 12px;
 }
 
-.ubicacion-busqueda {
+.Ubicacion-Busqueda {
 	width: 250px;
 	height: 40px;
 	border-radius: 7px;

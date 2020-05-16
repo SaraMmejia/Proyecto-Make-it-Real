@@ -1,13 +1,4 @@
 import React from "react";
-import "./App.css";
-
-// import {
-// 	BrowserRouter as Router,
-// 	Route,
-// 	Swith,
-// 	Redirect,
-// 	Link,
-// } from "react-router-dom";
 import Home from "./Components/Home";
 
 function App() {
@@ -17,5 +8,7 @@ function App() {
 		</div>
 	);
 }
+
+//En esta sesión del código sólo se está renderizando el encabezado del home, falta anexarle todo lo de las rutas.
 
 export default App;
