@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import NewProviderForm from "./components/newProviderForm.js";
 
 function App() {
