@@ -1,10 +1,10 @@
 import React from "react";
-import NewProviderForm from "./components/newProviderForm.js";
+import NewProviderFormCreate from "./pages/NewProviderFormCreate";
 
 function App() {
 	return (
 		<div className="App">
-			<NewProviderForm />
+			<NewProviderFormCreate />
 
 		</div>
 	);

@@ -2,18 +2,14 @@ import React from 'react';
 import './newProviderForm.css';
 import logo from '../assets/logo.png';
 
-class NewProviderForm extends React.Component{
 
-  render(){
+function ProviderForm ({name, lastname, providerEmail, nit, company, branchName, branchAdress, username, password, passwordTwo, handleChange, handleSubmit }){
     return (
 
     <div className="formContainer">
-
       <img src={logo} className="logo" alt="Cheaper"/>
-
       <h1 className="titleH1Form">Nuevo proveedor</h1>
-
-      <form className="supliersForm">
+      <form className="supliersForm" onSubmit={handleSubmit}>
         <label htmlFor="name">Nombre:</label>
         <input
         type="text"
@@ -36,7 +32,7 @@ class NewProviderForm extends React.Component{
         name="providerEmail"
         id="providerEmail"
         onChange={handleChange}
-        value={lastname}
+        value={providerEmail}
         />
         <label htmlFor="nit">Nit:</label>
         <input
@@ -60,7 +56,7 @@ class NewProviderForm extends React.Component{
         name="branchName"
         id="branchName"
         onChange={handleChange}
-        value={branch}
+        value={branchName}
         />
         <label htmlFor="location">Ubicación:</label>
         <select name="location" id="location">
@@ -69,13 +65,13 @@ class NewProviderForm extends React.Component{
           <option value="Medellín">Medellín</option>
         </select>
 
-        <label htmlFor="BranchAdress">Dirección:</label>
+        <label htmlFor="branchAdress">Dirección:</label>
         <input
         type="text"
-        name="BranchAdress"
-        id="BranchAdress"
+        name="branchAdress"
+        id="branchAdress"
         onChange={handleChange}
-        value={adress}
+        value={branchAdress}
         />
 
         <label htmlFor="username">Nombre de usuario:</label>
@@ -100,13 +96,12 @@ class NewProviderForm extends React.Component{
         name="passwordTwo"
         id="passwordTwo"
         onChange={handleChange}
-        value={password}
+        value={passwordTwo}
         />
         <button type="submit">Enviar</button>
       </form>
     </div>
 );
 }
-}
 
-export default NewProviderForm;
+export default ProviderForm;
