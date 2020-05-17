@@ -1,8 +1,3 @@
-body {
-  background-color: #f6fba2;
-  background-image: linear-gradient(315deg, #f6fba2 0%, #20ded3 74%);
-}
-
 @media (max-width: 768px) {
   .gridContainer {
     display: grid;
