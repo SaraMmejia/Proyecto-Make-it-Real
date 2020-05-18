@@ -1,10 +1,17 @@
-import React from "react";
+import React from 'react';
 import './App.css';
-import ProductListHome from "./components/productListHome.js";
-import Home from "./Components/Home";
-import NewProviderFormCreate from "./pages/NewProviderFormCreate";
+import FormClient from './components/formClient';
 
 function App() {
+
+  return (
+    <div className="App">
+
+      <FormClient />
+
+    </div>
+  );
+
 	return (
 		<div className="App">
 			<NewProviderFormCreate />
