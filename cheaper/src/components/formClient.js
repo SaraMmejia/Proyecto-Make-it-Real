@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../images/cheaper.png';
-import './formClient.css';
+import '../App.css';
 
 class FormClient extends React.Component {
 
@@ -12,9 +12,9 @@ class FormClient extends React.Component {
         <img src={logo} className="logo" alt="Cheaper" />
 
 
-        <h1>Ingresa tus datos</h1>
+        <h1 className="titleForm">Ingresa tus datos</h1>
 
-        <form className="supliersForm">
+        <form className="clientForm">
           <label htmlFor="name">Nombre:</label>
           <input
             type="text"
