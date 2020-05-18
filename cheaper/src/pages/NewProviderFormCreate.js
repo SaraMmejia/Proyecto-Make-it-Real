@@ -1,50 +1,48 @@
-import React from 'react';
-import axios from 'axios';
-import ProviderForm from '../components/newProviderForm.js';
+import React from "react";
+import "../Components/newProviderForm.css";
+import axios from "axios";
+import ProviderForm from "../Components/newProviderForm";
 
-class NewProviderFormCreate extends React.Component{
+class NewProviderFormCreate extends React.Component {
+	state = {
+		name: "",
+		lastname: "",
+		providerEmail: "",
+		nit: 0,
+		company: "",
+		branchName: "",
+		branchAdress: "",
+		username: "",
+		password: "",
+		passwordTwo: "",
+		providers: [],
+	};
 
-  state ={
-    name:'',
-    lastname:'',
-    providerEmail:'',
-    nit: 0,
-    company:'',
-    branchName:'',
-    branchAdress:'',
-    username:'',
-    password:'',
-    passwordTwo:'',
-    providers: []
-  }
+	handleChange = (e) => {
+		const { name, value } = e.target;
+		this.setState({ [name]: value });
+	};
 
-  handleChange = (e) => {
-    const { name, value } = e.target;
-    this.setState({ [name] : value});
-  }
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    const {...data} = this.state;
+	handleSubmit = (e) => {
+		e.preventDefault();
+		const { ...data } = this.state;
 
 		axios({
-			method: 'POST',
-			baseURL: 'http://localhost:3000',
-			url: '/',
+			method: "POST",
+			baseURL: "http://localhost:3000",
+			url: "/",
 			data,
 			headers: {
-				'Content-Type': 'application/json'
-			}
-		})
-			.then(() => this.props.history.push('/'))
+				"Content-Type": "application/json",
+			},
+		}).then(() => this.props.history.push("/"));
+	};
 
-  }
-
-  render(){
-    return (
+	render() {
+		return (
 			<ProviderForm
-        name={this.state.name}
-        lastname={this.state.lastname}
+				name={this.state.name}
+				lastname={this.state.lastname}
 				providerEmail={this.state.providerEmail}
 				nit={this.state.nit}
 				company={this.state.company}
@@ -53,11 +51,11 @@ class NewProviderFormCreate extends React.Component{
 				username={this.state.username}
 				password={this.state.password}
 				passwordTwo={this.state.passwordTwo}
-        handleChange={this.handleChange}
-        handleSubmit={this.handleSubmit}
-      />
-);
-}
+				handleChange={this.handleChange}
+				handleSubmit={this.handleSubmit}
+			/>
+		);
+	}
 }
 
 export default NewProviderFormCreate;

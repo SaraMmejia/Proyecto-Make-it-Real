@@ -1,16 +1,15 @@
 import React from "react";
-import './App.css';
-import ProductListHome from "./components/productListHome.js";
+import "./App.css";
 import Home from "./Components/Home";
 import NewProviderFormCreate from "./pages/NewProviderFormCreate";
+import ProductListHome from "../src/Components/productListHome";
 
 function App() {
 	return (
 		<div className="App">
 			<NewProviderFormCreate />
-			<ProductListHome />
 			<Home />
-			<NewProviderFormCreate />
+			<ProductListHome />
 		</div>
 	);
 }

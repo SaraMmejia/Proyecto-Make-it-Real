@@ -1,53 +1,54 @@
 @media (max-width: 768px) {
-  .gridContainer {
-    display: grid;
-    grid-template-columns: auto auto;
-}
+	.gridContainer {
+		display: grid;
+		grid-template-columns: auto auto;
+	}
 
-  .gridContainer > h2 {
-    font-size: 14px;
-  }
+	.gridContainer > h2 {
+		font-size: 14px;
+	}
 }
 .gridContainer {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-columns: auto auto auto;
-  padding: 20px;
-  margin: 20px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-template-columns: auto auto auto;
+	padding: 20px;
+	margin: 20px;
 }
 .row {
-  width: 70%;
+	width: 70%;
 }
 .card {
-  display: block;
-  text-align: center;
-  max-width: 400px;
-  margin-top: 20px;
+	display: block;
+	text-align: center;
+	max-width: 400px;
+	margin-top: 20px;
+	background-color: #20ded3;
 }
 .card > img {
-  max-width: 300px;
-  max-height: 160px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border: 3px solid #ddd;
-  border-radius: 7px;
+	max-width: 300px;
+	max-height: 160px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid #ddd;
+	border-radius: 7px;
 }
-.card > button{
-  padding: 10px;
-  margin: 7px;
-  color: #20ded3;
-  background-color:white;
-  border-radius: 4px;
-  border-style: hidden;
+.card > button {
+	padding: 10px;
+	margin: 7px;
+	color: #20ded3;
+	background-color: white;
+	border-radius: 4px;
+	border-style: hidden;
 }
-.card > button:hover{
-  background-color:#20ded3;
-  color: white;
+.card > button:hover {
+	background-color: #20ded3;
+	color: white;
 }
-.card > h3{
-  color: white;
+.card > h3 {
+	color: white;
 }
-.card > p{
-  color: white;
+.card > p {
+	color: white;
 }
