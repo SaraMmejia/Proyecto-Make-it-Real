@@ -1,0 +1,73 @@
+.App {
+	margin: 0;
+	padding: 0;
+}
+.NavBar-Container {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	background-color: lightcoral;
+	width: 100vw;
+}
+.NavBar-Parts {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: lightcoral;
+}
+
+.NavBar-Logo {
+	width: 100px;
+	text-align: center;
+}
+
+.NavBar-Icons {
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.NavBusqueda {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+}
+
+.NavBusqueda-Busqueda {
+	display: block;
+	width: 250px;
+	height: 40px;
+	border-radius: 7px;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.NavBusqueda-Icon {
+	color: gray;
+	cursor: pointer;
+}
+
+.Ubicacion {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+}
+
+.Ubicacion-Icon {
+	color: gray;
+	margin-left: 12px;
+}
+
+.Ubicacion-Busqueda {
+	width: 250px;
+	height: 40px;
+	border-radius: 7px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 15px;
+	cursor: pointer;
+}
