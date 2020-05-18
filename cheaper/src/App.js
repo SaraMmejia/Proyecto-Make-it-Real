@@ -7,6 +7,7 @@ import NewProviderFormCreate from "./pages/NewProviderFormCreate";
 function App() {
 	return (
 		<div className="App">
+			<NewProviderFormCreate />
 			<ProductListHome />
 			<Home />
 			<NewProviderFormCreate />
