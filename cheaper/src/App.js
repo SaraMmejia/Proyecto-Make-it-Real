@@ -1,23 +1,19 @@
 import React from 'react';
 import './App.css';
-import FormClient from './components/formClient';
+import FormClient from "./components/formClient.js";
+import NewProviderFormCreate from "./components/newProviderForm.js";
+import ProductListHome from "./components/productListHome.js";
+import Home from "./components/Home.js";
 
 function App() {
 
-  return (
-    <div className="App">
-
-      <FormClient />
-
-    </div>
-  );
 
 	return (
 		<div className="App">
 			<NewProviderFormCreate />
 			<ProductListHome />
 			<Home />
-			<NewProviderFormCreate />
+      <FormClient />
 		</div>
 	);
 }
