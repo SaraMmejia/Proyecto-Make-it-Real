@@ -1,12 +1,12 @@
 body {
-    background-color: blanchedalmond;
+    background-color: rgb(205, 255, 251);
 }
 
 Carousel.Item {
     height: 100%;
 }
 
-Carousel {
+.container-slider {
     max-height: fit-content;
 }
 img {

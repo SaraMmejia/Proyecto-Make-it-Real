@@ -11,8 +11,7 @@ class Slider extends React.Component {
 
     render() {
         return (
-                <Carousel>
-
+                <Carousel className="container-slider">
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
@@ -24,8 +23,6 @@ class Slider extends React.Component {
                             <p>Pagando con tu tarjeta Exito.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-
-
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
@@ -37,22 +34,17 @@ class Slider extends React.Component {
                             <p>Aprovecha, tenemos promociones todos los jueves</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-
-
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
                             src={pan}
                             alt="Third slide"
                         />
-
                         <Carousel.Caption>
                             <h3>Tenemos sorpresas para ti</h3>
                             <p>Solo en Jumbo, obtienes el 50%.Todos los Sábados</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-
-
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
@@ -64,7 +56,6 @@ class Slider extends React.Component {
                             <p>Aprovecha la oferta en chocolates suizos.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
@@ -76,7 +67,6 @@ class Slider extends React.Component {
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-
                 </Carousel>
 
         )
