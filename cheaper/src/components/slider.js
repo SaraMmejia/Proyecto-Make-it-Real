@@ -33,8 +33,8 @@ class Slider extends React.Component {
                             alt="Third slide"
                         />
                         <Carousel.Caption>
-                            <h3>Frutas siempre frecas</h3>
-                            <p>Aprovecha las promociones</p>
+                            <h3>Frutas siempre frsecas</h3>
+                            <p>Aprovecha, tenemos promociones todos los jueves</p>
                         </Carousel.Caption>
                     </Carousel.Item>
 
@@ -76,7 +76,7 @@ class Slider extends React.Component {
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    
+
                 </Carousel>
 
         )
