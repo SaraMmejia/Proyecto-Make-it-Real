@@ -9,7 +9,7 @@ Carousel.Item {
 .container-slider {
     max-height: fit-content;
 }
-img {
+.iimgSlider {
     height: 200px;
 }
 

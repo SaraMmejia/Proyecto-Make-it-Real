@@ -24,7 +24,7 @@ class Slider extends React.Component {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
+                        <img className="imgSlider"
                             className="d-block w-100"
                             src={fruver}
                             alt="Third slide"
@@ -35,7 +35,7 @@ class Slider extends React.Component {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
+                        <img className="imgSlider"
                             className="d-block w-100"
                             src={pan}
                             alt="Third slide"
@@ -46,7 +46,7 @@ class Slider extends React.Component {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
+                        <img className="imgSlider"
                             className="d-block w-100"
                             src={chocolate}
                             alt="First slide"
@@ -57,7 +57,7 @@ class Slider extends React.Component {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
+                        <img className="imgSlider"
                             className="d-block w-100"
                             src={superm}
                             alt="First slide"
