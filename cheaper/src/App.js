@@ -3,6 +3,7 @@ import './App.css';
 import ClientForm from "./pages/pgFormClient.js";
 import NewProvider from "./pages/pgNewProviderFormCreate.js";
 import Home from "./components/Home.js";
+import NavBar from "./components/NavBar.js";
 import IngresoSatisfactorio from "./pages/pgHome.js";
 import {
   BrowserRouter as Router,
@@ -11,14 +12,6 @@ import {
   Redirect,
   Link
 } from 'react-router-dom';
-
-const NavBar = () => (
-  <nav>
-    <Link to="/">Home</Link>
-    <Link to="/NewProviderFormCreate">Formulario proveedor Nuevo</Link>
-    <Link to="/FormClient">Formulario Cliente</Link>
-  </nav>
-)
 
 function App() {
   return (

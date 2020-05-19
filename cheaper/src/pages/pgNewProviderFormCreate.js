@@ -12,7 +12,7 @@ import {
 
 function NewProvider() {
 	return (
-		<div className="App">
+		<div className="pgNewProviderFormCreate">
      <NewProviderFormCreate />
 		</div>
 	);

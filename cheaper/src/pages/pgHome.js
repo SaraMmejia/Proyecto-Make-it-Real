@@ -7,7 +7,7 @@ import Home from "../components/Home.js";
 
 function IngresoSatisfactorio() {
 	return (
-		<div className="App">
+		<div className="pgHome">
 		 <Home />
 		 <Slider/>
 		 <ProductListHome />

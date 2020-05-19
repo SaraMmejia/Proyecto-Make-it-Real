@@ -7,8 +7,7 @@ function ProviderForm ({name, lastname, providerEmail, nit, company, branchName,
     return (
 
     <div className="formContainer">
-      {//<img src={logo} className="logo" alt="Cheaper"/>
-      }
+      <img src={logo} className="logo" alt="Cheaper"/>
       <h1 className="titleH1Form">Nuevo proveedor</h1>
       <form className="supliersForm" onSubmit={handleSubmit}>
         <label htmlFor="name">Nombre:</label>

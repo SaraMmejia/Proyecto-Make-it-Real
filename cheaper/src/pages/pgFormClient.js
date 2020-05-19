@@ -11,7 +11,7 @@ import {
 
 function ClientForm() {
 	return (
-		<div className="App">
+		<div className="pgClientForm">
      <FormClient />
 		</div>
 	);
