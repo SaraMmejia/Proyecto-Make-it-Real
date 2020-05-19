@@ -1,19 +1,19 @@
 import React from 'react';
 import './App.css';
+import Slider from './components/slider';
 import FormClient from "./components/formClient.js";
 import NewProviderFormCreate from "./components/newProviderForm.js";
 import ProductListHome from "./components/productListHome.js";
 import Home from "./components/Home.js";
 
 function App() {
-
-
 	return (
 		<div className="App">
-			<NewProviderFormCreate />
-			<ProductListHome />
-			<Home />
-      <FormClient />
+     <Slider/>
+     <FormClient />
+     <NewProviderFormCreate />
+		 <ProductListHome />
+		 <Home />  
 		</div>
 	);
 }
