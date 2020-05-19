@@ -6,7 +6,7 @@
 	display: flex;
 	justify-content: space-around;
 	text-align: center;
-	background-color: lightcoral;
+	background-color: white;
 	width: 100vw;
 }
 .NavBar-Parts {
@@ -23,7 +23,7 @@
 }
 
 .NavBar-Icons {
-	color: white;
+	color: #20ded3;
 	cursor: pointer;
 	font-size: 20px;
 }
@@ -43,6 +43,7 @@
 	margin-left: 10px;
 	margin-right: 10px;
 	cursor: pointer;
+	border-style: hidden;
 }
 
 .NavBusqueda-Icon {
@@ -70,4 +71,5 @@
 	margin-right: 10px;
 	margin-top: 15px;
 	cursor: pointer;
+	border-style: hidden;
 }
