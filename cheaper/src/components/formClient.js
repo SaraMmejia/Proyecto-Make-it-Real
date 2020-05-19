@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../images/cheaper.png';
-import '../App.css';
+import './formClient.css';
 
 class FormClient extends React.Component {
 
@@ -108,7 +108,7 @@ class FormClient extends React.Component {
           />
           <button type="submit">Enviar</button>
         </form>
-        
+
       </div>
 
 
@@ -117,4 +117,3 @@ class FormClient extends React.Component {
 }
 
 export default FormClient;
-
