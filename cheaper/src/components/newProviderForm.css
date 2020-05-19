@@ -1,60 +1,36 @@
-body {
-  background-color: #f6fba2;
-  background-image: linear-gradient(315deg, #f6fba2 0%, #20ded3 74%);
-}
-img {
-  width: auto;
-}
-
-body {
-  background-color: #f6fba2;
-  background-image: linear-gradient(315deg, #f6fba2 0%, #20ded3 74%);
-
-
-  font-family: Montserrat;
-}
-
-.clientForm {
+.supliersForm {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.clientForm > input {
-width: 70%;
-height: 30px;
-padding: 5px;
-border-radius: 7px;
-border-style: hidden;
-}
-
-.clientForm > select {
+.supliersForm > input {
   width: 70%;
-  height: 30px;
-  padding: 3px;
+  height: 25px;
+  padding: 5px;
   border-radius: 7px;
   border-style: hidden;
-  }
-.clientForm > input:focus {
-
-outline-color: #DDDDDD;
-box-shadow: 0 0 3pt 2pt #DDDDDD;
 }
 
-.clientForm > label {
+.supliersForm > input:focus {
+  outline-color: #DDDDDD;
+  box-shadow: 0 0 3pt 2pt #DDDDDD;
+}
+
+.supliersForm > label {
   padding: 5px;
   color: white;
   font-size: 18px;
   align-items: flex-start;
 }
-.clientForm > select {
+.supliersForm > select {
   width: 70%;
   height: 25px;
   padding: 5px;
   border-radius: 4px;
   border-style: hidden;
 }
-.clientForm > button{
+.supliersForm > button{
   padding: 10px;
   margin: 7px;
   color: #20ded3;
@@ -62,12 +38,12 @@ box-shadow: 0 0 3pt 2pt #DDDDDD;
   border-radius: 4px;
   border-style: hidden;
 }
-.clientForm > button:hover{
+.supliersForm > button:hover{
   background-color:#20ded3;
   color: white;
 }
 
-.titleForm {
+.titleH1Form {
   color: white;
   display: flex;
   flex-direction: column;
@@ -80,8 +56,7 @@ box-shadow: 0 0 3pt 2pt #DDDDDD;
   padding-bottom: 50px;
 }
 .logo {
-   display: flex;
+  display: flex;
   align-items: center;
   width: 100%;
-  height: 100%;
 }
