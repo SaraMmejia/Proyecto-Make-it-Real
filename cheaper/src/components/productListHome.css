@@ -1,37 +1,32 @@
-@media (max-width: 768px) {
-  .gridContainer {
-    display: grid;
-    grid-template-columns: auto auto;
-}
 
-  .gridContainer > h2 {
-    font-size: 14px;
-  }
-}
 .gridContainer {
   display: grid;
-  grid-template-columns: auto auto auto auto;
   grid-template-columns: auto auto auto;
+  /* grid-template-rows: auto auto auto; */
   padding: 20px;
   margin: 20px;
 }
 .row {
   width: 70%;
+  margin: 0.8rem;
 }
 .card {
   display: block;
   text-align: center;
+  position: relative;
   max-width: 400px;
   margin-top: 20px;
+  background-color: inherit;
+  border-style: hidden;
 }
 .card > img {
-  max-width: 300px;
+  max-width: 200px;
   max-height: 160px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   border: 3px solid #ddd;
-  border-radius: 7px;
+  border-radius: 22px;
 }
 .card > button{
   padding: 10px;
@@ -47,7 +42,35 @@
 }
 .card > h3{
   color: white;
+  width: 100%;
 }
 .card > p{
   color: white;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+  .card > h3 {
+    font-size: 1.2rem;
+  }
+  .card {
+    /* width: 50%; */
+    display: block;
+    text-align: center;
+    max-width: 200px;
+    margin-top: 20px;
+    border-style: hidden;
+  }
+  .card > img {
+    width: 100px;
+    height: 55px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #ddd;
+    border-radius: 7px;
+  }
 }

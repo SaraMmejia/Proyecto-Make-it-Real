@@ -1,6 +1,6 @@
 import React from "react";
-import "../Components/Home.css";
-import logo from "../assets/logo.png";
+import "./Home.css";
+import logo from "../assets/logoTwo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faBars,

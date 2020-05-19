@@ -6,7 +6,7 @@
 
 .supliersForm > input {
   width: 70%;
-  height: 25px;
+  height: 35px;
   padding: 5px;
   border-radius: 7px;
   border-style: hidden;
@@ -25,7 +25,7 @@
 }
 .supliersForm > select {
   width: 70%;
-  height: 25px;
+  height: 35px;
   padding: 5px;
   border-radius: 4px;
   border-style: hidden;
