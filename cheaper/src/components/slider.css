@@ -1,0 +1,16 @@
+Carousel.Item {
+    height: 100%;
+}
+.container-slider {
+    max-height: fit-content;
+    margin-top: 50px;
+}
+.iimgSlider {
+    height: 200px;
+}
+.container-slider > h3{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+.container-slider > p {
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
