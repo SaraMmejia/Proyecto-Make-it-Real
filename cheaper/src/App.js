@@ -20,11 +20,11 @@ function App() {
       <Router>
         <NavBar />      
 		<Switch>
-		| <Route exact path="/" component={Registro} />
-          <Route exact path="/:IngresoSatisfactorio" component={IngresoSatisfactorio} />
+		|     <Route exact path="/" component={Registro} />
+          <Route exact path="/IngresoSatisfactorio" component={IngresoSatisfactorio} />
           <Route exact path="/NewProviderFormCreate" component={NewProvider} />
           <Route exact path="/FormClient" component={ClientForm} />
-          <Route path="*" component={IngresoSatisfactorio} />
+          <Route exact from="*" to="/" />
         </Switch>
       </Router>
     </div>

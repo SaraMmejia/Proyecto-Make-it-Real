@@ -9,7 +9,7 @@ function Registro() {
 				<img src={logo} className="NavBar-Logo"></img>
 				<div className="PaginaDeRegistro-Formurlario">
 					<h1 className="Bienvenido"> Bienvenido a Cheaper </h1>
-					<p className="Frase">Encuentra las opcioness más económicas </p>
+					<p className="Frase">Encuentra las opciones más económicas </p>
 					<div className="Botones-Ingreso">
 						<button className="Boton-IniciarSesion">Iniciar Sesión </button>
 						<button className="Boton-Registrarse">Registrarse</button>
