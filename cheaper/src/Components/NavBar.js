@@ -8,6 +8,7 @@ const NavBar = () => (
   <nav>
     <Router>
       <Link to="/">Home</Link>
+      <Link to="/:IngresoSatisfactorio">Home de Ingreso</Link>
       <Link to="/NewProviderFormCreate">Formulario proveedor Nuevo</Link>
       <Link to="/FormClient">Formulario Cliente</Link>
     </Router>

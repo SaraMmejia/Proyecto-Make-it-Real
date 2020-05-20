@@ -1,23 +1,34 @@
 import React from 'react';
 import './App.css';
-import Slider from './Components/slider';
-import FormClient from "./Components/formClient.js";
-import NewProviderFormCreate from "./Components/newProviderForm.js";
-import ProductListHome from "./Components/productListHome.js";
-import Home from "./Components/Home.js";
-import NavBar from "./Components/NavBar.js"
+import ClientForm from "./pages/pgFormClient.js";
+import NewProvider from "./pages/pgNewProviderFormCreate.js";
+import Home from "./components/Home.js";
+import NavBar from "./components/NavBar.js";
+import IngresoSatisfactorio from "./pages/pgHome.js";
+import Registro from "./components/Registro.js"
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+  Link
+} from 'react-router-dom';
 
 function App() {
-	return (
-	<div className="App">
-		<NavBar/>
-		<Home /> 
-		<Slider/>
-		<FormClient />
-		<NewProviderFormCreate />
-		<ProductListHome />
-		</div>
-	);
+  return (
+    <div className="App">
+      <Router>
+        <NavBar />      
+		<Switch>
+		| <Route exact path="/" component={Registro} />
+          <Route exact path="/:IngresoSatisfactorio" component={IngresoSatisfactorio} />
+          <Route exact path="/NewProviderFormCreate" component={NewProvider} />
+          <Route exact path="/FormClient" component={ClientForm} />
+          <Route path="*" component={IngresoSatisfactorio} />
+        </Switch>
+      </Router>
+    </div>
+  );
 }
 
 //En esta sesión del código sólo se está renderizando el encabezado del home, falta anexarle todo lo de las rutas.
