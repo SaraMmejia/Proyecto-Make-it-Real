@@ -1,31 +1,21 @@
-import React from "react";
-import "./App.css";
-import ClientForm from "./pages/pgFormClient.js";
-import NewProvider from "./pages/pgNewProviderFormCreate.js";
-import Home from "./components/Home.js";
-import NavBar from "./components/NavBar.js";
-import IngresoSatisfactorio from "./pages/pgHome.js";
-import ProductListHome from "../src/Components/productListHome";
-import {
-	BrowserRouter as Router,
-	Route,
-	Switch,
-	Redirect,
-	Link,
-} from "react-router-dom";
+import React from 'react';
+import './App.css';
+import Slider from './Components/slider';
+import FormClient from "./Components/formClient.js";
+import NewProviderFormCreate from "./Components/newProviderForm.js";
+import ProductListHome from "./Components/productListHome.js";
+import Home from "./Components/Home.js";
+import NavBar from "./Components/NavBar.js"
 
 function App() {
 	return (
-		<div className="App">
-			<Router>
-				<NavBar />
-				<Switch>
-					<Route exact path="/" component={IngresoSatisfactorio} />
-					<Route exact path="/NewProviderFormCreate" component={NewProvider} />
-					<Route exact path="/FormClient" component={ClientForm} />
-					<Route path="*" component={IngresoSatisfactorio} />
-				</Switch>
-			</Router>
+	<div className="App">
+		<NavBar/>
+		<Home /> 
+		<Slider/>
+		<FormClient />
+		<NewProviderFormCreate />
+		<ProductListHome />
 		</div>
 	);
 }
