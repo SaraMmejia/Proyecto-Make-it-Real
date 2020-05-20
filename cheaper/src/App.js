@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
-import ClientForm from "./pages/pgFormClient.js";
-import NewProvider from "./pages/pgNewProviderFormCreate.js";
+import ClientForm from "./components/formClient";
+import ProviderForm from "./components/newProviderForm";
 import Home from "./components/Home.js";
 import NavBar from "./components/NavBar.js";
 import IngresoSatisfactorio from "./pages/pgHome.js";
 import Registro from "./components/Registro.js"
+import "./components/formClient.css"
 import {
   BrowserRouter as Router,
   Route,
@@ -19,10 +20,10 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />      
-		<Switch>
-		|     <Route exact path="/" component={Registro} />
+		    <Switch>
+          <Route exact path="/" component={Registro} />
           <Route exact path="/IngresoSatisfactorio" component={IngresoSatisfactorio} />
-          <Route exact path="/NewProviderFormCreate" component={NewProvider} />
+          <Route exact path="/NewProviderFormCreate" component={ProviderForm} />
           <Route exact path="/FormClient" component={ClientForm} />
           <Route exact from="*" to="/" />
         </Switch>
