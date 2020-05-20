@@ -5,6 +5,7 @@ import NewProvider from "./pages/pgNewProviderFormCreate.js";
 import Home from "./components/Home.js";
 import NavBar from "./components/NavBar.js";
 import IngresoSatisfactorio from "./pages/pgHome.js";
+import ClientProvider from "./components/ClientProvider.js";
 import {
   BrowserRouter as Router,
   Route,
@@ -20,6 +21,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path="/" component={IngresoSatisfactorio} />
+          <Route exact path="/ClientProvider" component={ClientProvider} />
           <Route exact path="/NewProviderFormCreate" component={NewProvider} />
           <Route exact path="/FormClient" component={ClientForm} />
           <Route path="*" component={IngresoSatisfactorio} />
