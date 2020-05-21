@@ -2,7 +2,7 @@
 	width: 100vmin;
 	height: 100vmin;
 	text-align: center;
-	background-color: black;
+	
 }
 
 .Login {
@@ -49,9 +49,10 @@
 
  .Input-Correo {
 	display: block;
+	margin-top: 15px;
 	margin-bottom: 10px;
 	padding-left: 10px;
-	height: 30px;
+	height: 35px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -62,7 +63,7 @@
  .Input-Password{
 	display: block;
 	padding-left: 10px;
-	height: 30px;
+	height: 35px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;

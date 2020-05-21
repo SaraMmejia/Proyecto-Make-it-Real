@@ -1,67 +1,206 @@
+.App {
+	width: 100vmin;
+	height: 100vmin;
+	text-align: center;
+}
 
+.FormContainer {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+		url("../assets/Carros.jpg") no-repeat center top;
+	background-size: cover;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.NavBar-Logo {
+	width: 300px;
+	margin: 15px; 
+}
+
+.TitleForm {
+	font-size: 24px;
+	margin-bottom: 5px;
+	margin-top: 10px;;
+	text-align: center;
+}
+
+.PaginaNew-Client {
+	width: 270px;
+	height: 290px;
+	margin: 20px;
+	padding: 10px;
+	background-color: rgba(48, 48, 48, 0.8);
+	border-radius: 10px;
+}
+
+.InputsNew-Client {
+	display: flex;
+	justify-content: center;
+}
 
 .clientForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+  
+.Name{
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	height: 30px;
+	width: 200px;
+	border-radius: 10px;
+	background: white;
+	border-color: rgb(183, 185, 178);
+	cursor: pointer;
 }
 
-.clientForm > input {
-width: 70%;
-height: 35px;
-padding: 5px;
-border-radius: 7px;
-border-style: hidden;
+.LastName {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	height: 30px;
+	width: 200px;
+	border-radius: 10px;
+	background: white;
+	border-color: rgb(183, 185, 178);
+	cursor: pointer;
 }
 
-.clientForm > select {
-  width: 70%;
-  height: 35px;
-  padding: 3px;
-  border-radius: 7px;
-  border-style: hidden;
-  }
-.clientForm > input:focus {
-
-outline-color: #DDDDDD;
-box-shadow: 0 0 3pt 2pt #DDDDDD;
+.Correo {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	height: 30px;
+	width: 200px;
+	border-radius: 10px;
+	background: white;
+	border-color: rgb(183, 185, 178);
+	cursor: pointer;
 }
 
-.clientForm > label {
-  padding: 5px;
-  color: white;
-  font-size: 18px;
-  align-items: flex-start;
+.Password {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	height: 30px;
+	width: 200px;
+	border-radius: 10px;
+	background: white;
+	border-color: rgb(183, 185, 178);
+	cursor: pointer;
 }
 
-.clientForm > button{
-  padding: 10px;
-  margin: 7px;
-  color: #20ded3;
-  background-color:white;
-  border-radius: 4px;
-  border-style: hidden;
-}
-.clientForm > button:hover{
-  background-color:#20ded3;
-  color: white;
+.SubmitClient { 
+	display:block;
+	margin-top: 20px;
+	margin-left: 25px;
+	height: 40px;
+	width: 150px;
+	border-radius: 20px;
+	padding-top: 6px;
+	font-weight: 600;
+	background: #e0c408c9;
+	border-color: black;
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+	
+} 
+
+.SubmitClient:hover {
+	background: #e0c308;
 }
 
-.titleForm {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  
+@media screen and (min-width: 768px) {
+	.FormContainer{
+		width: 768px;
+		height: 529px;
+	}
+	.PaginaNew-Client {
+		width: 290px;
+		height: 250px;
+	}
 }
 
-.formContainer {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 50px;
+@media screen and (min-width: 992px) {
+	.FormContainer {
+		width: 1024px;
+		height: 529px;
+	}
+
+	.NavBar-Logo {
+		width: 400px;
+		height: 400px;
+	}
+
+	.PaginaNew-Client {
+		width: 350px;
+		height: 300px;
+	}
+	.Name {
+		grid-gap: 30px;
+	}
+
+	.LastName {
+		font-weight: 500;
+	}
+
+	.Correo {
+		font-weight: 500;
+	}
+
+	.Password {
+		font-weight: 500;
+	}
+
+	.SubmitClient {
+			font-weight: 500;
+		}
+	
 }
-.logo {
-   display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
+
+@media screen and (min-width: 1200px) {
+	.FormContainer {
+		width: 1440px;
+		height: 540px;
+	}
+
+	.NavBar-Logo {
+		width: 500px;
+		height: 500px;
+	}
+
+	.PaginaNew-Client {
+		width: 350px;
+		height: 300px;
+	}
+	.Name {
+		grid-gap: 30px;
+	}
+
+	.LastName {
+		font-weight: 500;
+	}
+
+	.Correo {
+		font-weight: 500;
+	}
+
+	.Password {
+		font-weight: 500;
+	}
+
+	.SubmitClient {
+			font-weight: 500;
+		}
+} 
