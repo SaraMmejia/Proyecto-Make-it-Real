@@ -61,9 +61,11 @@
 .Ubicacion-Icon {
 	color: gray;
 	margin-left: 12px;
+	cursor: pointer;
 }
 
 .Ubicacion-Busqueda {
+	align-items: center;
 	width: 250px;
 	height: 40px;
 	border-radius: 7px;
