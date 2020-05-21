@@ -46,38 +46,43 @@
 	display: grid;
 	grid-template-columns: 250px;
 	grid-template-rows: 40px 40px 40px;
-	grid-gap: 15px;
+	grid-gap: 10px;
 }
 
 .Boton-IniciarSesion {
 	border-radius: 20px;
-
+	padding-top: 5px;
 	font-weight: 600;
 	font-size: 15px;
 	background: #e0c408c9;
 	border-color: black;
 	color: white;
 	cursor: pointer;
+	
 }
 
 .Boton-Registrarse {
 	border-radius: 20px;
+	padding-top: 6px;
 	font-weight: 600;
 	font-size: 15px;
 	background: #e0c408c9;
 	border-color: black;
 	color: white;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 .Boton-CrearEmpresa {
 	border-radius: 20px;
+	padding-top: 6px;
 	font-weight: 600;
 	font-size: 15px;
 	background: #e0c408c9;
 	border-color: black;
 	color: white;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {

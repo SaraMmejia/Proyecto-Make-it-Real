@@ -1,17 +1,12 @@
 import React from "react";
 import logo from "../assets/logo.png";
-import "./Registro.css";
+import "./Registry.css";
+import {Link} from "react-router-dom"
 
-class Registro extends React.Component {
+
+
+class Registry extends React.Component {
 	
-	handleClick = (e) => {
-	this.props.history.push("/FormClient")
-	}
-
-	handleOnClick = (e) => {
-		this.props.history.push("/NewProvider")
-
-	}
 
 	render (){
 		return (
@@ -22,11 +17,11 @@ class Registro extends React.Component {
 						<h1 className="Bienvenido"> Bienvenido a Cheaper </h1>
 						<p className="Frase">Encuentra las opciones más económicas </p>
 						<div className="Botones-Ingreso">
-							<button className="Boton-IniciarSesion">Iniciar Sesión </button>
-							<button className="Boton-Registrarse" onClick={this.handleClick}>Registrarse</button>
-							<button className="Boton-CrearEmpresa" onClick={this.handleOnClick}>
+							<Link to="/login" className ="Boton-IniciarSesion" >Iniciar Sesión</Link>
+							<Link to="/FormClient" className="Boton-Registrarse">Registrarse</Link>
+							<Link to="/NewProviderFormCreate"className="Boton-CrearEmpresa" >
 								Crear una cuenta de empresa
-							</button>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -36,4 +31,4 @@ class Registro extends React.Component {
 	
 }
 
-export default Registro;
+export default Registry;
