@@ -35,7 +35,7 @@
 	margin-bottom: 5px;
 }
 .Frase {
-	font-weight: 500;
+	font-weight: 600;
 	margin: 5px;
 }
 
@@ -57,8 +57,11 @@
 	background: #e0c408c9;
 	border-color: black;
 	color: white;
-	cursor: pointer;
-	
+	cursor: pointer;	
+}
+
+.Boton-IniciarSesion:hover {
+	background: #e0c308;
 }
 
 .Boton-Registrarse {
@@ -73,6 +76,10 @@
 	text-decoration: none;
 }
 
+.Boton-Registrarse:hover {
+	background: #e0c308;
+}
+
 .Boton-CrearEmpresa {
 	border-radius: 20px;
 	padding-top: 6px;
@@ -83,6 +90,10 @@
 	color: white;
 	cursor: pointer;
 	text-decoration: none;
+}
+
+.Boton-CrearEmpresa:hover {
+	background: #e0c308;
 }
 
 @media screen and (min-width: 768px) {
