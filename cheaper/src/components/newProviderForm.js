@@ -1,13 +1,11 @@
 import React from "react";
-import "../components/newProviderForm.css";
-import "./newProviderForm.css";
 import logo from "../assets/logo.png";
+ import "./newProviderForm.css";
 
 function ProviderForm({
 	name,
 	lastname,
-	providerEmail,
-	nit,
+	correo,
 	company,
 	branchName,
 	branchAdress,
@@ -18,102 +16,71 @@ function ProviderForm({
 	handleSubmit,
 }) {
 	return (
-		<div className="formContainer">
-			<img src={logo} className="logo" alt="Cheaper" />
-			<h1 className="titleH1Form">Nuevo proveedor</h1>
-			<form className="supliersForm" onSubmit={handleSubmit}>
-				<label htmlFor="name">Nombre:</label>
-				<input
-					type="text"
-					name="name"
-					id="name"
-					onChange={handleChange}
-					value={name}
-				/>
-				<label htmlFor="lastname">Apellido:</label>
-				<input
-					type="text"
-					name="lastname"
-					id="lastname"
-					onChange={handleChange}
-					value={lastname}
-				/>
-				<label htmlFor="providerEmail">Email:</label>
-				<input
-					type="email"
-					name="providerEmail"
-					id="providerEmail"
-					onChange={handleChange}
-					value={providerEmail}
-				/>
-				<label htmlFor="nit">Nit:</label>
-				<input
-					type="number"
-					name="nit"
-					id="nit"
-					onChange={handleChange}
-					value={nit}
-				/>
-				<label htmlFor="company">Compañía:</label>
-				<input
-					type="text"
-					name="company"
-					id="company"
-					onChange={handleChange}
-					value={company}
-				/>
-				<label htmlFor="branchName">Nombre de sucursal:</label>
-				<input
-					type="text"
-					name="branchName"
-					id="branchName"
-					onChange={handleChange}
-					value={branchName}
-				/>
-				<label htmlFor="location">Ubicación:</label>
-				<select name="location" id="location">
-					<option value="Bogotá">Bogotá</option>
-					<option value="Cali">Cali</option>
-					<option value="Medellín">Medellín</option>
-				</select>
+		<div clasName="App">	
+			<div className="FormContainer">
+				<img src={logo} className="NavBar-Logo"></img>
+				<div className="PaginaNew-Provider">
+					<h1 className="TitleProvider">Ingresa tus datos</h1>
+					<div className="InputsNew-Provider">
+						<form className="ProviderForm">
+							<input  className="Name-Provider"
+								type="text"
+								name="name"
+								id="name"
+								placeholder="Nombre"
+								onChange={handleChange}
+								value={name}
+							/> 
+							<input className="Lastname-Provider"
+								type="text"
+								name="lastname"
+								id="lastname"
+								placeholder="Apellidos"
+								onChange={handleChange}
+								value={lastname}
+							/>
+							<input className="Empresa-Provider"
+								type="text"
+								name="company"
+								id="company"
+								placeholder="Empresa"
+								onChange={handleChange}
+								value={company}
+							/>
+							<input className="Nit-Provider"
+								type="number"
+								name="branchName"
+								id="branchName"
+								placeholder="Nit"
+								onChange={handleChange}
+								value={branchName}
+							/>
+							<input className="Correo" 
+								type="text"
+								name="correo"
+								placeholder="Correo"
+				 			/>
 
-				<label htmlFor="branchAdress">Dirección:</label>
-				<input
-					type="text"
-					name="branchAdress"
-					id="branchAdress"
-					onChange={handleChange}
-					value={branchAdress}
-				/>
-
-				<label htmlFor="username">Nombre de usuario:</label>
-				<input
-					type="text"
-					name="username"
-					id="username"
-					onChange={handleChange}
-					value={username}
-				/>
-				<label htmlFor="password">Contraseña:</label>
-				<input
-					type="password"
-					name="password"
-					id="password"
-					onChange={handleChange}
-					value={password}
-				/>
-				<label htmlFor="passwordTwo">Confirmar contraseña:</label>
-				<input
-					type="password"
-					name="passwordTwo"
-					id="passwordTwo"
-					onChange={handleChange}
-					value={passwordTwo}
-				/>
-				<button type="submit">Enviar</button>
-			</form>
+							<input className="Password-Provider"
+								type="password"
+								name="password"
+								id="password"
+								placeholder="Contraseña"
+								onChange={handleChange}
+								value={password}
+							/>
+							<button className="SubmitProvider" type="Submit">Enviar</button>
+						</form>
+					</div>
+				</div>	
+			</div>	
 		</div>
+		
+			
 	);
 }
+			
 
-export default ProviderForm;
+		
+
+export default  ProviderForm;	
