@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar.js";
 import IngresoSatisfactorio from "./pages/pgHome.js";
 import Registry from "./components/Registry.js"
 import Login from "./components/Login"
+import Login from "./components/Login" 
 import "./components/formClient.css"
 import {
   BrowserRouter as Router,
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/" component={Registry} />
           <Route exact path="/IngresoSatisfactorio" component={IngresoSatisfactorio} />
           <Route exact path="/NewProviderFormCreate" component={ProviderForm} />
+          <Route exact path="/Login" component={Login} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/FormClient" component={ClientForm} />
           <Route exact from="*" to="/" />
