@@ -1,7 +1,12 @@
+
 .App {
 	width: 100vmin;
 	height: 100vmin;
 	text-align: center;
+.supliersForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .FormContainer{
@@ -36,6 +41,16 @@
 	padding: 0px;
 	background-color: rgba(48, 48, 48, 0.8);
 	border-radius: 10px;
+.supliersForm > input:focus {
+	outline-color: #dddddd;
+	box-shadow: 0 0 3pt 2pt #dddddd;
+}
+
+.supliersForm > label {
+	padding: 5px;
+	color: white;
+	font-size: 18px;
+	align-items: flex-start;
 }
 
 .InputsNew-Provider {
@@ -202,6 +217,23 @@
 	.SubmitProvider {
 		font-weight: 500;
 	}
+
+.titleH1Form {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formContainer {
+	width: 100%;
+	height: 100%;
+	padding-bottom: 50px;
+}
+.logo {
+	display: flex;
+	align-items: center;
+	width: 100%;
 }
 
 @media screen and (min-width: 1200px) {

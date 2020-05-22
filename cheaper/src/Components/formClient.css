@@ -1,3 +1,4 @@
+
 .App {
 	width: 100vmin;
 	height: 100vmin;
@@ -26,6 +27,10 @@
 	margin-bottom: 5px;
 	margin-top: 10px;;
 	text-align: center;
+.clientForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .PaginaNew-Client {

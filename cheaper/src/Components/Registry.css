@@ -36,6 +36,8 @@
 }
 .Frase {
 	font-weight: 600;
+	font-weight: 600;
+	font-weight: 500;
 	margin: 5px;
 }
 
@@ -62,6 +64,7 @@
 
 .Boton-IniciarSesion:hover {
 	background: #e0c308;
+	cursor: pointer;
 }
 
 .Boton-Registrarse {
