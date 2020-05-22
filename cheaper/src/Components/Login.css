@@ -2,11 +2,8 @@
 	width: 100vmin;
 	height: 100vmin;
 	text-align: center;
-<<<<<<< HEAD
-	
-=======
 	background-color: black;
->>>>>>> fad1f9e964c33a297080738b0aad9b8deb3684b4
+	background-color: black;
 }
 
 .Login {
@@ -57,12 +54,12 @@
 	margin-bottom: 10px;
 	padding-left: 10px;
 	height: 35px;
-<<<<<<< HEAD
-=======
 	margin-bottom: 10px;
 	padding-left: 10px;
 	height: 30px;
->>>>>>> fad1f9e964c33a297080738b0aad9b8deb3684b4
+	margin-bottom: 10px;
+	padding-left: 10px;
+	height: 30px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -74,10 +71,8 @@
 	display: block;
 	padding-left: 10px;
 	height: 35px;
-<<<<<<< HEAD
-=======
 	height: 30px;
->>>>>>> fad1f9e964c33a297080738b0aad9b8deb3684b4
+	height: 30px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -104,7 +99,6 @@
 
 .SubmitButton:hover {
 	background: #e0c308;
-<<<<<<< HEAD
 }
 
 @media screen and (min-width: 992px) {
@@ -164,6 +158,3 @@
 		font-weight: 500;
 	}
 } 
-=======
-}
->>>>>>> fad1f9e964c33a297080738b0aad9b8deb3684b4

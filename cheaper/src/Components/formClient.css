@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> fad1f9e964c33a297080738b0aad9b8deb3684b4
 .App {
 	width: 100vmin;
 	height: 100vmin;
@@ -30,13 +26,11 @@
 	margin-bottom: 5px;
 	margin-top: 10px;;
 	text-align: center;
-<<<<<<< HEAD
-=======
+}
 .clientForm {
   display: flex;
   flex-direction: column;
   align-items: center;
->>>>>>> fad1f9e964c33a297080738b0aad9b8deb3684b4
 }
 
 .PaginaNew-Client {
@@ -145,13 +139,8 @@
 
 @media screen and (min-width: 992px) {
 	.FormContainer {
-<<<<<<< HEAD
 		width: 1440px;
 		height: 620px;
-=======
-		width: 1024px;
-		height: 529px;
->>>>>>> fad1f9e964c33a297080738b0aad9b8deb3684b4
 	}
 
 	.NavBar-Logo {
@@ -165,10 +154,7 @@
 	}
 	.Name {
 		grid-gap: 30px;
-<<<<<<< HEAD
 		font-weight: 500;
-=======
->>>>>>> fad1f9e964c33a297080738b0aad9b8deb3684b4
 	}
 
 	.LastName {
@@ -192,11 +178,7 @@
 @media screen and (min-width: 1200px) {
 	.FormContainer {
 		width: 1440px;
-<<<<<<< HEAD
 		height: 650px;
-=======
-		height: 540px;
->>>>>>> fad1f9e964c33a297080738b0aad9b8deb3684b4
 	}
 
 	.NavBar-Logo {
@@ -210,10 +192,7 @@
 	}
 	.Name {
 		grid-gap: 30px;
-<<<<<<< HEAD
 		font-weight: 500;
-=======
->>>>>>> fad1f9e964c33a297080738b0aad9b8deb3684b4
 	}
 
 	.LastName {
