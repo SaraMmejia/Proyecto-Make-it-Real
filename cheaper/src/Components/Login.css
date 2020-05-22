@@ -49,6 +49,10 @@
 
  .Input-Correo {
 	display: block;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	height: 35px;
 	margin-bottom: 10px;
 	padding-left: 10px;
 	height: 30px;
@@ -62,6 +66,7 @@
  .Input-Password{
 	display: block;
 	padding-left: 10px;
+	height: 35px;
 	height: 30px;
 	width: 200px;
 	border-radius: 10px;

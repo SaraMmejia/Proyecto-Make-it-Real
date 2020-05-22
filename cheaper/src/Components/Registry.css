@@ -35,11 +35,9 @@
 	margin-bottom: 5px;
 }
 .Frase {
-
 	font-weight: 600;
-
+	font-weight: 600;
 	font-weight: 500;
-
 	margin: 5px;
 }
 
@@ -66,9 +64,7 @@
 
 .Boton-IniciarSesion:hover {
 	background: #e0c308;
-
 	cursor: pointer;
-	
 }
 
 .Boton-Registrarse {
@@ -82,7 +78,6 @@
 	cursor: pointer;
 	text-decoration: none;
 }
-
 
 .Boton-Registrarse:hover {
 	background: #e0c308;
@@ -100,11 +95,9 @@
 	text-decoration: none;
 }
 
-
 .Boton-CrearEmpresa:hover {
 	background: #e0c308;
 }
-
 
 @media screen and (min-width: 768px) {
 	.PaginadeRegistro {
