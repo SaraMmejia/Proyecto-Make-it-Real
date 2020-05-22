@@ -134,8 +134,8 @@
 
 @media screen and (min-width: 992px) {
 	.FormContainer {
-		width: 1024px;
-		height: 529px;
+		width: 1440px;
+		height: 620px;
 	}
 
 	.NavBar-Logo {
@@ -149,6 +149,7 @@
 	}
 	.Name {
 		grid-gap: 30px;
+		font-weight: 500;
 	}
 
 	.LastName {
@@ -172,7 +173,7 @@
 @media screen and (min-width: 1200px) {
 	.FormContainer {
 		width: 1440px;
-		height: 540px;
+		height: 650px;
 	}
 
 	.NavBar-Logo {
@@ -186,6 +187,7 @@
 	}
 	.Name {
 		grid-gap: 30px;
+		font-weight: 500;
 	}
 
 	.LastName {

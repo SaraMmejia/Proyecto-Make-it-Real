@@ -91,3 +91,61 @@
 .SubmitButton:hover {
 	background: #e0c308;
 }
+
+@media screen and (min-width: 992px) {
+	.Login {
+		width: 1440px;
+		height: 620px;
+	}
+
+	.NavBar-Logo {
+		width: 400px;
+		height: 400px;
+	}
+
+	.Pagina-Login {
+		width: 350px;
+		height: 300px;
+	}
+	.Input-Correo{
+		grid-gap: 30px;
+		font-weight: 500;
+	}
+
+	.Input-Password {
+		font-weight: 500;
+	}
+
+	.SubmitButton{
+		font-weight: 500;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.Login  {
+		width: 1440px;
+		height: 620px;
+	}
+
+	.NavBar-Logo {
+		width: 500px;
+		height: 500px;
+	}
+
+	.Pagina-Login {
+		width: 350px;
+		height: 300px;
+	}
+	.Input-Correo {
+		grid-gap: 30px;
+		font-weight: 500;
+	}
+
+	.Input-Password {
+		font-weight: 500;
+	}
+
+	.SubmitButton {
+		font-weight: 500;
+	}
+} 

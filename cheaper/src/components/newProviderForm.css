@@ -25,7 +25,7 @@
 .TitleProvider {
 	font-size: 24px;
 	margin-bottom: 5px;
-	margin-top: 0px;
+	margin-top: 5px;
 	text-align: center;
 }
 
@@ -50,10 +50,10 @@
   
 .Name-Provider {
 	display: block;
-	margin-top: 2px;
-	margin-bottom: 2px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	padding-left: 10px;
-	height: 23px;
+	height: 25px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -63,10 +63,10 @@
 
 .Lastname-Provider {
 	display: block;
-	margin-top: 2px;
-	margin-bottom: 2px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	padding-left: 10px;
-	height: 23px;
+	height: 25px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -76,10 +76,10 @@
 
 .Empresa-Provider {
 	display: block;
-	margin-top: 2px;
-	margin-bottom: 2px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	padding-left: 10px;
-	height: 23px;
+	height: 25px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -89,10 +89,10 @@
 
 .Nit-Provider{
 	display: block;
-	margin-top: 2px;
-	margin-bottom: 2px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	padding-left: 10px;
-	height: 23px;
+	height: 25px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -102,10 +102,10 @@
 
 .Correo {
 	display: block;
-	margin-top: 2px;
-	margin-bottom: 2px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	padding-left: 10px;
-	height: 23px;
+	height: 25px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -115,10 +115,10 @@
 
 .Password-Provider {
 	display: block;
-	margin-top: 2px;
-	margin-bottom: 2px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	padding-left: 10px;
-	height: 23px;
+	height:25px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -128,7 +128,7 @@
 
 .SubmitProvider{ 
 	display:block;
-	margin-top: 8px;
+	margin-top: 5px;
 	margin-left: 27px;
 	height: 40px;
 	width: 150px;
@@ -162,8 +162,8 @@
 
 @media screen and (min-width: 992px) {
 	.FormContainer {
-		width: 1024px;
-		height: 529px;
+		width: 1440px;
+		height: 620px;
 	}
 
 	.NavBar-Logo {
@@ -177,26 +177,26 @@
 	}
 	.Name-Provider {
 		grid-gap: 30px;
+		font-weight: 500
 	}
 
 	.Lastname-Provider {
-		font-size: 30px;
+		font-weight: 500
 	}
-
 	.Empresa-Provider {
-		font-size: 30px;
+		font-weight: 500
 	}
 
 	.Nit-Provider {
-		font-size: 30px;
+		font-weight: 500
 	}
 
 	.Correo {
-		font-size: 30px;
+		font-weight: 500
 	}
 
 	.Password-Provider {
-		font-size: 30px;
+		font-weight: 500
 	}
 
 	.SubmitProvider {
@@ -207,7 +207,7 @@
 @media screen and (min-width: 1200px) {
 	.FormContainer{
 		width: 1440px;
-		height: 540px;
+		height: 620px;
 	}
 
 	.NavBar-Logo {
@@ -221,26 +221,27 @@
 	}
 	.Name-Provider {
 		grid-gap: 30px;
+		font-weight: 500
 	}
 
 	.Lastname-Provider {
-		font-size: 30px;
+		font-weight: 500
 	}
 
 	.Empresa-Provider {
-		font-size: 30px;
+		font-weight: 500
 	}
 
 	.Nit-Provider {
-		font-size: 30px;
+		font-weight: 500
 	}
 
 	.Correo {
-		font-size: 30px;
+		font-weight: 500
 	}
 
 	.Password-Provider {
-		font-size: 30px;
+		font-weight: 500
 	}
 
 	.SubmitProvider {
