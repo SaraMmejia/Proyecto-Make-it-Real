@@ -36,8 +36,6 @@
 }
 .Frase {
 	font-weight: 600;
-	font-weight: 600;
-	font-weight: 500;
 	margin: 5px;
 }
 
@@ -64,7 +62,6 @@
 
 .Boton-IniciarSesion:hover {
 	background: #e0c308;
-	cursor: pointer;
 }
 
 .Boton-Registrarse {
@@ -141,7 +138,7 @@
 @media screen and (min-width: 1200px) {
 	.PaginadeRegistro {
 		width: 1440px;
-		height: 540px;
+		height: 620px;
 	}
 
 	.NavBar-Logo {
