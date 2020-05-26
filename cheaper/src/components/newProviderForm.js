@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/newProviderForm.css";
+import "./newProviderForm.css";
 import "./newProviderForm.css";
 import logo from "../assets/logo.png";
 

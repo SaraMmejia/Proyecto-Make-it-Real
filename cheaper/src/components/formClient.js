@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../assets/logo.png';
-import logo from '../images/cheaper.png';
 import "./formClient.css";
 
 class FormClient extends React.Component {

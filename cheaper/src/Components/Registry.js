@@ -18,8 +18,6 @@ class Registry extends React.Component {
 						<p className="Frase">Encuentra las opciones más económicas </p>
 						<div className="Botones-Ingreso">
 							<Link to="/Login" className ="Boton-IniciarSesion" >Iniciar Sesión</Link>
-							<Link to="/Login" className ="Boton-IniciarSesion" >Iniciar Sesión</Link>
-							<Link to="/login" className ="Boton-IniciarSesion" >Iniciar Sesión</Link>
 							<Link to="/FormClient" className="Boton-Registrarse">Registrarse</Link>
 							<Link to="/NewProviderFormCreate"className="Boton-CrearEmpresa" >
 								Crear una cuenta de empresa

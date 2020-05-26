@@ -1,18 +1,18 @@
-import React from 'react';
-import {
-  Link
-} from 'react-router-dom';
+// import React from 'react';
+// import {
+//   Link
+// } from 'react-router-dom';
 
-const NavBar = () => (
-  <nav>
+// const NavBar = () => (
+//   <nav>
    
-      <Link to="/">Home</Link>
-      <Link to="/IngresoSatisfactorio">Home de Ingreso</Link>
-      <Link to="/NewProviderFormCreate">Formulario proveedor Nuevo</Link>
-      <Link to="/FormClient">Formulario Cliente</Link>
+//       <Link to="/">Home</Link>
+//       <Link to="/IngresoSatisfactorio">Home de Ingreso</Link>
+//       <Link to="/NewProviderFormCreate">Formulario proveedor Nuevo</Link>
+//       <Link to="/FormClient">Formulario Cliente</Link>
     
    
-  </nav>
-)
+//   </nav>
+// )
 
-export default NavBar;
+// export default NavBar;
