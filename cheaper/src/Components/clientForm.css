@@ -2,11 +2,9 @@
 	width: 100vmin;
 	height: 100vmin;
 	text-align: center;
-	background-color: black;
-	background-color: black;
 }
 
-.Login {
+.FormContainer {
 	width: 100vw;
 	height: 100vh;
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
@@ -20,10 +18,22 @@
 
 .NavBar-Logo {
 	width: 300px;
-	margin: 20px;
+	margin: 15px; 
 }
 
-.Pagina-Login {
+.TitleForm {
+	font-size: 24px;
+	margin-bottom: 5px;
+	margin-top: 10px;;
+	text-align: center;
+}
+.clientForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PaginaNew-Client {
 	width: 270px;
 	height: 290px;
 	margin: 20px;
@@ -32,31 +42,19 @@
 	border-radius: 10px;
 }
 
-.Bienvenido {
-	font-size: 24px;
-	margin-bottom: 5px;
-
-}
-.Frase {
-	font-weight: 600px;
-	margin: 5px;
-
-}
-
-.Botones-Login {
+.InputsNew-Client {
 	display: flex;
 	justify-content: center;
-} 
+}
 
- .Input-Correo {
+.clientForm {
+	display: flex;
+	flex-direction: column;
+}
+  
+.Name{
 	display: block;
-	margin-top: 15px;
-	margin-bottom: 10px;
-	padding-left: 10px;
-	height: 35px;
-	margin-bottom: 10px;
-	padding-left: 10px;
-	height: 30px;
+	margin-top: 10px;
 	margin-bottom: 10px;
 	padding-left: 10px;
 	height: 30px;
@@ -67,20 +65,46 @@
 	cursor: pointer;
 }
 
- .Input-Password{
+.LastName {
 	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	padding-left: 10px;
-	height: 35px;
-	height: 30px;
 	height: 30px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
 	border-color: rgb(183, 185, 178);
 	cursor: pointer;
-} 
+}
 
-.SubmitButton { 
+.Correo {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	height: 30px;
+	width: 200px;
+	border-radius: 10px;
+	background: white;
+	border-color: rgb(183, 185, 178);
+	cursor: pointer;
+}
+
+.Password {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	height: 30px;
+	width: 200px;
+	border-radius: 10px;
+	background: white;
+	border-color: rgb(183, 185, 178);
+	cursor: pointer;
+}
+
+.SubmitClient { 
 	display:block;
 	margin-top: 20px;
 	margin-left: 25px;
@@ -97,12 +121,24 @@
 	
 } 
 
-.SubmitButton:hover {
+.SubmitClient:hover {
 	background: #e0c308;
 }
 
+  
+@media screen and (min-width: 768px) {
+	.FormContainer{
+		width: 768px;
+		height: 529px;
+	}
+	.PaginaNew-Client {
+		width: 290px;
+		height: 250px;
+	}
+}
+
 @media screen and (min-width: 992px) {
-	.Login {
+	.FormContainer {
 		width: 1440px;
 		height: 620px;
 	}
@@ -112,28 +148,37 @@
 		height: 400px;
 	}
 
-	.Pagina-Login {
+	.PaginaNew-Client {
 		width: 350px;
 		height: 300px;
 	}
-	.Input-Correo{
+	.Name {
 		grid-gap: 30px;
 		font-weight: 500;
 	}
 
-	.Input-Password {
+	.LastName {
 		font-weight: 500;
 	}
 
-	.SubmitButton{
+	.Correo {
 		font-weight: 500;
 	}
+
+	.Password {
+		font-weight: 500;
+	}
+
+	.SubmitClient {
+			font-weight: 500;
+		}
+	
 }
 
 @media screen and (min-width: 1200px) {
-	.Login  {
+	.FormContainer {
 		width: 1440px;
-		height: 620px;
+		height: 650px;
 	}
 
 	.NavBar-Logo {
@@ -141,20 +186,28 @@
 		height: 500px;
 	}
 
-	.Pagina-Login {
+	.PaginaNew-Client {
 		width: 350px;
 		height: 300px;
 	}
-	.Input-Correo {
+	.Name {
 		grid-gap: 30px;
 		font-weight: 500;
 	}
 
-	.Input-Password {
+	.LastName {
 		font-weight: 500;
 	}
 
-	.SubmitButton {
+	.Correo {
 		font-weight: 500;
 	}
+
+	.Password {
+		font-weight: 500;
+	}
+
+	.SubmitClient {
+			font-weight: 500;
+		}
 } 

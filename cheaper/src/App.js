@@ -1,34 +1,27 @@
 import React from 'react';
 import './App.css';
-import ClientForm from "./components/formClient";
-import ProviderForm from "./components/newProviderForm";
-import Home from "./components/Home.js";
-import NavBar from "./components/NavBar.js";
-import IngresoSatisfactorio from "./pages/pgHome.js";
+import ClientFormCreate from "./pages/ClientFormCreate.js";
+import ProviderFormCreate from "./pages/ProviderFormCreate.js";
+// import Home from "./components/Home.js";
+// import IngresoSatisfactorio from "./pages/pgHome.js";
 import Registry from "./components/Registry.js"
-import Login from "./components/Login"
-import Login from "./components/Login" 
-import "./components/formClient.css"
+import LoginSignin from "./pages/LoginSignin.js"
+// import "./components/clientForm.css"
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Redirect,
-  Link
+  Switch
 } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />      
-		    <Switch>
+        <Switch>
           <Route exact path="/" component={Registry} />
-          <Route exact path="/IngresoSatisfactorio" component={IngresoSatisfactorio} />
-          <Route exact path="/NewProviderFormCreate" component={ProviderForm} />
-          <Route exact path="/Login" component={Login} />
-          <Route exact path="/Login" component={Login} />
-          <Route exact path="/FormClient" component={ClientForm} />
+          <Route exact path="/providers/create" component={ProviderFormCreate} />
+          <Route exact path="/login" component={LoginSignin} />
+          <Route exact path="/clients/create" component={ClientFormCreate} />
           <Route exact from="*" to="/" />
         </Switch>
       </Router>
