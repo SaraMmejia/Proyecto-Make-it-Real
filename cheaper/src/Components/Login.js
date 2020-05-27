@@ -25,7 +25,7 @@ function Login({
 						placeholder=" Correo"
 						onChange={handleChange}
 						value={email}></input>
-						
+
 						<input className="Input-Password"
 						type="password"
 						name="password"

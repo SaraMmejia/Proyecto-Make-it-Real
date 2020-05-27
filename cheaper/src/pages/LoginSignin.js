@@ -20,7 +20,7 @@ class LoginSignin extends React.Component {
 		const { ...data } = this.state;
 
 		axios({
-			method: "GET",
+			method: "POST",
 			baseURL: "http://localhost:8080",
 			url: "/signin",
 			data,
