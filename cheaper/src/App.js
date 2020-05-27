@@ -11,9 +11,7 @@ import "./components/formClient.css"
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Redirect,
-  Link
+  Switch
 } from 'react-router-dom';
 
 function App() {

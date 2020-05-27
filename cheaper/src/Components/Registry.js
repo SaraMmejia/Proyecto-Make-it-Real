@@ -3,16 +3,15 @@ import logo from "../assets/logo.png";
 import "./Registry.css";
 import {Link} from "react-router-dom"
 
-
-
 class Registry extends React.Component {
-	
+
 
 	render (){
 		return (
 			<div className="App">
 				<div className="PaginadeRegistro">
-					<img src={logo} className="NavBar-Logo"></img>
+					<img src={logo} className="NavBar-Logo" alt="Logo"></img>
+
 					<div className="PaginaDeRegistro-Formurlario">
 						<h1 className="Bienvenido"> Bienvenido a Cheaper </h1>
 						<p className="Frase">Encuentra las opciones más económicas </p>
@@ -28,7 +27,7 @@ class Registry extends React.Component {
 			</div>
 		);
 	}
-	
+
 }
 
 export default Registry;

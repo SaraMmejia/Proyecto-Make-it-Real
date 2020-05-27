@@ -1,20 +1,16 @@
 import React from "react";
-import "../Components/newProviderForm.css";
+import "../components/ProviderForm.css";
 import axios from "axios";
-import ProviderForm from "../Components/newProviderForm";
+import ProviderForm from "../components/ProviderForm.js";
 
-class NewProviderFormCreate extends React.Component {
+class ProviderFormCreate extends React.Component {
 	state = {
 		name: "",
 		lastname: "",
 		providerEmail: "",
 		nit: 0,
 		company: "",
-		branchName: "",
-		branchAdress: "",
-		username: "",
 		password: "",
-		passwordTwo: "",
 		providers: [],
 	};
 
@@ -29,8 +25,8 @@ class NewProviderFormCreate extends React.Component {
 
 		axios({
 			method: "POST",
-			baseURL: "http://localhost:3000",
-			url: "/",
+			baseURL: "http://localhost:8080",
+			url: "/providers/create",
 			data,
 			headers: {
 				"Content-Type": "application/json",
@@ -46,11 +42,7 @@ class NewProviderFormCreate extends React.Component {
 				providerEmail={this.state.providerEmail}
 				nit={this.state.nit}
 				company={this.state.company}
-				branchName={this.state.branchName}
-				branchAdress={this.state.branchAdress}
-				username={this.state.username}
 				password={this.state.password}
-				passwordTwo={this.state.passwordTwo}
 				handleChange={this.handleChange}
 				handleSubmit={this.handleSubmit}
 			/>
@@ -58,4 +50,4 @@ class NewProviderFormCreate extends React.Component {
 	}
 }
 
-export default NewProviderFormCreate;
+export default ProviderFormCreate;
