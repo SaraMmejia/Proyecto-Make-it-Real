@@ -1,20 +1,19 @@
 import React from "react";
-import "../App.css";
 import "./productListHome.css";
-import productList from "./dummyList.js";
+import productList from "./dummyList";
 
 function ProductListHome() {
 	return (
-		<div>
+		<div className="App">
 			<div className="gridContainer">
 				{productList.map((el) => {
 					return (
 						<div className="row">
-							<div className="card" key={el.id}>
-								<img src={el.image} className={el.name} alt={el.name} />
-								<h3>{el.name}</h3>
-								<p>{el.description}</p>
-								<button>Ver más</button>
+							<div className="cards" key={el.id}>
+								<img src={el.image} className={el.name} className="Imagenes" alt={el.name} />
+								<h3 className="H3-Productos">{el.name}</h3>
+								<p className="p-Productos">{el.description}</p>
+								<button className="VerMas">Ver más</button>
 							</div>
 						</div>
 					);

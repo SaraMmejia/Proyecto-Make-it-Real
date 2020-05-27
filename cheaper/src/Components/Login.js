@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import "./Login.css";
-
+import {Link} from "react-router-dom";
 
 function Login({
 	email,
@@ -19,6 +19,11 @@ function Login({
 					<div className="Botones-Login">
 
 						<form onSubmit={handleSubmit}>
+<<<<<<< HEAD
+						<input className="Input-Correo" type="text" name="correo" placeholder=" Correo" onChange={handleChange} value={correo}></input>
+						<input className="Input-Password" type="password" name="password" placeholder=" Constraseña"  onChange={handleChange} value={password}></input>
+						<Link to="/Home" className="SubmitButton">Iniciar Sesión</Link>
+=======
 						<input className="Input-Correo"
 						type="text"
 						name="email"
@@ -33,6 +38,7 @@ function Login({
 						onChange={handleChange}
 						value={password}></input>
 						<button className="SubmitButton" type="submit">Iniciar Sesión</button>
+>>>>>>> e289d797e71621d153de269f910b6fd1716dfa10
 						</form>
 					</div>
 				</div>
