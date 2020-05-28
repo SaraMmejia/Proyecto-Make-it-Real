@@ -3,14 +3,14 @@ import logo from "../assets/logo.png";
  import "./ProviderForm.css";
 
 function ProviderForm({
-	name,
-	lastname,
-	company,
-	nit,
+  name,
+  lastname,
+  company,
+  nit,
   providerEmail,
-	password,
-	handleChange,
-	handleSubmit,
+  password,
+  handleChange,
+  handleSubmit,
 }) {
 	return (
 		<div className="App">

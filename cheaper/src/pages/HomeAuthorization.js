@@ -9,7 +9,7 @@ import Home from '../components/Home.js'
       const token = localStorage.getItem('token');
       axios({
         method: 'GET',
-        baseURL: 'http://localhost:8080',
+        baseURL: process.env.REACT_APP_SERVER_URL,
         url: '/products',
         headers: {
           'Authorization': token
