@@ -46,7 +46,7 @@
 .Botones-Login {
 	display: flex;
 	justify-content: center;
-} 
+}
 
  .Input-Correo {
 	display: block;
@@ -78,9 +78,9 @@
 	background: white;
 	border-color: rgb(183, 185, 178);
 	cursor: pointer;
-} 
+}
 
-.SubmitButton { 
+.SubmitButton {
 	display:block;
 	margin-top: 20px;
 	margin-left: 25px;
@@ -94,8 +94,8 @@
 	color: white;
 	cursor: pointer;
 	text-decoration: none;
-	
-} 
+
+}
 
 .SubmitButton:hover {
 	background: #e0c308;
@@ -157,4 +157,4 @@
 	.SubmitButton {
 		font-weight: 500;
 	}
-} 
+}

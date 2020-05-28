@@ -1,28 +1,26 @@
 import React from "react";
 import logo from "../assets/logo.png";
- import "./newProviderForm.css";
+ import "./ProviderForm.css";
 
 function ProviderForm({
 	name,
 	lastname,
-	correo,
 	company,
-	branchName,
-	branchAdress,
-	username,
+	nit,
+  providerEmail,
 	password,
-	passwordTwo,
 	handleChange,
 	handleSubmit,
 }) {
 	return (
-		<div clasName="App">
+		<div className="App">
 			<div className="FormContainer">
-				<img src={logo} className="NavBar-Logo"></img>
+				<img src={logo} className="NavBar-Logo" alt="Logo"></img>
 				<div className="PaginaNew-Provider">
 					<h1 className="TitleProvider">Ingresa tus datos</h1>
 					<div className="InputsNew-Provider">
-						<form className="ProviderForm">
+
+						<form className="ProviderForm" onSubmit={handleSubmit}>
 							<input  className="Name-Provider"
 								type="text"
 								name="name"
@@ -49,16 +47,19 @@ function ProviderForm({
 							/>
 							<input className="Nit-Provider"
 								type="number"
-								name="branchName"
-								id="branchName"
+								name="nit"
+								id="nit"
 								placeholder="Nit"
 								onChange={handleChange}
-								value={branchName}
+								value={nit}
 							/>
 							<input className="Correo"
-								type="text"
-								name="correo"
+								type="email"
+								name="providerEmail"
+                id="providerEmail"
 								placeholder="Correo"
+                onChange={handleChange}
+								value={providerEmail}
 				 			/>
 
 							<input className="Password-Provider"
@@ -69,7 +70,7 @@ function ProviderForm({
 								onChange={handleChange}
 								value={password}
 							/>
-							<button className="SubmitProvider" type="Submit">Enviar</button>
+							<button className="SubmitProvider" type="submit">Enviar</button>
 						</form>
 					</div>
 				</div>
@@ -79,8 +80,5 @@ function ProviderForm({
 
 	);
 }
-
-
-
 
 export default  ProviderForm;

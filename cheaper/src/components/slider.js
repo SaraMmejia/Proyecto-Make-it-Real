@@ -1,10 +1,10 @@
 import React from 'react';
-import food from '../images/food.png';
-import fruver from '../images/fruver.png';
-import superm from '../images/superm.png';
-import pan from '../images/pan.png';
-import chocolate from '../images/chocolate.png';
-import Carousel from 'react-bootstrap/Carousel';
+import food from '../assets/food.png';
+import fruver from '../assets/fruver.png';
+import carne from '../assets/CarneSlider.jpg';
+import pan from '../assets/pan.png';
+import chocolate from '../assets/chocolate.png';
+import Carousel from 'react-bootstrap/Carousel'
 import './slider.css';
 
 class Slider extends React.Component {
@@ -14,57 +14,53 @@ class Slider extends React.Component {
         <Carousel className="container-slider">
             <Carousel.Item>
                 <img
-                    className="d-block w-100"
+                    className="Food"
                     src={food}
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>Descuentos hasta del 40%</h3>
-                    <p>Pagando con tu tarjeta Exito.</p>
+                    <h3 className="H3-Food">Descuentos hasta del 40%</h3>
+                    <p className="P-Food">Pagando con tu tarjeta Éxito.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img className="imgSlider"
-                    className="d-block w-100"
+                <img className="Fruver"
                     src={fruver}
                     alt="Third slide"
                 />
                 <Carousel.Caption>
-                    <h3>Frutas siempre frsecas</h3>
-                    <p>Aprovecha, tenemos promociones todos los jueves</p>
+                    <h3 className="H3-Fruver">Frutas siempre frsecas</h3>
+                    <p className="P-Fruver">Aprovecha, tenemos promociones todos los Jueves</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img className="imgSlider"
-                    className="d-block w-100"
+                <img className="Pan"
                     src={pan}
                     alt="Third slide"
                 />
                 <Carousel.Caption>
-                    <h3>Tenemos sorpresas para ti</h3>
-                    <p>Solo en Jumbo, obtienes el 50%.Todos los Sábados</p>
+                    <h3 className="H3-Pan">Tenemos sorpresas para ti</h3>
+                    <p className="P-Pan">Solo en Jumbo, obtienes el 50%.Todos los Sábados</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img className="imgSlider"
-                    className="d-block w-100"
+                <img className="Chocolate"
                     src={chocolate}
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>Lo que mas te gusta</h3>
-                    <p>Aprovecha la oferta en chocolates suizos.</p>
+                    <h3 className="H3-Chocolate">Lo que más te gusta</h3>
+                    <p className="P-Chocolate">Aprovecha la oferta en chocolates Suizos.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img className="imgSlider"
-                    className="d-block w-100"
-                    src={superm}
+                <img className="Carne"
+                    src={carne}
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3 className="H3-Carne">25% De descuento</h3>
+                    <p className="P-Carne">Todos los Martes en la Vaquita</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
