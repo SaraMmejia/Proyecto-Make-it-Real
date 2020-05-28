@@ -1,8 +1,7 @@
-.App {
+.AppLog {
 	width: 100vmin;
 	height: 100vmin;
 	text-align: center;
-	background-color: black;
 	background-color: black;
 }
 
@@ -18,7 +17,7 @@
 	align-items: center;
 }
 
-.NavBar-Logo {
+.NavBar-Logo-Login {
 	width: 300px;
 	margin: 20px;
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import ClientForm from "./components/formClient";
+import ClientForm from "./components/clientForm.js";
 import ProviderForm from "./components/newProviderForm";
 import NavBar from "./components/NavBar.js";
 import IngresoSatisfactorio from "./pages/pgHome.js";
 import Registry from "./components/Registry.js"
 import Login from "./components/Login.js"
 import Home from "./components/Home.js"
-import "./components/formClient.css"
+import "./components/clientForm.css"
 import {
   BrowserRouter as Router,
   Route,
