@@ -2,9 +2,9 @@ import React from 'react';
 import logo from '../images/cheaper.png';
 import './formClient.css';
 
-class FormClient extends React.Component {
 
-  render() {
+  function FormClient({name, lastname, clientEmail, doc, bornDate, adress, username, password, passwordTwo, handleChange}) {
+    
     return (
 
       <div className="formContainer">
@@ -20,50 +20,50 @@ class FormClient extends React.Component {
             type="text"
             name="name"
             id="name"
-          //onChange={handleChange}
-          //value={name}
+            onChange={handleChange}
+            value={name}
           />
           <label htmlFor="lastname">Apellido:</label>
           <input
             type="text"
             name="lastname"
             id="lastname"
-          // onChange={handleChange}
-          // value={lastname}
+            onChange={handleChange}
+            value={lastname}
           />
-          <label htmlFor="providerEmail">Email:</label>
+          <label htmlFor="clientEmail">Email:</label>
           <input
             type="email"
-            name="providerEmail"
-            id="providerEmail"
-          // onChange={handleChange}
-          // value={lastname}
+            name="clientEmail"
+            id="clientEmail"
+            onChange={handleChange}
+            value={clientEmail}
           />
 
 
-          <label htmlFor="location">Tipo de documento:</label>
-          <select name="location" id="location">
+          <label htmlFor="docType">Tipo de documento:</label>
+          <select name="docType" id="docType">
             <option value="Bogotá">Cédula de ciudadanía</option>
             <option value="Cali">Cédula de extrnjería</option>
             <option value="Medellín">Pasaporte</option>
           </select>
 
 
-          <label htmlFor="nit"># de documento</label>
+          <label htmlFor="doc"># de documento</label>
           <input
             type="number"
-            name="nit"
-            id="nit"
-          // onChange={handleChange}
-          // value={nit}
+            name="doc"
+            id="doc"
+            nonChange={handleChange}
+            value={doc}
           />
-          <label htmlFor="company">Fecha de nacimiento</label>
+          <label htmlFor="bornDate">Fecha de nacimiento</label>
           <input
             type="date"
-            name="company"
-            id="company"
-          // onChange={handleChange}
-          // value={company}
+            name="bornDate"
+            id="bornDate"
+             onChange={handleChange}
+             value={bornDate}
           />
 
           <label htmlFor="location">Ubicación:</label>
@@ -73,13 +73,13 @@ class FormClient extends React.Component {
             <option value="Medellín">Medellín</option>
           </select>
 
-          <label htmlFor="BranchAdress">Dirección:</label>
+          <label htmlFor="adress">Dirección:</label>
           <input
             type="text"
-            name="BranchAdress"
-            id="BranchAdress"
-          // onChange={handleChange}
-          // value={adress}
+            name="adress"
+            id="adress"
+            onChange={handleChange}
+            value={adress}
           />
 
           <label htmlFor="username">Nombre de usuario:</label>
@@ -87,24 +87,24 @@ class FormClient extends React.Component {
             type="text"
             name="username"
             id="username"
-          // onChange={handleChange}
-          // value={username}
+            onChange={handleChange}
+            value={username}
           />
           <label htmlFor="password">Contraseña:</label>
           <input
             type="password"
             name="password"
             id="password"
-          // onChange={handleChange}
-          // value={password}
+            onChange={handleChange}
+            value={password}
           />
           <label htmlFor="passwordTwo">Confirmar contraseña:</label>
           <input
             type="password"
             name="passwordTwo"
             id="passwordTwo"
-          // onChange={handleChange}
-          // value={password}
+            onChange={handleChange}
+            value={passwordTwo}
           />
           <button type="submit">Enviar</button>
         </form>
@@ -114,6 +114,6 @@ class FormClient extends React.Component {
 
     );
   }
-}
+
 
 export default FormClient;
