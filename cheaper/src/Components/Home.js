@@ -1,6 +1,8 @@
 import React from "react";
-import "../Components/Home.css";
+import "./Home.css";
 import logo from "../assets/logo.png";
+import Slider from "../components/slider";
+import ProductListHome from "../components/productListHome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faBars,
@@ -9,6 +11,8 @@ import {
 	faCamera,
 	faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
+
+
 
 function Home() {
 	return (
@@ -20,7 +24,6 @@ function Home() {
 					<FontAwesomeIcon icon={faShoppingCart} className="NavBar-Icons" />
 				</nav>
 			</div>
-
 			<div className="NavBusqueda">
 				<FontAwesomeIcon icon={faSearch} classNAme="NavBusqueda-Icon" />
 				<input
@@ -29,16 +32,19 @@ function Home() {
 					className="NavBusqueda-Busqueda"
 				/>
 				<FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" />
-			</div>
+				</div>
 
-			<div classsName="Ubicacion">
+				<div classsName="Ubicacion">
 				<FontAwesomeIcon icon={faMapMarkerAlt} className="Ubicacion-Icon" />
 				<input
 					type="text"
 					placeholder=" Ubicación."
 					className="Ubicacion-Busqueda"
 				/>
-			</div>
+				</div>
+			<Slider/>
+			<ProductListHome/>
+
 		</div>
 	);
 }
