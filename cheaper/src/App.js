@@ -9,8 +9,8 @@ import HomeAuthorization from "./pages/HomeAuthorization.js"
 import {
   BrowserRouter as Router,
   Route,
-  Redirect,
-  Switch
+  Switch,
+  Redirect
 } from 'react-router-dom';
 
 function PrivateRoute(props) {
@@ -52,6 +52,5 @@ function App() {
   );
 }
 
-//En esta sesión del código sólo se está renderizando el encabezado del home, falta anexarle todo lo de las rutas.
 
 export default App;

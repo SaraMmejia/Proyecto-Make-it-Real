@@ -11,11 +11,12 @@ function ProviderForm({
   password,
   handleChange,
   handleSubmit,
+
 }) {
 	return (
 		<div className="App">
 			<div className="FormContainer">
-				<img src={logo} className="NavBar-Logo" alt="Logo"></img>
+				<img src={logo} className="NavBar-Logo-ProvidersCreate" alt="Logo"></img>
 				<div className="PaginaNew-Provider">
 					<h1 className="TitleProvider">Ingresa tus datos</h1>
 					<div className="InputsNew-Provider">

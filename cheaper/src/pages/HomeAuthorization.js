@@ -23,8 +23,7 @@ import Home from '../components/Home.js'
     }, [history]);
 
     return (
-      <Home
-      name={name}/>
+      <Home/>
     );
   }
 

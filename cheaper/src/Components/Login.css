@@ -2,7 +2,6 @@
 	width: 100vmin;
 	height: 100vmin;
 	text-align: center;
-	background-color: black;
 }
 
 .Login {
@@ -17,7 +16,7 @@
 	align-items: center;
 }
 
-.NavBar-Logo {
+.NavBar-Logo-Login {
 	width: 300px;
 	margin: 20px;
 }
@@ -70,6 +69,7 @@
 	display: block;
 	padding-left: 10px;
 	height: 35px;
+	height: 30px;
 	height: 30px;
 	width: 200px;
 	border-radius: 10px;
