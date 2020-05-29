@@ -2,6 +2,7 @@ import React from 'react';
 import logo from "../assets/logo.png";
 import"./productDescription.css";
 import image from '../assets/hogar.jpg';
+import {Link} from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faBars,
@@ -15,7 +16,9 @@ function ProductDescription() {
     return (
 
         <div className = "ProductDescription">
-			<div class="NavBar-Container">
+
+
+			<div class="NavBar-Container"> 
 				<nav className="NavBar-Parts">
                     <div className ="menu">
 					    <FontAwesomeIcon icon={faBars} className="NavBar-Icons" />
@@ -29,6 +32,9 @@ function ProductDescription() {
 					<FontAwesomeIcon icon={faShoppingCart} className="NavBar-Icons" />
 				</nav>
 			</div>
+
+
+
 			<div className="NavBusqueda">
 				<FontAwesomeIcon icon={faSearch} classNAme="NavBusqueda-Icon" />
 				<input
@@ -62,9 +68,9 @@ function ProductDescription() {
                 Aenean ut pretium neque.Nam ac libero accumsan, lobortis massa in, auctor tortor. 
                 Aenean ut pretium neque.</p>
             <div className ="buttons">
-                <button className="edit">Editar producto</button>
-                <button className="delete">Eliminar producto</button>
-                <button className="create">Nuevo producto</button>
+                <Link to="/"><button className="edit">Editar producto</button></Link>
+                <Link to="/"><button className="delete">Eliminar producto</button></Link>
+                <Link to="/"><button className="create">Nuevo producto</button></Link>
             </div>
             
 

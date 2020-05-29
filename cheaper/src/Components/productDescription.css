@@ -2,7 +2,10 @@
 	margin: 0;
 	padding: 0;
 }
-.NavBar-Container {
+.productDescription {
+	margin-top: 5px;
+}
+.NavBar-Container { /*.toolbar*/
     position: fixed;
     top: 0;
     left: 0;
@@ -13,7 +16,7 @@
 	background-color: #e0c308;
 	/*width: 100vw;*/
 }
-.NavBar-Parts {
+.NavBar-Parts {  /*.toolbar_navigation*/
 	/*width: 100%;*/
 	height: 100%; /*new*/
     display: flex;
@@ -27,17 +30,22 @@
 list-style: none;
 margin: 0;
 padding: 0;
-display: flex;
+display: none;
 
 }
 
-
-
 /*new*/
-.menu a{
+.menu a{   /*toolbar_navigation-items a*/
 color: white;
 text-decoration: none;
 }
+
+.menu a:hover, /*toolbar_navigation-items a:hover*/
+.menu a:active{   /*toolbar_navigation-items a:active*/
+	 color: blue;
+	 text-decoration: none;
+}
+
 .NavBar-Logo-Home  {
 	width: 100px;
 	height: 45px;
@@ -109,24 +117,27 @@ margin: 4%;
 
 .buttons {
     align-items: flex-end;
-    font-size: small;
+	font-size: small;
 }
 .edit{
     width:  25%;
     margin : 3% 2%;
     background-color:#e0c308 ;
-    border-radius: 8px;
+	border-radius: 8px;
+	color: white;
 }
 
 .delete {
     width:  25%;
     margin : 3% 2%;
     background-color:#e0c308;
-    border-radius: 8px;
+	border-radius: 8px;
+	color: white;
 }
 .create {
     width:  25%;
     margin : 3% 2%;
     background-color:#e0c308;
-    border-radius: 8px;
+	border-radius: 8px;
+	color: white;
 }
