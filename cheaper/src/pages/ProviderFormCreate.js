@@ -25,7 +25,7 @@ class ProviderFormCreate extends React.Component {
 
 		axios({
 			method: "POST",
-			baseURL: "http://localhost:8080",
+			baseURL: process.env.REACT_APP_SERVER_URL,
 			url: "/providers/create",
 			data,
 			headers: {
