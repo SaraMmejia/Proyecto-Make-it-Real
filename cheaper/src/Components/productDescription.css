@@ -1,0 +1,132 @@
+.App {
+	margin: 0;
+	padding: 0;
+}
+.NavBar-Container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	background-color: #e0c308;
+	/*width: 100vw;*/
+}
+.NavBar-Parts {
+	/*width: 100%;*/
+	height: 100%; /*new*/
+    display: flex;
+    
+	/*justify-content: space-around;*/
+	align-items: center;
+    padding: 0 1rem;
+}
+/*new*/
+.menu ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+
+}
+
+
+
+/*new*/
+.menu a{
+color: white;
+text-decoration: none;
+}
+.NavBar-Logo-Home  {
+	width: 100px;
+	height: 45px;
+	text-align: center;
+	margin:0px
+}
+
+.NavBar-Icons {
+	color: whitesmoke;
+	cursor: pointer;
+	font-size: 20px;
+	margin: 5px;
+}
+
+.NavBusqueda {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+}
+
+.NavBusqueda-Busqueda {
+	display: block;
+	margin: 10px;
+	padding-left: 10px;
+	height: 50px;
+	width: 230px;
+	border-radius: 10px;
+	border-color: rgb(183, 185, 178);
+	cursor: pointer;
+}
+.NavBusqueda-Icon {
+	color: gray;
+	cursor: pointer;
+}
+
+
+.Ubicacion-Icon {
+	color: gray;
+	margin-left: -12px;
+	cursor: pointer;
+}
+
+.Ubicacion-Busqueda {
+	margin: 10px;
+	padding-left: 10px;
+	height: 50px;
+	width: 230px;
+	border-radius: 10px;
+	border-color: rgb(183, 185, 178);
+	cursor: pointer;
+}
+.hogar {
+    height: 80%;;
+    width:80%;
+    margin: 2% auto;
+}
+.description-title{
+margin: 3%;
+}
+
+.description-subtitle{
+margin: 4%; 
+}
+.paragraph-description {
+    text-align: justify;
+    margin: auto 4%;
+}
+
+.buttons {
+    align-items: flex-end;
+    font-size: small;
+}
+.edit{
+    width:  25%;
+    margin : 3% 2%;
+    background-color:#e0c308 ;
+    border-radius: 8px;
+}
+
+.delete {
+    width:  25%;
+    margin : 3% 2%;
+    background-color:#e0c308;
+    border-radius: 8px;
+}
+.create {
+    width:  25%;
+    margin : 3% 2%;
+    background-color:#e0c308;
+    border-radius: 8px;
+}

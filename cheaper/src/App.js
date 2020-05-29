@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
-import ClientForm from "./components/formClient";
+import ClientForm from "./components/clientForm";
 import ProviderForm from "./components/newProviderForm";
 import NavBar from "./components/NavBar.js";
 import IngresoSatisfactorio from "./pages/pgHome.js";
-import Registry from "./components/Registry.js"
-import Login from "./components/Login" 
-import Home from "./components/Home"
-import "./components/formClient.css"
+import Registry from "./components/Registry.js";
+import Login from "./components/Login" ;
+import Home from "./components/Home";
+import "./components/clientForm.js";
+import ProductDescription from "./components/productDescription.js";
 import {
   BrowserRouter as Router,
   Route,
@@ -19,12 +20,14 @@ function App() {
     <div className="App">
       <Router>      
 		    <Switch>
+          
           <Route exact path="/" component={Registry} />
           <Route exact path="/IngresoSatisfactorio" component={IngresoSatisfactorio} />
           <Route exact path="/NewProviderFormCreate" component={ProviderForm} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Home" component={Home} />
           <Route exact path="/FormClient" component={ClientForm} />
+          <Route exact path="/product" component={ProductDescription} />
           <Route exact from="*" to="/" />
         </Switch>
       </Router>

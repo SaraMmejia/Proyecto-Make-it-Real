@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/logo.png';
-import "./formClient.css";
+import "./clientForm.css";
 
 
   function FormClient({name, lastname, clientEmail, doc, bornDate, adress, username, password, passwordTwo, handleChange}) {

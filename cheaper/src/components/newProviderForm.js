@@ -1,5 +1,5 @@
 import React from "react";
-import "./newProviderForm.css";
+import "./ProviderForm.css";
 import logo from "../assets/logo.png";
 
 function ProviderForm({
