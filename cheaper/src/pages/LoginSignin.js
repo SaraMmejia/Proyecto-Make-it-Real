@@ -27,7 +27,7 @@ class LoginSignin extends React.Component {
 			headers: {
 				"Content-Type": "application/json",
 			},
-		}).then(() => this.props.history.push("/"));
+		}).then(() => this.props.history.push("/home"));
 	};
 
 	render() {

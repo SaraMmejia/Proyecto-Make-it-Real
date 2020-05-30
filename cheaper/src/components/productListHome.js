@@ -1,35 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import "./productListHome.css";
 import axios from "axios";
-// import productList from "./dummyList";
-
-const productList = async () => {
-	// const { ...data } = this.state;
-	try{
-		return await axios({
-		method: "GET",
-		baseURL: "http://localhost:8080",
-		url: "/home",
-		headers: {
-			"Content-Type": "application/json",
-		}
-		})}
-	catch (error){
-			console.log(error)
-		}
-};
 
 function ProductListHome() {
 
-let products = productList ();
+let [products, setProducts] = useState([]);
+
+
+useEffect(() => {
+	const token = localStorage.getItem('token');
+	axios({
+		method: 'GET',
+		baseURL: process.env.REACT_APP_SERVER_URL,
+		url: '/products/all',
+		headers: {
+			'Authorization': token
+		}
+	})
+		.then(response  => {
+			setProducts(response.data)
+		})
+		.catch(error => {
+			localStorage.removeItem('token');
+			// history.push('/');
+		})
+
+}, []);
 
 	return (
 		<div className="App">
+
 			<div className="gridContainer">
 				{products.map((data) => {
 					return (
-						<div className="row">
-							<div className="cards" key={data.id}>
+						<div className="row-List">
+
+							<div className="cards" key={data._id}>
 								<img
 								src={data.productImage}
 								className="Imagenes"
@@ -51,3 +57,26 @@ let products = productList ();
 }
 
 export default ProductListHome;
+//
+// const [products] = useState([]);
+// //Nuevo método:
+//
+// useEffect(() => {
+// 	const token = localStorage.getItem('token');
+// 	axios({
+// 		method: 'GET',
+// 		baseURL: process.env.REACT_APP_SERVER_URL,
+// 		url: '/products',
+// 		headers: {
+// 			'Authorization': token
+// 		}
+// 	})
+// 		.then(({ data }) => console.log(data))
+// 		.catch(error => {
+// 			localStorage.removeItem('token');
+// 			history.push('/');
+// 		})
+// }, [history]);
+// 		.catch(error => console.log(error));
+
+// .then(({ response }) => setProducts(response.data, (products: response.data)))
