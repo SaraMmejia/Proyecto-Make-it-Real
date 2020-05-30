@@ -18,7 +18,7 @@
 
 }
 
-.NavBar-Logo {
+.NavBar-Logo-Home {
 	width: 100px;
 	height: 45px;
 	text-align: center;
@@ -48,7 +48,7 @@
 	border-radius: 10px;
 	border-color: rgb(183, 185, 178);
 	cursor: pointer;
-}	
+}
 .NavBusqueda-Icon {
 	color: gray;
 	cursor: pointer;
