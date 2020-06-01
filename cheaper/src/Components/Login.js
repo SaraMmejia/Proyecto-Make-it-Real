@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import "./Login.css";
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 
 function Login({
 	email,
@@ -10,7 +10,7 @@ function Login({
 	handleSubmit,
 }) {
 	return (
-		<div className="App">
+		<div className="AppLog">
 			<div className="Login">
 				<img src={logo} className="NavBar-Logo-Login" alt="Logo"></img>
 				<div className="Pagina-Login">
