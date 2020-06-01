@@ -20,7 +20,7 @@ function Home() {
 			<div class="NavBar-Container">
 				<nav className="NavBar-Parts">
 					<FontAwesomeIcon icon={faBars} className="NavBar-Icons" />
-					<img src={logo} className="NavBar-Logo-Home"></img>
+					<img src={logo} className="NavBar-Logo-Home" alt="Logo"></img>
 					<FontAwesomeIcon icon={faShoppingCart} className="NavBar-Icons" />
 				</nav>
 			</div>

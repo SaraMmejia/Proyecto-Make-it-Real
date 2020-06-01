@@ -12,8 +12,8 @@ class ClientFormCreate extends React.Component {
 		clients: [],
 	};
 
-	handleChange = (e) => {
-		const { name, value } = e.target;
+	handleChange = (e) => { 
+		const { name, value } = e.target; 	
 		this.setState({ [name]: value });
 	};
 
@@ -23,7 +23,7 @@ class ClientFormCreate extends React.Component {
 
 		axios({
 			method: "POST",
-			baseURL: "http://localhost:8080",
+			baseURL: process.env.REACT_APP_SERVER_URL,
 			url: "/clients/create",
 			data,
 			headers: {

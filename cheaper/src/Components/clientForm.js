@@ -5,7 +5,7 @@ import "./clientForm.css";
 function ClientForm({
 	name,
 	lastname,
-  clientEmail,
+	clientEmail,
 	password,
 	handleChange,
 	handleSubmit,
