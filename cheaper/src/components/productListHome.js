@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "./productListHome.css";
 import axios from "axios";
 
-function ProductListHome() {
+function ProductListHome({ history }) {
 
 let [products, setProducts] = useState([]);
 
@@ -25,7 +25,7 @@ useEffect(() => {
 			// history.push('/');
 		})
 
-}, []);
+}, [history]);
 
 	return (
 		<div className="App">

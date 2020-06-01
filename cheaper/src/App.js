@@ -13,9 +13,9 @@ import {
 } from 'react-router-dom';
 
 function PrivateRoute(props) {
-  const autenticated = localStorage.getItem('token');
+  const authorization = localStorage.getItem('token');
 
-  if(!autenticated) return <Redirect to="/" />;
+  if(!authorization) return <Redirect to="/" />;
   return (
     <Route {...props} />
   );
@@ -43,7 +43,8 @@ function App() {
           <Route exact path="/providers/create" component={ProviderFormCreate} />
           <Route exact path="/signin" component={LoginSignin} />
           <Route exact path="/clients/create" component={ClientFormCreate} />
-          <Route exact path="/home" component={Home} />
+          <PrivateRoute exact path="/home" component={Home} />
+
           <Route exact from="*" to="/" />
         </Switch>
       </Router>
@@ -52,4 +53,5 @@ function App() {
 }
 
 // <PrivateRoute exact path="/products" component={Home} />
+//<Route exact path="/products/edit" component={ProductDescription} />
 export default App;
