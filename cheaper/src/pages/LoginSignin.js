@@ -20,14 +20,18 @@ class LoginSignin extends React.Component {
 		const { ...data } = this.state;
 
 		axios({
-			method: "GET",
-			baseURL: "http://localhost:8080",
+			method: "POST",
+			baseURL: process.env.REACT_APP_SERVER_URL,
 			url: "/signin",
 			data,
 			headers: {
 				"Content-Type": "application/json",
 			},
-		}).then(() => this.props.history.push("/"));
+		}).then(({data}) => {
+			localStorage.setItem("token", data.token)
+			this.props.history.push("/home")
+		});
+
 	};
 
 	render() {

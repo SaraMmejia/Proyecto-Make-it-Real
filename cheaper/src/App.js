@@ -1,30 +1,50 @@
 import React from 'react';
 import './App.css';
-import ClientForm from "./components/clientForm.js";
-import ProviderForm from "./components/newProviderForm";
-import NavBar from "./components/NavBar.js";
-import IngresoSatisfactorio from "./pages/pgHome.js";
+import ClientFormCreate from "./pages/ClientFormCreate.js";
+import ProviderFormCreate from "./pages/ProviderFormCreate.js";
+import Home from "./components/Home.js";
 import Registry from "./components/Registry.js"
-import Login from "./components/Login.js"
-import Home from "./components/Home.js"
-import "./components/clientForm.css"
+import LoginSignin from "./pages/LoginSignin.js"
 import {
   BrowserRouter as Router,
   Route,
-  Switch
+  Switch,
+  Redirect
 } from 'react-router-dom';
+
+function PrivateRoute(props) {
+  const authorization = localStorage.getItem('token');
+
+  if(!authorization) return <Redirect to="/" />;
+  return (
+    <Route {...props} />
+  );
+}
+//
+// function UserRoute(props) {
+//   const token = localStorage.getItem('token');
+//   const isAdmin = token.isAdmin();
+//
+//   if(token && !isAdmin) return <Redirect to="/home" />
+//   if(!token && !isAdmin) return <Redirect to="/login" />
+//   return (
+//     <Route {...props} />
+//   );
+// }
+
+
 
 function App() {
   return (
     <div className="App">
       <Router>
-		    <Switch>
+        <Switch>
           <Route exact path="/" component={Registry} />
-          <Route exact path="/IngresoSatisfactorio" component={IngresoSatisfactorio} />
-          <Route exact path="/NewProviderFormCreate" component={ProviderForm} />
-          <Route exact path="/Login" component={Login} />
-          <Route exact path="/Home" component={Home} />
-          <Route exact path="/FormClient" component={ClientForm} />
+          <Route exact path="/providers/create" component={ProviderFormCreate} />
+          <Route exact path="/signin" component={LoginSignin} />
+          <Route exact path="/clients/create" component={ClientFormCreate} />
+          <PrivateRoute exact path="/home" component={Home} />
+
           <Route exact from="*" to="/" />
         </Switch>
       </Router>
@@ -32,5 +52,6 @@ function App() {
   );
 }
 
-
+// <PrivateRoute exact path="/products" component={Home} />
+//<Route exact path="/products/edit" component={ProductDescription} />
 export default App;
