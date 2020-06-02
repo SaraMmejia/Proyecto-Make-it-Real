@@ -57,26 +57,3 @@ useEffect(() => {
 }
 
 export default ProductListHome;
-//
-// const [products] = useState([]);
-// //Nuevo método:
-//
-// useEffect(() => {
-// 	const token = localStorage.getItem('token');
-// 	axios({
-// 		method: 'GET',
-// 		baseURL: process.env.REACT_APP_SERVER_URL,
-// 		url: '/products',
-// 		headers: {
-// 			'Authorization': token
-// 		}
-// 	})
-// 		.then(({ data }) => console.log(data))
-// 		.catch(error => {
-// 			localStorage.removeItem('token');
-// 			history.push('/');
-// 		})
-// }, [history]);
-// 		.catch(error => console.log(error));
-
-// .then(({ response }) => setProducts(response.data, (products: response.data)))
