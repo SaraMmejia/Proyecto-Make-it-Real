@@ -5,9 +5,9 @@ import './SideDrawer.css';
 
 const SideDrawer = props => {
 
-    let drawerClasses ='side-drawer';
-    if (props.show){
-        drawerClasses='side-drawer open';
+    let drawerClasses = 'side-drawer';
+    if (props.show) {
+        drawerClasses = 'side-drawer open';
     }
     return (
         <nav className={drawerClasses}>
@@ -16,12 +16,9 @@ const SideDrawer = props => {
                 <li><a href="/">Mis productos</a></li>
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/">Configuracion</a></li>
-                <li><a href="/">Crear sucursal</a></li>    
-                <img src={logo}  className="side-drawer-logo"></img>       
+                <li><a href="/">Crear sucursal</a></li>
+                <img src={logo} className="side-drawer-logo"></img>
             </ul>
-
-         
-
         </nav>
     )
 };

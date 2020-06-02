@@ -10,21 +10,21 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 
-const Toolbar = props =>(
-    
+const Toolbar = props => (
+
     <header className="toolbar">
         <nav className="toolbar-navigation">
             <div className="toolbar-toggle-button">
-                <DrawerToggleButton click={props.drawerClickHandler}/>
+                <DrawerToggleButton click={props.drawerClickHandler} />
             </div>
-    
-            <img src={logo}  className="toolbar-logo"></img> 
+
+            <img src={logo} className="toolbar-logo"></img>
             <FontAwesomeIcon icon={faShoppingCart} className="NavBar-Icons" />
-            
+
 
         </nav>
     </header>
-    );
+);
 
 
 export default Toolbar;

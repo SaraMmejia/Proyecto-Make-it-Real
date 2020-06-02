@@ -64,33 +64,33 @@ class NewProduct extends React.Component {
                         className="Ubicacion-Busqueda"
                     />
                 </div>
-                
+
                 <div className="buttons">
                     <Link to="/"><button className="edit">Editar producto</button></Link>
                     <Link to="/"><button className="delete">Eliminar producto</button></Link>
                     <Link to="/"><button className="create">Nuevo producto</button></Link>
                 </div>
 
-                    
+
                 <div className="title">
                     <label htmlFor="">Nombre del producto</label>
-                    <input type="text" placeholder="Ingresa el nombre del producto"/>  
+                    <input type="text" placeholder="Ingresa el nombre del producto" />
                 </div>
 
                 <div class="container-img">
                     <input type="file" className="file-img"></input>
                 </div>
 
-                   <textarea name="paragraph-description" id="" cols="45" rows="5" placeholder="Descripcion del producto">
-                   </textarea>
+                <textarea name="paragraph-description" id="" cols="45" rows="5" placeholder="Descripcion del producto">
+                </textarea>
 
                 <div className="description-article  ">
                     <div className="price-gral">
-                        <input type="text" className="price" placeholder="$"/>
+                        <input type="text" className="price" placeholder="$" />
                         <h6>Precio</h6>
                     </div>
                     <div className="cant-gral">
-                    <input type="text" className="cant" placeholder="#"/>
+                        <input type="text" className="cant" placeholder="#" />
                         <h6>Cantidad</h6>
                     </div>
                 </div>

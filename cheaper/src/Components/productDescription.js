@@ -15,13 +15,10 @@ import {
     faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
-
 class ProductDescription extends React.Component {
     state = {
         sideDrawerOpen: false
     };
-
-
 
     drawerToggleClickHandler = () => {
         this.setState((prevState) => {
@@ -64,18 +61,17 @@ class ProductDescription extends React.Component {
                         className="Ubicacion-Busqueda"
                     />
                 </div>
-                
+
                 <div className="buttons">
                     <Link to="/"><button className="edit">Editar producto</button></Link>
                     <Link to="/"><button className="delete">Eliminar producto</button></Link>
                     <Link to="/"><button className="create">Nuevo producto</button></Link>
                 </div>
 
-
                 <h4 className="description-title">Cubre lecho italiano</h4>
 
                 <div class="container-img">
-                    <img class="img" src={image} alt="hogar" />  
+                    <img class="img" src={image} alt="hogar" />
                 </div>
 
                 <p className="paragraph-description">
@@ -84,7 +80,7 @@ class ProductDescription extends React.Component {
                     Nullam vulputate tempor nunc, ut sodales tellus rhoncus ac.
                     Praesent id hendrerit orci. In ornare hendrerit lacus, vitae maximus lectus bibendum eu.
                     Pellentesque quis sodales magna, vel placerat nisl.
-                   </p>
+                </p>
 
                 <div className="description-article  ">
                     <div className="price-gral">
@@ -96,17 +92,12 @@ class ProductDescription extends React.Component {
                         <h6>Cantidad</h6>
                     </div>
                 </div>
-
-
+                
                 <footer className="footer">
                     <img src={logo} className="NavBar-Logo-Home"></img>
                     <p className="copyright"> <span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> All rights reserved 2020 </p>
                 </footer>
-
-
             </div>
-
-
         )
     }
 }
