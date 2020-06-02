@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 import Slider from "../components/slider";
 import ProductListHome from "../components/productListHome";
 import CreateProduct from "../components/createProduct.js";
+import CreateBranch from "../components/createBranch.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faBars,
@@ -44,6 +45,7 @@ function Home() {
 				/>
 				</div>
 			<CreateProduct />
+			<CreateBranch />
 			<Slider/>
 			<ProductListHome/>
 
