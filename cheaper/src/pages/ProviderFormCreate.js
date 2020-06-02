@@ -9,20 +9,17 @@ class ProviderFormCreate extends React.Component {
 		lastname: "",
 		providerEmail: "",
 		nit: 0,
-		company: "",
+		company: "", 
 		password: "",
 		providers: [],
 	};
-
 	handleChange = (e) => {
 		const { name, value } = e.target;
 		this.setState({ [name]: value });
 	};
-
 	handleSubmit = (e) => {
 		e.preventDefault();
 		const { ...data } = this.state;
-
 		axios({
 			method: "POST",
 			baseURL: process.env.REACT_APP_SERVER_URL,

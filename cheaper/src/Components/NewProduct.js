@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 import Toolbar from './sideDrower-Toolbar/toolbar.js'
 import SideDrawer from './sideDrower-Toolbar/sideDrawer.js'
 import Backdrop from './sideDrower-Toolbar/Backdrop'
-import "./productDescription.css";
+import "./NewProduct.css";
 import image from '../assets/hogar.jpg';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,7 +16,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 
-class ProductDescription extends React.Component {
+class NewProduct extends React.Component {
     state = {
         sideDrawerOpen: false
     };
@@ -71,28 +71,26 @@ class ProductDescription extends React.Component {
                     <Link to="/"><button className="create">Nuevo producto</button></Link>
                 </div>
 
-
-                <h4 className="description-title">Cubre lecho italiano</h4>
-
-                <div class="container-img">
-                    <img class="img" src={image} alt="hogar" />  
+                    
+                <div className="title">
+                    <label htmlFor="">Nombre del producto</label>
+                    <input type="text" placeholder="Ingresa el nombre del producto"/>  
                 </div>
 
-                <p className="paragraph-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nunc finibus mauris sed maximus convallis.
-                    Nullam vulputate tempor nunc, ut sodales tellus rhoncus ac.
-                    Praesent id hendrerit orci. In ornare hendrerit lacus, vitae maximus lectus bibendum eu.
-                    Pellentesque quis sodales magna, vel placerat nisl.
-                   </p>
+                <div class="container-img">
+                    <input type="file" className="file-img"></input>
+                </div>
+
+                   <textarea name="paragraph-description" id="" cols="45" rows="5" placeholder="Descripcion del producto">
+                   </textarea>
 
                 <div className="description-article  ">
                     <div className="price-gral">
-                        <h5>Precio</h5>
-                        <h6 className="price">$300.000</h6>
+                        <input type="text" className="price" placeholder="$"/>
+                        <h6>Precio</h6>
                     </div>
                     <div className="cant-gral">
-                        <h5 className="cant">1</h5>
+                    <input type="text" className="cant" placeholder="#"/>
                         <h6>Cantidad</h6>
                     </div>
                 </div>
@@ -110,4 +108,4 @@ class ProductDescription extends React.Component {
         )
     }
 }
-export default ProductDescription;
+export default NewProduct;

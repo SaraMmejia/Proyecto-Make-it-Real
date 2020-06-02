@@ -5,6 +5,9 @@ import ProviderFormCreate from "./pages/ProviderFormCreate.js";
 import Home from "./components/Home.js";
 import Registry from "./components/Registry.js"
 import LoginSignin from "./pages/LoginSignin.js"
+import ProductDescription from './components/productDescription'
+import NewProduct from './components/NewProduct'
+
 import HomeAuthorization from "./pages/HomeAuthorization.js"
 import {
   BrowserRouter as Router,
@@ -42,6 +45,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Registry} />
           <Route exact path="/providers/create" component={ProviderFormCreate} />
+          <Route exact path="/product" component={ProductDescription} />
+          <Route exact path="/product/create" component={NewProduct} />
           <Route exact path="/signin" component={LoginSignin} />
           <Route exact path="/clients/create" component={ClientFormCreate} />
           <PrivateRoute exact path="/home" component={HomeAuthorization} />

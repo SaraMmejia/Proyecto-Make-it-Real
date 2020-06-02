@@ -1,22 +1,20 @@
 import React from "react";
 import "../components/clientForm.css";
-import axios from "axios";
+import axios from 'axios';
 import ClientForm from "../components/clientForm.js";
 
 class ClientFormCreate extends React.Component {
 	state = {
 		name: "",
 		lastname: "",
-		clientEmail: "",
+		clientEmail: "", 
 		password: "",
-		clients: [],
+		clients: [], 
 	};
-
 	handleChange = (e) => {
 		const { name, value } = e.target;
 		this.setState({ [name]: value });
 	};
-
 	handleSubmit = (e) => {
 		e.preventDefault();
 		const { ...data } = this.state;
@@ -30,6 +28,7 @@ class ClientFormCreate extends React.Component {
 				"Content-Type": "application/json",
 			},
 		}).then(() => this.props.history.push("/"));
+
 	};
 
 	render() {
