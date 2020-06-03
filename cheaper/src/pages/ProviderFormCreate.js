@@ -28,8 +28,11 @@ class ProviderFormCreate extends React.Component {
 			headers: {
 				"Content-Type": "application/json",
 			},
-		}).then(() => this.props.history.push("/"));
-	};
+		}).then(({data}) => {
+			localStorage.setItem("token", data.token)
+			this.props.history.push("/home")
+		});
+	}
 
 	render() {
 		return (

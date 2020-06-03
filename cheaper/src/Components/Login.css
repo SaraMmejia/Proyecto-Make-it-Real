@@ -1,7 +1,8 @@
-.App {
+.AppLog {
 	width: 100vmin;
 	height: 100vmin;
 	text-align: center;
+	background-color: black;
 }
 
 .Login {

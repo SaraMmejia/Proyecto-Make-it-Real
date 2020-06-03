@@ -3,6 +3,8 @@ import "./Home.css";
 import logo from "../assets/logo.png";
 import Slider from "../components/slider";
 import ProductListHome from "../components/productListHome";
+import CreateProduct from "../components/createProduct.js";
+import CreateBranch from "../components/createBranch.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faBars,
@@ -17,7 +19,7 @@ import {
 function Home() {
 	return (
 		<div className="Home">
-			<div class="NavBar-Container">
+			<div className="NavBar-Container">
 				<nav className="NavBar-Parts">
 					<FontAwesomeIcon icon={faBars} className="NavBar-Icons" />
 					<img src={logo} className="NavBar-Logo-Home" alt="Logo"></img>
@@ -25,7 +27,7 @@ function Home() {
 				</nav>
 			</div>
 			<div className="NavBusqueda">
-				<FontAwesomeIcon icon={faSearch} classNAme="NavBusqueda-Icon" />
+				<FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
 				<input
 					type="text"
 					placeholder=" Realizar una busqueda."
@@ -34,7 +36,7 @@ function Home() {
 				<FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" />
 				</div>
 
-				<div classsName="Ubicacion">
+				<div className="Ubicacion">
 				<FontAwesomeIcon icon={faMapMarkerAlt} className="Ubicacion-Icon" />
 				<input
 					type="text"
@@ -42,6 +44,8 @@ function Home() {
 					className="Ubicacion-Busqueda"
 				/>
 				</div>
+			<CreateProduct />
+			<CreateBranch />
 			<Slider/>
 			<ProductListHome/>
 

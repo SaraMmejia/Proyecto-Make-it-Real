@@ -7,7 +7,6 @@ import Registry from "./components/Registry.js"
 import LoginSignin from "./pages/LoginSignin.js"
 import ProductDescription from './components/productDescription'
 import NewProduct from './components/NewProduct'
-
 import HomeAuthorization from "./pages/HomeAuthorization.js"
 import {
   BrowserRouter as Router,
@@ -17,9 +16,9 @@ import {
 } from 'react-router-dom';
 
 function PrivateRoute(props) {
-  const autenticated = localStorage.getItem('token');
+  const authorization = localStorage.getItem('token');
 
-  if(!autenticated) return <Redirect to="/" />;
+  if(!authorization) return <Redirect to="/" />;
   return (
     <Route {...props} />
   );
@@ -50,7 +49,8 @@ function App() {
           <Route exact path="/product/edit/:id" component={NewProduct} />
           <Route exact path="/signin" component={LoginSignin} />
           <Route exact path="/clients/create" component={ClientFormCreate} />
-          <PrivateRoute exact path="/home" component={HomeAuthorization} />
+          <PrivateRoute exact path="/home" component={Home} />
+
           <Route exact from="*" to="/" />
         </Switch>
       </Router>
@@ -58,5 +58,6 @@ function App() {
   );
 }
 
-
+// <PrivateRoute exact path="/products" component={Home} />
+//<Route exact path="/products/edit" component={ProductDescription} />
 export default App;

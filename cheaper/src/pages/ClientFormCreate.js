@@ -11,8 +11,10 @@ class ClientFormCreate extends React.Component {
 		password: "",
 		clients: [], 
 	};
-	handleChange = (e) => {
-		const { name, value } = e.target;
+
+
+	handleChange = (e) => { 
+		const { name, value } = e.target; 	
 		this.setState({ [name]: value });
 	};
 	handleSubmit = (e) => {
@@ -26,8 +28,17 @@ class ClientFormCreate extends React.Component {
 			headers: {
 				"Content-Type": "application/json",
 			},
+      
 		}).then(() => this.props.history.push("/"));
 	};
+
+		}).then(({data}) => {
+			localStorage.setItem("token", data.token)
+			this.props.history.push("/home")
+		});
+	}
+
+
 	render() {
 		return (
 			<ClientForm
