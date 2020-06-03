@@ -207,7 +207,24 @@ margin: 4%;
 	background-color:white;
 	color: #e0c308;
 	border-style: solid;
-	border-color: #e0c308; ;
+	border-color: #e0c308; 
+}
+
+.create-product{
+	width:  40%;
+	margin : 4% 2% 8% 2%;
+	font-weight: 500;
+	background-color:#e0c308 ;
+	border-style: hidden;
+	border-radius: 8px;
+	color: white;
+	padding: 2%;
+}
+.create-product:hover{
+	background-color:white;
+	color: #08e008;
+	border-style: solid;
+	border-color: #08e008; 
 }
 .copyright{
 	color: white;

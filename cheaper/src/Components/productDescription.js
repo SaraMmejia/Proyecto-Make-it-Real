@@ -14,6 +14,7 @@ import {
     faCamera,
     faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import productList from './dummyList';
 
 class ProductDescription extends React.Component {
     state = {
@@ -63,9 +64,9 @@ class ProductDescription extends React.Component {
                 </div>
 
                 <div className="buttons">
-                    <Link to="/"><button className="edit">Editar producto</button></Link>
+                    <Link to={"/product/edit"}><button className="edit">Editar producto</button></Link>
                     <Link to="/"><button className="delete">Eliminar producto</button></Link>
-                    <Link to="/"><button className="create">Nuevo producto</button></Link>
+                    <Link to={"/product/create"}><button className="create">Nuevo producto</button></Link>
                 </div>
 
                 <h4 className="description-title">Cubre lecho italiano</h4>
@@ -92,7 +93,7 @@ class ProductDescription extends React.Component {
                         <h6>Cantidad</h6>
                     </div>
                 </div>
-                
+
                 <footer className="footer">
                     <img src={logo} className="NavBar-Logo-Home"></img>
                     <p className="copyright"> <span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> All rights reserved 2020 </p>

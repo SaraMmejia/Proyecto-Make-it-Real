@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import logo from "../assets/logo.png";
 import Toolbar from './sideDrower-Toolbar/toolbar.js'
 import SideDrawer from './sideDrower-Toolbar/sideDrawer.js'
@@ -16,25 +17,40 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 
-class NewProduct extends React.Component {
+class NewProduct extends React.Component { //Estado del menu lateral
     state = {
         sideDrawerOpen: false
     };
-
-
-
     drawerToggleClickHandler = () => {
         this.setState((prevState) => {
             return { sideDrawerOpen: !prevState.sideDrawerOpen };
         });
     };
-
     backdropClickHandler = () => {
         this.setState({ sideDrawerOpen: false })
     };
+     
+    stateProduct = {
+        name:"",
+        picture:"",
+        description:"",
+        price :0,
+        category :""
+    }
+
+    onSubmit = async e =>{
+        e.preventDefault()
+        const res =await axios.post('htt://localhost:8080/products',{
+            name: this.stateProduct.name,
+            picture: this.stateProduct.picture,
+            description: this.stateProduct.description,
+            price: this.stateProduct.price,
+            category: this.stateProduct.category
+        })
+        console.log(res);
+    }
     render() {
         let backdrop;
-
         if (this.state.sideDrawerOpen) {
             backdrop = <Backdrop click={this.backdropClickHandler} />
         }
@@ -71,29 +87,35 @@ class NewProduct extends React.Component {
                     <Link to="/"><button className="create">Nuevo producto</button></Link>
                 </div>
 
-
-                <div className="title">
-                    <label htmlFor="">Nombre del producto</label>
-                    <input type="text" placeholder="Ingresa el nombre del producto" />
-                </div>
-
-                <div class="container-img">
-                    <input type="file" className="file-img"></input>
-                </div>
-
-                <textarea name="paragraph-description" id="" cols="45" rows="5" placeholder="Descripcion del producto">
-                </textarea>
-
-                <div className="description-article  ">
-                    <div className="price-gral">
-                        <input type="text" className="price" placeholder="$" />
-                        <h6>Precio</h6>
+                <form>
+                    <div className="title">
+                        <label htmlFor="">Nombre del producto</label>
+                        <input type="text" placeholder="Ingresa el nombre del producto" />
                     </div>
-                    <div className="cant-gral">
-                        <input type="text" className="cant" placeholder="#" />
-                        <h6>Cantidad</h6>
+
+                    <div class="container-img">
+                        <input type="file" className="file-img"></input>
                     </div>
-                </div>
+
+                    <textarea name="paragraph-description" id="" cols="45" rows="5" placeholder="Descripcion del producto">
+                    </textarea>
+
+                    <div className="description-article  ">
+                        <div className="price-gral">
+                            <input type="text" className="price" placeholder="$" />
+                            <h6>Precio</h6>
+                        </div>
+                        <div className="cant-gral">
+                            <input type="text" className="cant" placeholder="#" />
+                            <h6>Cantidad</h6>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" className="create-product">
+                      Publicar
+                    </button>
+
+                </form>
 
 
                 <footer className="footer">

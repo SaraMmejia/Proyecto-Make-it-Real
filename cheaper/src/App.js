@@ -47,6 +47,7 @@ function App() {
           <Route exact path="/providers/create" component={ProviderFormCreate} />
           <Route exact path="/product" component={ProductDescription} />
           <Route exact path="/product/create" component={NewProduct} />
+          <Route exact path="/product/edit/:id" component={NewProduct} />
           <Route exact path="/signin" component={LoginSignin} />
           <Route exact path="/clients/create" component={ClientFormCreate} />
           <PrivateRoute exact path="/home" component={HomeAuthorization} />
