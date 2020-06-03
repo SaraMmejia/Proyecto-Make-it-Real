@@ -30,9 +30,6 @@ function UserRoute(props) {
   if(authorization && (isClient === 'client')) return <Redirect to="/clients" />;
   if(authorization && (isClient !== 'client')) return <Redirect to="/providers" />;
   if(!authorization && !isClient) return <Redirect to="/signin" />;
-  return (
-    <Route {...props} />
-  );
 }
 
 function App() {
@@ -45,7 +42,6 @@ function App() {
           <Route exact path="/signin" component={LoginSignin} />
           <Route exact path="/clients/create" component={ClientFormCreate} />
           <UserRoute exact path="/home" />
-          <UserRoute exact path="/home/clients"  />
           <PrivateRoute exact path="/clients" component={HomeClient} />
           <PrivateRoute exact path="/providers" component={Home}  />
           <Route exact from="*" to="/" />

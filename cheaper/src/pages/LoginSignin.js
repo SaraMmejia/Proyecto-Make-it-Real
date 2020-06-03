@@ -30,7 +30,7 @@ class LoginSignin extends React.Component {
 		}).then(({data}) => {
 			localStorage.setItem("token", data.token)
 			localStorage.setItem("typeOf", data.typeOf)
-			this.props.history.push("/home/clients")
+			this.props.history.push("/home")
 		});
 
 	};

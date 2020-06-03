@@ -9,10 +9,8 @@ class CreateBranch extends React.Component {
         <span className ="span-createBranch">
           <Link to="/providers/:id/branch/create" className ="btn-createBranch" >Crear Sucursal</Link>
         </span>
-
         )
-
-    }
-}
+      }
+  }
 
 export default CreateBranch;
