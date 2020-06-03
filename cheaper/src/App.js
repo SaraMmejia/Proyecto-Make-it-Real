@@ -3,6 +3,7 @@ import './App.css';
 import ClientFormCreate from "./pages/ClientFormCreate.js";
 import ProviderFormCreate from "./pages/ProviderFormCreate.js";
 import Home from "./components/Home.js";
+import HomeClient from "./components/HomeClient.js";
 import Registry from "./components/Registry.js"
 import LoginSignin from "./pages/LoginSignin.js"
 import {
@@ -20,17 +21,19 @@ function PrivateRoute(props) {
     <Route {...props} />
   );
 }
-//
-// function UserRoute(props) {
-//   const token = localStorage.getItem('token');
-//   const isAdmin = token.isAdmin();
-//
-//   if(token && !isAdmin) return <Redirect to="/home" />
-//   if(!token && !isAdmin) return <Redirect to="/login" />
-//   return (
-//     <Route {...props} />
-//   );
-// }
+
+function UserRoute(props) {
+  const authorization = localStorage.getItem('token');
+  let isClient = localStorage.getItem('typeOf');
+  console.log(authorization);
+  console.log(isClient);
+  if(authorization && (isClient === 'client')) return <Redirect to="/clients" />;
+  if(authorization && (isClient !== 'client')) return <Redirect to="/providers" />;
+  if(!authorization && !isClient) return <Redirect to="/signin" />;
+  return (
+    <Route {...props} />
+  );
+}
 
 
 
@@ -43,8 +46,10 @@ function App() {
           <Route exact path="/providers/create" component={ProviderFormCreate} />
           <Route exact path="/signin" component={LoginSignin} />
           <Route exact path="/clients/create" component={ClientFormCreate} />
-          <PrivateRoute exact path="/home" component={Home} />
-
+          <UserRoute exact path="/home" />
+          <UserRoute exact path="/home/clients"  />
+          <PrivateRoute exact path="/clients" component={HomeClient} />
+          <PrivateRoute exact path="/providers" component={Home}  />
           <Route exact from="*" to="/" />
         </Switch>
       </Router>
@@ -55,3 +60,14 @@ function App() {
 // <PrivateRoute exact path="/products" component={Home} />
 //<Route exact path="/products/edit" component={ProductDescription} />
 export default App;
+
+// function UserRoute(props) {
+//   const token = localStorage.getItem('token');
+//   const isClient = token.isAdmin();
+//
+//   if(token && !isAdmin) return <Redirect to="/home" />
+//   if(!token && !isAdmin) return <Redirect to="/login" />
+//   return (
+//     <Route {...props} />
+//   );
+// }
