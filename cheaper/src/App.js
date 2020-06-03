@@ -35,8 +35,6 @@ function UserRoute(props) {
   );
 }
 
-
-
 function App() {
   return (
     <div className="App">
@@ -57,17 +55,4 @@ function App() {
   );
 }
 
-// <PrivateRoute exact path="/products" component={Home} />
-//<Route exact path="/products/edit" component={ProductDescription} />
 export default App;
-
-// function UserRoute(props) {
-//   const token = localStorage.getItem('token');
-//   const isClient = token.isAdmin();
-//
-//   if(token && !isAdmin) return <Redirect to="/home" />
-//   if(!token && !isAdmin) return <Redirect to="/login" />
-//   return (
-//     <Route {...props} />
-//   );
-// }
