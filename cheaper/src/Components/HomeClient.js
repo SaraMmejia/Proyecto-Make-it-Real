@@ -3,8 +3,6 @@ import "./Home.css";
 import logo from "../assets/logo.png";
 import Slider from "../components/slider";
 import ProductListHome from "../components/productListHome";
-import CreateProduct from "../components/createProduct.js";
-import CreateBranch from "../components/createBranch.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faBars,
@@ -16,7 +14,7 @@ import {
 
 
 
-function Home() {
+function HomeClient() {
 	return (
 		<div className="Home">
 			<div className="NavBar-Container">
@@ -44,8 +42,6 @@ function Home() {
 					className="Ubicacion-Busqueda"
 				/>
 				</div>
-			<CreateProduct />
-			<CreateBranch />
 			<Slider/>
 			<ProductListHome/>
 
@@ -53,4 +49,4 @@ function Home() {
 	);
 }
 
-export default Home;
+export default HomeClient;

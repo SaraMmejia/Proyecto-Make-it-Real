@@ -37,14 +37,14 @@ useEffect(() => {
 
 							<div className="cards" key={data._id}>
 								<img
-								src={data.productImage}
+								src={data.picture}
 								className="Imagenes"
-								alt={data.productImage} />
+								alt={data.picture} />
 								<h3 className="H3-Productos">
-								{data.productName}
+								{data.name}
 								</h3>
 								<p className="p-Productos">
-								{data.productDescription}
+								{data.description}
 								</p>
 								<button className="VerMas">Ver más</button>
 							</div>
