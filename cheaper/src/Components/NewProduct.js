@@ -29,7 +29,7 @@ class NewProduct extends React.Component { //Estado del menu lateral
     backdropClickHandler = () => {
         this.setState({ sideDrawerOpen: false })
     };
-     
+
     stateProduct = {
         name:"",
         picture:"",
@@ -40,7 +40,7 @@ class NewProduct extends React.Component { //Estado del menu lateral
 
     onSubmit = async e =>{
         e.preventDefault()
-        const res =await axios.post('htt://localhost:8080/products',{
+        const res =await axios.post('http://localhost:8080/products',{
             name: this.stateProduct.name,
             picture: this.stateProduct.picture,
             description: this.stateProduct.description,
@@ -82,9 +82,9 @@ class NewProduct extends React.Component { //Estado del menu lateral
                 </div>
 
                 <div className="buttons">
-                    <Link to="/"><button className="edit">Editar producto</button></Link>
-                    <Link to="/"><button className="delete">Eliminar producto</button></Link>
-                    <Link to="/"><button className="create">Nuevo producto</button></Link>
+                    <Link to="/edit"><button className="edit">Editar producto</button></Link>
+                    <Link to="/delete"><button className="delete">Eliminar producto</button></Link>
+                    <Link to="/create"><button className="create">Nuevo producto</button></Link>
                 </div>
 
                 <form>
@@ -110,7 +110,7 @@ class NewProduct extends React.Component { //Estado del menu lateral
                             <h6>Cantidad</h6>
                         </div>
                     </div>
-                    
+
                     <button type="submit" className="create-product">
                       Publicar
                     </button>
