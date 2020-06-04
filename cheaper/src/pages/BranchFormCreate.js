@@ -29,7 +29,7 @@ class BranchFormCreate extends React.Component {
 			},
 		}).then(({data}) => {
 			localStorage.setItem("token", data.token)
-			this.props.history.push("/branchs")
+			this.props.history.push("/providers")
 		});
 	}
 
