@@ -20,6 +20,7 @@ class ClientFormCreate extends React.Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		const { ...data } = this.state;
+		
 		axios({
 			method: "POST",
 			baseURL: process.env.REACT_APP_SERVER_URL,
@@ -30,7 +31,7 @@ class ClientFormCreate extends React.Component {
 			},
 		}).then(({data}) => {
 			localStorage.setItem("token", data.token)
-			this.props.history.push("/clients/create")
+			this.props.history.push("/clients")
 		});
 	}
 

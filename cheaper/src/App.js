@@ -9,7 +9,7 @@ import Registry from "./components/Registry.js"
 import LoginSignin from "./pages/LoginSignin.js"
 import ProductDescription from './components/productDescription.js'
 import NewProduct from './components/NewProduct.js'
-import HomeAuthorization from "./pages/HomeAuthorization.js"
+// import HomeAuthorization from "./pages/HomeAuthorization.js"
 import {
   BrowserRouter as Router,
   Route,

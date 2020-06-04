@@ -18,7 +18,7 @@ const Toolbar = props => (
                 <DrawerToggleButton click={props.drawerClickHandler} />
             </div>
 
-            <img src={logo} className="toolbar-logo"></img>
+            <img src={logo} className="toolbar-logo" alt="Logo"></img>
             <FontAwesomeIcon icon={faShoppingCart} className="NavBar-Icons" />
 
 

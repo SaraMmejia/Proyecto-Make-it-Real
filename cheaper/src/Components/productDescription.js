@@ -8,13 +8,11 @@ import image from '../assets/hogar.jpg';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faBars,
-    faShoppingCart,
     faSearch,
     faCamera,
     faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import productList from './dummyList';
+// import productList from './dummyList';
 
 class ProductDescription extends React.Component {
     state = {
@@ -95,7 +93,7 @@ class ProductDescription extends React.Component {
                 </div>
 
                 <footer className="footer">
-                    <img src={logo} className="NavBar-Logo-Home"></img>
+                    <img src={logo} className="NavBar-Logo-Home" alt="Logo"></img>
                     <p className="copyright"> <span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> All rights reserved 2020 </p>
                 </footer>
             </div>

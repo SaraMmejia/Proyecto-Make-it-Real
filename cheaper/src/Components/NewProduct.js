@@ -5,12 +5,10 @@ import Toolbar from './sideDrower-Toolbar/toolbar.js'
 import SideDrawer from './sideDrower-Toolbar/sideDrawer.js'
 import Backdrop from './sideDrower-Toolbar/Backdrop'
 import "./NewProduct.css";
-import image from '../assets/hogar.jpg';
+// import image from '../assets/hogar.jpg';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faBars,
-    faShoppingCart,
     faSearch,
     faCamera,
     faMapMarkerAlt,
@@ -119,7 +117,7 @@ class NewProduct extends React.Component { //Estado del menu lateral
 
 
                 <footer className="footer">
-                    <img src={logo} className="NavBar-Logo-Home"></img>
+                    <img src={logo} className="NavBar-Logo-Home" alt="Logo"></img>
                     <p className="copyright"> <span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> All rights reserved 2020 </p>
                 </footer>
 

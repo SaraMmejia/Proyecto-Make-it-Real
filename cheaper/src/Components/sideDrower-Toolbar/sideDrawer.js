@@ -17,7 +17,7 @@ const SideDrawer = props => {
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/">Configuracion</a></li>
                 <li><a href="/">Crear sucursal</a></li>
-                <img src={logo} className="side-drawer-logo"></img>
+                <img src={logo} className="side-drawer-logo" alt="Logo"></img>
             </ul>
         </nav>
     )
