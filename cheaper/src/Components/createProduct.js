@@ -6,9 +6,9 @@ class CreateProduct extends React.Component {
 
     render() {
       return (
-        <div>
+        <span className ="span-createProduct">
           <Link to="/products/edit" className ="btn-createProduct" >Crear Producto</Link>
-        </div>
+        </span>
 
         )
 

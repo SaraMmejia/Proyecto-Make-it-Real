@@ -1,4 +1,4 @@
-.btn-createProduct{
+.btn-createBranch{
   border-radius: 20px;
   padding: 7px;
   font-weight: 600;
@@ -8,6 +8,6 @@
   color: white;
   cursor: pointer;
 }
-.span-createProduct{
+.span-createBranch{
   margin: 10px;
 }
