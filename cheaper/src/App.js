@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import ClientFormCreate from "./pages/ClientFormCreate.js";
 import ProviderFormCreate from "./pages/ProviderFormCreate.js";
+import BranchFormCreate from "./pages/BranchFormCreate.js";
 import Home from "./components/Home.js";
 import HomeClient from "./components/HomeClient.js";
 import Registry from "./components/Registry.js"
@@ -44,6 +45,7 @@ function App() {
           <UserRoute exact path="/home" />
           <PrivateRoute exact path="/clients" component={HomeClient} />
           <PrivateRoute exact path="/providers" component={Home}  />
+          <Route exact path="/providers/:id/branch/create" component={BranchFormCreate} />
           <Route exact from="*" to="/" />
         </Switch>
       </Router>
