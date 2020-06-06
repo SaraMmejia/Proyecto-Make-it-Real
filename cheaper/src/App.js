@@ -7,6 +7,7 @@ import HomeClient from "./components/HomeClient.js";
 import Registry from "./components/Registry.js"
 import LoginSignin from "./pages/LoginSignin.js"
 import ProductDescription from './components/productDescription'
+import SearchProducts from './components/SearchProducts'
 import NewProduct from './components/NewProduct'
 import HomeAuthorization from "./pages/HomeAuthorization.js"
 import {
@@ -45,6 +46,7 @@ function App() {
           <Route exact path="/product" component={ProductDescription} />
           <Route exact path="/product/create" component={NewProduct} />
           <Route exact path="/product/edit/:id" component={NewProduct} />
+          <Route exact path="/search" component={SearchProducts} />
           <Route exact path="/signin" component={LoginSignin} />
           <Route exact path="/clients/create" component={ClientFormCreate} />
           <UserRoute exact path="/home" />
