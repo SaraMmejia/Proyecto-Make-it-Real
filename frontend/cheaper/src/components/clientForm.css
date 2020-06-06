@@ -16,21 +16,21 @@
 	align-items: center;
 }
 
-.NavBar-Logo {
+.NavBar-Logo-Client {
 	width: 300px;
-	margin: 15px; 
+	margin: 15px;
 }
 
 .TitleForm {
 	font-size: 24px;
 	margin-bottom: 5px;
-	margin-top: 10px;;
+	margin-top: 10px;
 	text-align: center;
 }
 .clientForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .PaginaNew-Client {
@@ -51,8 +51,8 @@
 	display: flex;
 	flex-direction: column;
 }
-  
-.Name{
+
+.Name {
 	display: block;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -104,8 +104,8 @@
 	cursor: pointer;
 }
 
-.SubmitClient { 
-	display:block;
+.SubmitClient {
+	display: block;
 	margin-top: 20px;
 	margin-left: 25px;
 	height: 40px;
@@ -118,22 +118,20 @@
 	color: white;
 	cursor: pointer;
 	text-decoration: none;
-	
-} 
+}
 
 .SubmitClient:hover {
 	background: #e0c308;
 }
 
-  
 @media screen and (min-width: 768px) {
-	.FormContainer{
+	.FormContainer {
 		width: 768px;
 		height: 529px;
 	}
 	.PaginaNew-Client {
 		width: 290px;
-		height: 250px;
+		height: 280px;
 	}
 }
 
@@ -143,9 +141,9 @@
 		height: 620px;
 	}
 
-	.NavBar-Logo {
+	.NavBar-Logo-Client {
 		width: 400px;
-		height: 400px;
+		margin: 15px;
 	}
 
 	.PaginaNew-Client {
@@ -170,9 +168,8 @@
 	}
 
 	.SubmitClient {
-			font-weight: 500;
-		}
-	
+		font-weight: 500;
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -181,9 +178,9 @@
 		height: 650px;
 	}
 
-	.NavBar-Logo {
-		width: 500px;
-		height: 500px;
+	.NavBar-Logo-Client {
+		width: 400px;
+		margin: 15px;
 	}
 
 	.PaginaNew-Client {
@@ -208,6 +205,6 @@
 	}
 
 	.SubmitClient {
-			font-weight: 500;
-		}
-} 
+		font-weight: 500;
+	}
+}
