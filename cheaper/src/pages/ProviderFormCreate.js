@@ -9,7 +9,7 @@ class ProviderFormCreate extends React.Component {
 		lastname: "",
 		providerEmail: "",
 		nit: 0,
-		company: "", 
+		company: "",
 		password: "",
 		providers: [],
 	};

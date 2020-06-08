@@ -3,11 +3,7 @@ import DrawerToggleButton from './DrawerToggleButton';
 import logo from "../../assets/logo.png";
 import './toolbar.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-
-    faShoppingCart
-
-} from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 
 const Toolbar = props => (

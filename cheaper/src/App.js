@@ -8,6 +8,7 @@ import HomeClient from "./components/HomeClient.js";
 import Registry from "./components/Registry.js"
 import LoginSignin from "./pages/LoginSignin.js"
 import ProductDescription from './components/productDescription.js'
+import ProductDescriptionClient from './components/productDescriptionClient.js'
 import NewProduct from './components/NewProduct.js'
 // import HomeAuthorization from "./pages/HomeAuthorization.js"
 import {
@@ -35,6 +36,15 @@ function UserRoute(props) {
   if(authorization && (isClient !== 'client')) return <Redirect to="/providers" />;
   if(!authorization && !isClient) return <Redirect to="/signin" />;
 }
+function ClientProducts(props) {
+  const authorization = localStorage.getItem('token');
+  let isClient = localStorage.getItem('typeOf');
+  console.log(authorization);
+  console.log(isClient);
+  if(authorization && (isClient === 'client')) return <Redirect to="/clients/products/show/:id" />;
+  if(authorization && (isClient !== 'client')) return <Redirect to="/providers/products/show/:id" />;
+  if(!authorization && !isClient) return <Redirect to="/signin" />;
+}
 
 function App() {
   return (
@@ -48,7 +58,9 @@ function App() {
           <UserRoute exact path="/home" />
           <PrivateRoute exact path="/clients" component={HomeClient} />
           <PrivateRoute exact path="/providers" component={Home}  />
-          <Route exact path="/products/show/:id" component={ProductDescription} />
+          <ClientProducts exact path="/products/show/:id"  />
+          <Route exact path="/providers/products/show/:id" component={ProductDescription} />
+          <Route exact path="/clients/products/show/:id" component={ProductDescriptionClient} />
           <Route exact path="/products/create" component={NewProduct} />
           <Route exact path="/products/edit/:id" component={NewProduct} />
           <Route exact path="/providers/:id/branch/create" component={BranchFormCreate} />
