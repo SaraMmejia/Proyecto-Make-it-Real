@@ -2,8 +2,11 @@ import React from "react";
 import "./Home.css";
 import logo from "../assets/logo.png";
 import Slider from "../components/slider";
-import ProductListHome from "../components/productListHome";
+import ProductListHomeClient from "../components/productListHomeClient.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SideDrawerClient from './sideDrower-Toolbar/sideDrawerClient.js'
+import Backdrop from './sideDrower-Toolbar/Backdrop'
+import Toolbar from './sideDrower-Toolbar/toolbar.js'
 import {
 	faBars,
 	faShoppingCart,
@@ -14,17 +17,38 @@ import {
 
 
 
-function HomeClient() {
+class HomeClient extends React.Component {
+
+		state = {
+				sideDrawerOpen: false
+		};
+
+		drawerToggleClickHandler = () => {
+				this.setState((prevState) => {
+						return { sideDrawerOpen: !prevState.sideDrawerOpen };
+				});
+		};
+
+		backdropClickHandler = () => {
+				this.setState({ sideDrawerOpen: false })
+		};
+		render() {
+				let backdrop;
+
+				if (this.state.sideDrawerOpen) {
+						backdrop = <Backdrop click={this.backdropClickHandler} />
+				}
+
+
+
 	return (
 		<div className="Home">
-			<div className="NavBar-Container">
-				<nav className="NavBar-Parts">
-					<FontAwesomeIcon icon={faBars} className="NavBar-Icons" />
-					<img src={logo} className="NavBar-Logo-Home" alt="Logo"></img>
-					<FontAwesomeIcon icon={faShoppingCart} className="NavBar-Icons" />
-				</nav>
-			</div>
-			<div className="NavBusqueda">
+
+		<Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
+		<SideDrawerClient show={this.state.sideDrawerOpen} />
+		{backdrop}
+
+			<div className="NavBusqueda-Home">
 				<FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
 				<input
 					type="text"
@@ -43,10 +67,11 @@ function HomeClient() {
 				/>
 				</div>
 			<Slider/>
-			<ProductListHome/>
+			<ProductListHomeClient/>
 
 		</div>
 	);
+}
 }
 
 export default HomeClient;
