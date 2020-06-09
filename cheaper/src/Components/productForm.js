@@ -1,18 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import logo from "../assets/logo.png";
-import Toolbar from './sideDrower-Toolbar/toolbar.js'
-import SideDrawer from './sideDrower-Toolbar/sideDrawer.js'
-import Backdrop from './sideDrower-Toolbar/Backdrop'
 import "./NewProduct.css";
 // import image from '../assets/hogar.jpg';
 import { Link } from "react-router-dom"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faSearch,
-    faCamera,
-    faMapMarkerAlt,
-} from "@fortawesome/free-solid-svg-icons";
+
 
 function ProductForm({
   id,
@@ -28,25 +20,6 @@ function ProductForm({
 
 return (
   <div className="ProductDescription">
-
-      <div className="NavBusqueda-NewProduct">
-          <FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
-          <input
-              type="text"
-              placeholder=" Realizar una busqueda."
-              className="NavBusqueda-Busqueda"
-          />
-          <FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" />
-      </div>
-
-      <div className="Ubicacion">
-          <FontAwesomeIcon icon={faMapMarkerAlt} className="Ubicacion-Icon" />
-          <input
-              type="text"
-              placeholder=" Ubicación."
-              className="Ubicacion-Busqueda"
-          />
-      </div>
 
       <div className="buttons">
 

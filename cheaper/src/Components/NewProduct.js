@@ -1,18 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import logo from "../assets/logo.png";
-import Toolbar from './sideDrower-Toolbar/toolbar.js'
-import SideDrawer from './sideDrower-Toolbar/sideDrawer.js'
-import Backdrop from './sideDrower-Toolbar/Backdrop'
 import "./NewProduct.css";
 import ProductForm from './productForm.js'
+import NavBar from './NavBar.js'
 import { Link } from "react-router-dom"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faSearch,
-    faCamera,
-    faMapMarkerAlt,
-} from "@fortawesome/free-solid-svg-icons";
+
 
 
 
@@ -24,19 +17,7 @@ class NewProduct extends React.Component { //Estado del menu lateral
       price :0,
       category :"lacteos",
       products: [],
-      sideDrawerOpen: false,
   };
-
-
-  drawerToggleClickHandler = () => {
-      this.setState((prevState) => {
-          return { sideDrawerOpen: !prevState.sideDrawerOpen };
-      });
-  };
-  backdropClickHandler = () => {
-      this.setState({ sideDrawerOpen: false })
-  };
-
 
 
   handleChange = (e) => {
@@ -81,21 +62,11 @@ class NewProduct extends React.Component { //Estado del menu lateral
   })
   };
 
-
-
-
   render() {
-      let backdrop;
-
-      if (this.state.sideDrawerOpen) {
-          backdrop = <Backdrop click={this.backdropClickHandler} />
-      }
 
       return (
         <div className="container-pg">
-             <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-             <SideDrawer show={this.state.sideDrawerOpen} />
-              {backdrop}
+              <NavBar />
               <ProductForm
                 name={this.state.name}
                 picture={this.handleImage}

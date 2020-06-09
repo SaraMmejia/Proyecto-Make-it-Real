@@ -1,19 +1,11 @@
 import React from 'react';
 import axios from "axios";
 import logo from "../assets/logo.png";
-import Toolbar from './sideDrower-Toolbar/toolbar.js'
-import SideDrawerClient from './sideDrower-Toolbar/sideDrawerClient.js'
-import Backdrop from './sideDrower-Toolbar/Backdrop'
 import "./productDescription.css";
+import NavBarClient from './NavBarClient.js'
 import image from '../assets/hogar.jpg';
 import { Link } from "react-router-dom"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faSearch,
-    faCamera,
-    faMapMarkerAlt,
-} from "@fortawesome/free-solid-svg-icons";
-// import productList from './dummyList';
+
 
 class ProductDescriptionClient extends React.Component {
   state = {
@@ -24,15 +16,6 @@ class ProductDescriptionClient extends React.Component {
 
     };
 
-    drawerToggleClickHandler = () => {
-        this.setState((prevState) => {
-            return { sideDrawerOpen: !prevState.sideDrawerOpen };
-        });
-    };
-
-    backdropClickHandler = () => {
-        this.setState({ sideDrawerOpen: false });
-    };
 
 componentDidMount() {
       console.log(this.props)
@@ -55,38 +38,12 @@ componentDidMount() {
   }
 
     render() {
-        let backdrop;
-
-        if (this.state.sideDrawerOpen) {
-            backdrop = <Backdrop click={this.backdropClickHandler} />
-        }
 
         return (
 
             <div className="ProductDescription">
 
-                <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-                <SideDrawerClient show={this.state.sideDrawerOpen} />
-                {backdrop}
-
-                <div className="NavBusqueda-ProductDescription">
-                    <FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
-                    <input
-                        type="text"
-                        placeholder=" Realizar una busqueda."
-                        className="NavBusqueda-Busqueda"
-                    />
-                    <FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" />
-                </div>
-
-                <div className="Ubicacion">
-                    <FontAwesomeIcon icon={faMapMarkerAlt} className="Ubicacion-Icon" />
-                    <input
-                        type="text"
-                        placeholder=" Ubicación."
-                        className="Ubicacion-Busqueda"
-                    />
-                </div>
+                <NavBarClient />
 
                 <div className="buttons">
                     <Link to={"/"}><button className="agregar">Agregar a lista de compras</button></Link>

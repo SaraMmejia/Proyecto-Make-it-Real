@@ -1,68 +1,23 @@
 import React from 'react';
 import logo from "../assets/logo.png";
 import './SearchProducts.css';
-import Toolbar from './sideDrower-Toolbar/toolbar.js'
-import SideDrawer from './sideDrower-Toolbar/sideDrawer.js'
-import Backdrop from './sideDrower-Toolbar/Backdrop'
+import NavBarClient from './NavBarClient.js'
 import productList from "./dummyList";
 import { Link } from "react-router-dom"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faBars,
-    faShoppingCart,
-    faSearch,
-    faCamera,
-    faMapMarkerAlt,
-} from "@fortawesome/free-solid-svg-icons";
 
 
 class SearchProducts extends React.Component {
     state = {
-        sideDrawerOpen: false
+
     };
 
-    drawerToggleClickHandler = () => {
-        this.setState((prevState) => {
-            return { sideDrawerOpen: !prevState.sideDrawerOpen };
-        });
-    };
 
-    backdropClickHandler = () => {
-        this.setState({ sideDrawerOpen: false })
-    };
     render() {
-        let backdrop;
 
-        if (this.state.sideDrawerOpen) {
-            backdrop = <Backdrop click={this.backdropClickHandler} />
-        }
 
         return (
             <div className="ProductSearch">
-
-                <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-                <SideDrawer show={this.state.sideDrawerOpen} />
-                {backdrop}
-
-                <div className="NavBusqueda">
-                    <FontAwesomeIcon icon={faSearch} classNAme="NavBusqueda-Icon" />
-                    <input
-                        type="text"
-                        placeholder=" Realizar una busqueda."
-                        className="NavBusqueda-Busqueda"
-                    />
-                    <FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" />
-                </div>
-
-                <div classsName="Ubicacion">
-                    <FontAwesomeIcon icon={faMapMarkerAlt} className="Ubicacion-Icon" />
-                    <input
-                        type="text"
-                        placeholder=" Ubicación."
-                        className="Ubicacion-Busqueda"
-                    />
-                </div>
-
+              <NavBarClient />
 
                 <h5 className="title-search">Te damos las mejores opciones</h5>
                 <div className="list">
