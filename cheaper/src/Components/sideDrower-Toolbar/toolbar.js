@@ -3,11 +3,7 @@ import DrawerToggleButton from './DrawerToggleButton';
 import logo from "../../assets/logo.png";
 import './toolbar.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-
-    faShoppingCart
-
-} from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 
 const Toolbar = props => (
@@ -18,7 +14,7 @@ const Toolbar = props => (
                 <DrawerToggleButton click={props.drawerClickHandler} />
             </div>
 
-            <img src={logo} className="toolbar-logo"></img>
+            <img src={logo} className="toolbar-logo" alt="Logo"></img>
             <FontAwesomeIcon icon={faShoppingCart} className="NavBar-Icons" />
 
 
