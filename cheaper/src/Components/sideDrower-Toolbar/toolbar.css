@@ -1,5 +1,4 @@
 .toolbar{
-    position: fixed ;
     width: 100%;
     background:  #e0c308;
     height: 56px;
@@ -14,7 +13,7 @@
     justify-content: space-between;
 }
 .toolbar-logo{
-    height: 50px;   
+    height: 50px;
 }
 
 .toolbar-navigation-items{
@@ -28,7 +27,7 @@
    padding: 0;
    display: flex;
    font-size: 12px;
-    
+
 }
 
 .toolbar-navigation-items li{

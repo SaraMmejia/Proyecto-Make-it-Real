@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import axios from "axios";
 import logo from "../assets/logo.png";
 import Toolbar from './sideDrower-Toolbar/toolbar.js'
-import SideDrawer from './sideDrower-Toolbar/sideDrawer.js'
+import SideDrawerClient from './sideDrower-Toolbar/sideDrawerClient.js'
 import Backdrop from './sideDrower-Toolbar/Backdrop'
 import "./productDescription.css";
 import image from '../assets/hogar.jpg';
@@ -15,9 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 // import productList from './dummyList';
 
-
-
-class ProductDescription extends React.Component {
+class ProductDescriptionClient extends React.Component {
   state = {
         sideDrawerOpen: false,
         name: '',
@@ -38,22 +36,22 @@ class ProductDescription extends React.Component {
 
 componentDidMount() {
       console.log(this.props)
-    	const token = localStorage.getItem('token');
-    	axios({
-    		method: 'GET',
-    		baseURL: process.env.REACT_APP_SERVER_URL,
-    		url: `/products/show/${this.props.match.params.id}`,
-    		headers: {
-    			'Authorization': token
-    		}
-    	})
-    		.then(response  => {
-    			this.setState(response.data)
-    		})
-    		.catch(error => {
-    			localStorage.removeItem('token');
-    			// history.push('/');
-    		})
+      const token = localStorage.getItem('token');
+      axios({
+        method: 'GET',
+        baseURL: process.env.REACT_APP_SERVER_URL,
+        url: `/products/show/${this.props.match.params.id}`,
+        headers: {
+          'Authorization': token
+        }
+      })
+        .then(response  => {
+          this.setState(response.data)
+        })
+        .catch(error => {
+          localStorage.removeItem('token');
+          // history.push('/');
+        })
   }
 
     render() {
@@ -68,7 +66,7 @@ componentDidMount() {
             <div className="ProductDescription">
 
                 <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-                <SideDrawer show={this.state.sideDrawerOpen} />
+                <SideDrawerClient show={this.state.sideDrawerOpen} />
                 {backdrop}
 
                 <div className="NavBusqueda-ProductDescription">
@@ -91,9 +89,7 @@ componentDidMount() {
                 </div>
 
                 <div className="buttons">
-                    <Link to={"/products/edit/:id"}><button className="edit">Editar producto</button></Link>
-                    <Link to="/products/destroy/:id"><button className="delete">Eliminar producto</button></Link>
-                    <Link to={"/products/create"}><button className="create">Nuevo producto</button></Link>
+                    <Link to={"/"}><button className="agregar">Agregar a lista de compras</button></Link>
                 </div>
 
                 <div className="ProductDescription-Card" key={this.state._id}>
@@ -132,5 +128,4 @@ componentDidMount() {
         )
     }
 }
-export default ProductDescription;
-//`/products/show/${id}`
+export default ProductDescriptionClient;
