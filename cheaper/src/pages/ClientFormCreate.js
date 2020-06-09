@@ -29,6 +29,9 @@ class ClientFormCreate extends React.Component {
 			headers: {
 				"Content-Type": "application/json",
 			},
+		})
+		
+		.then(({data}) => {
 		}).then(({data}) => {
 			localStorage.setItem("token", data.token)
 			this.props.history.push("/clients")
