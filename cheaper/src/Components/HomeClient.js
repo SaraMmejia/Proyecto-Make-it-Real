@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-import logo from "../assets/logo.png";
 import Slider from "../components/slider";
 import ProductListHomeClient from "../components/productListHomeClient.js";
 import NavBarClient from './NavBarClient.js'

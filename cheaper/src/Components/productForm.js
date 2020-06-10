@@ -1,8 +1,5 @@
 import React from 'react';
-import axios from 'axios';
-import logo from "../assets/logo.png";
 import "./NewProduct.css";
-// import image from '../assets/hogar.jpg';
 import { Link } from "react-router-dom"
 
 

@@ -6,8 +6,7 @@ import ProductForm from './productForm.js'
 import NavBar from './NavBar.js'
 
 
-
-class NewProduct extends React.Component { //Estado del menu lateral
+class EditProduct extends React.Component { //Estado del menu lateral
   state = {
       name:"",
       picture:"",
@@ -35,16 +34,22 @@ class NewProduct extends React.Component { //Estado del menu lateral
 
 
       axios({
-        method: "POST",
+        method: "GET",
         baseURL: process.env.REACT_APP_SERVER_URL,
-        url: "/products/create",
+        url: `/products/show/${this.props.match.params.id}`,
         data,
         headers: {
           "Content-Type": "multipart/form-data",
         },
-      }).then(({data}) => {
-        this.props.history.push("/providers")
-      });
+      })
+    		.then(response  => {
+    			this.setState(response.data)
+          console.log(data)
+    		})
+    		.catch(error => {
+    			localStorage.removeItem('token');
+    			// history.push('/');
+    		});
   }
 
   readFile = (file) => {
@@ -83,4 +88,4 @@ class NewProduct extends React.Component { //Estado del menu lateral
         )
     }
 }
-export default NewProduct;
+export default EditProduct;

@@ -11,7 +11,7 @@ import SearchProducts from './components/SearchProducts'
 import ProductDescription from './components/productDescription.js'
 import ProductDescriptionClient from './components/productDescriptionClient.js'
 import NewProduct from './components/NewProduct.js'
-// import HomeAuthorization from "./pages/HomeAuthorization.js"
+import EditProduct from './components/EditProduct.js'
 import {
   BrowserRouter as Router,
   Route,
@@ -62,10 +62,11 @@ function App() {
           <PrivateRoute exact path="/clients" component={HomeClient} /> //
           <PrivateRoute exact path="/providers" component={Home}  /> //
           <ClientProducts exact path="/products/show/:id"  />
+          <Route exact path="/products/edit/:id" component={EditProduct} />
           <Route exact path="/providers/products/show/:id" component={ProductDescription} /> //
           <Route exact path="/clients/products/show/:id" component={ProductDescriptionClient} />//
           <Route exact path="/products/create" component={NewProduct} />//
-          <Route exact path="/products/edit/:id" component={NewProduct} />//
+          <Route exact path="/products/show/:id" component={EditProduct} />//
           <Route exact path="/providers/:id/branch/create" component={BranchFormCreate} /> //
           <Route exact from="*" to="/" />
         </Switch>

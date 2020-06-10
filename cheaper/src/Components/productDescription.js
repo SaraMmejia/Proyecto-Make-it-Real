@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import axios from "axios";
 import logo from "../assets/logo.png";
 import NavBar from './NavBar.js'
 import "./productDescription.css";
-import image from '../assets/hogar.jpg';
 import { Link } from "react-router-dom"
 
 
@@ -42,7 +41,7 @@ componentDidMount() {
 
                 <NavBar />
                 <div className="buttons">
-                    <Link to={"/products/edit/:id"}><button className="edit">Editar producto</button></Link>
+                    <Link to={`/products/edit/${this.props.match.params.id}`}><button className="edit">Editar producto</button></Link>
                     <Link to="/products/destroy/:id"><button className="delete">Eliminar producto</button></Link>
                     <Link to={"/products/create"}><button className="create">Nuevo producto</button></Link>
                 </div>

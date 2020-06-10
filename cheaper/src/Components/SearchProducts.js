@@ -3,7 +3,6 @@ import logo from "../assets/logo.png";
 import './SearchProducts.css';
 import NavBarClient from './NavBarClient.js'
 import productList from "./dummyList";
-import { Link } from "react-router-dom"
 
 
 class SearchProducts extends React.Component {
@@ -25,9 +24,16 @@ class SearchProducts extends React.Component {
                         return (
                             <div className="row-search">
                                 <div className="cards" key={el.id}>
-                                    <img src={el.image} className={el.name} className="Imagenes" alt={el.name} />
-                                    <h3 className="H3-Productos">{el.name}</h3>
-                                    <p className="p-Productos">{el.description}</p>
+                                    <img src={el.image}
+                                    className={el.name}
+                                    className="Imagenes"
+                                    alt={el.name} />
+                                    <h3 className="H3-Productos">
+                                      {el.name}
+                                    </h3>
+                                    <p className="p-Productos">
+                                      {el.description}
+                                    </p>
                                     <button className="VerMas">Ver más</button>
                                 </div>
                             </div>
@@ -35,7 +41,7 @@ class SearchProducts extends React.Component {
                     })}
                 </div>
                 <footer className="footer">
-                    <img src={logo} className="NavBar-Logo-Home"></img>
+                    <img src={logo} className="NavBar-Logo-Home" alt="Logo"></img>
                     <p className="copyright"> <span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> All rights reserved 2020 </p>
                 </footer>
 

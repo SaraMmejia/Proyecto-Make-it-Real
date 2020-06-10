@@ -1,13 +1,10 @@
 import React from "react";
 import "./NavBar.css";
-import logo from "../assets/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SideDrawerClient from './sideDrower-Toolbar/sideDrawerClient.js'
 import Backdrop from './sideDrower-Toolbar/Backdrop.js'
 import Toolbar from './sideDrower-Toolbar/toolbar.js'
 import {
-	faBars,
-	faShoppingCart,
 	faSearch,
 	faCamera,
 	faMapMarkerAlt,

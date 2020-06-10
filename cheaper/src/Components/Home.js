@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-import logo from "../assets/logo.png";
 import Slider from "../components/slider";
 import ProductListHome from "../components/productListHome.js";
 import CreateProduct from "../components/createProduct.js";

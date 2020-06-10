@@ -3,7 +3,6 @@ import axios from "axios";
 import logo from "../assets/logo.png";
 import "./productDescription.css";
 import NavBarClient from './NavBarClient.js'
-import image from '../assets/hogar.jpg';
 import { Link } from "react-router-dom"
 
 
