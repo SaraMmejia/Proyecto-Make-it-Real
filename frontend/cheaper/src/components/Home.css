@@ -2,6 +2,9 @@
 	margin: 0;
 	padding: 0;
 }
+.Home{
+	width: 100%;
+}
 .NavBar-Container {
 	display: flex;
 	justify-content: space-around;
@@ -32,11 +35,11 @@
 	margin: 5px;
 }
 
-.NavBusqueda {
+.NavBusqueda-Home {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 15px;
+	margin-top: 5%;
 }
 
 .NavBusqueda-Busqueda {

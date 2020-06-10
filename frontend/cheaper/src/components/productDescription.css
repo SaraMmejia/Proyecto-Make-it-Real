@@ -7,11 +7,11 @@
 	height: 100%;
 }
 
-.NavBusqueda {
+.NavBusqueda-ProductDescription {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top:20%;
+	margin-top:5%;
 }
 
 .NavBusqueda-Busqueda {
@@ -59,15 +59,15 @@ margin: 2%;
   display: flex;
   justify-content: space-between;
   margin: 20%;
-	} 
+	}
 .price-gral{
 	background-color: yellow;
-	padding: 1% 5%;	
+	padding: 1% 5%;
 
 }
 .cant-gral{
 	background-color: yellow;
-	padding: 1% 5%;	
+	padding: 1% 5%;
 }
 .paragraph-description {
     text-align: justify;
@@ -127,10 +127,25 @@ margin: 2%;
 	border-style: solid;
 	border-color: #e0c308; ;
 }
+.agregar{
+  margin : 3% 2%;
+	font-weight: 500;
+	background-color:#e0c308 ;
+	border-style: hidden;
+	border-radius: 8px;
+	color: white;
+	padding: 2%;
+}
+.agregar:hover{
+	background-color:white;
+	color: #e0c308;
+	border-style: solid;
+	border-color: #e0c308; ;
+}
 .copyright{
 	color: white;
 	margin-bottom: 0;
-	
+
 }
 .footer{
 	background-color: rgba(128, 128, 128, 0.514);

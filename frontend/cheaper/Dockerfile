@@ -5,10 +5,12 @@ WORKDIR /usr/src/app/frontend
 
 COPY . .
 
-RUN npm install 
+RUN npm install --production
+RUN npm install serve -g
+RUN npm build
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["serve", "build"]
 
 

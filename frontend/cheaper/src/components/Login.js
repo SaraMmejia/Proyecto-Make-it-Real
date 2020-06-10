@@ -17,7 +17,7 @@ function Login({
 					<h1 className="Bienvenido"> Bienvenido a Cheaper </h1>
 					<p className="Frase">Encuentra las opciones más económicas </p>
 					<div className="Botones-Login">
-						 <form onSubmit={handleSubmit}>
+						<form onSubmit={handleSubmit}>
 							<input className="Input-Correo"
 							type="text"
 							name="email"
