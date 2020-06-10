@@ -6,10 +6,8 @@ import BranchFormCreate from "./pages/BranchFormCreate.js";
 import Home from "./components/Home.js";
 import HomeClient from "./components/HomeClient.js";
 import Registry from "./components/Registry.js"
-import LoginSignin from "./pages/LoginSignin.js"
-import ProductDescription from './components/productDescription'
+import LoginSignin from "./pages/LoginSignin.js";
 import SearchProducts from './components/SearchProducts'
-import NewProduct from './components/NewProduct'
 import HomeAuthorization from "./pages/HomeAuthorization.js"
 import ProductDescription from './components/productDescription.js'
 import ProductDescriptionClient from './components/productDescriptionClient.js'

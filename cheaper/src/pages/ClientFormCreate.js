@@ -31,8 +31,7 @@ class ClientFormCreate extends React.Component {
 			},
 		})
 		
-		.then(({data}) => {
-		}).then(({data}) => {
+	    .then(({data}) => {
 			localStorage.setItem("token", data.token)
 			this.props.history.push("/clients")
 		});
