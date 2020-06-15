@@ -45,7 +45,7 @@ class SearchProducts extends React.Component {
                 {backdrop}
 
                 <div className="NavBusqueda">
-                    <FontAwesomeIcon icon={faSearch} classNAme="NavBusqueda-Icon" />
+                    <FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
                     <input
                         type="text"
                         placeholder=" Realizar una busqueda."
@@ -54,7 +54,7 @@ class SearchProducts extends React.Component {
                     <FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" />
                 </div>
 
-                <div classsName="Ubicacion">
+                <div className="Ubicacion">
                     <FontAwesomeIcon icon={faMapMarkerAlt} className="Ubicacion-Icon" />
                     <input
                         type="text"

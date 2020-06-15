@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should render correctly 1`] = `
+<div
+  class="AppLog"
+>
+  <div
+    class="Login"
+  >
+    <img
+      alt="Logo"
+      class="NavBar-Logo-Login"
+      src="logo.png"
+    />
+    <div
+      class="Pagina-Login"
+    >
+      <h1
+        class="Bienvenido"
+      >
+         Bienvenido a Cheaper 
+      </h1>
+      <p
+        class="Frase"
+      >
+        Encuentra las opciones más económicas 
+      </p>
+      <div
+        class="Botones-Login"
+      >
+        <form>
+          <input
+            class="Input-Correo"
+            name="email"
+            placeholder=" Correo"
+            type="text"
+            value=""
+          />
+          <input
+            class="Input-Password"
+            name="password"
+            placeholder=" Constraseña"
+            type="password"
+            value=""
+          />
+          <button
+            class="SubmitButton"
+            type="submit"
+          >
+            Iniciar Sesión
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
