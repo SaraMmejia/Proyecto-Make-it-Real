@@ -1,9 +1,11 @@
 import React from "react";
 import "./NavBar.css";
+/* import axios from "axios"; */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SideDrawerClient from './sideDrower-Toolbar/sideDrawerClient.js'
 import Backdrop from './sideDrower-Toolbar/Backdrop.js'
 import Toolbar from './sideDrower-Toolbar/toolbar.js'
+import { Link } from "react-router-dom"
 import {
 	faSearch,
 	faCamera,
@@ -12,11 +14,47 @@ import {
 
 
 
+
 class NavBar extends React.Component{
 
 	state = {
-			sideDrawerOpen: false
+		name:"",
+		sideDrawerOpen: false,
+		};
+
+	handleChange = (e) => {
+		const { name, value } = e.target;
+		this.setState({ [name]: value });
 	};
+
+	handleSubmit = (e) => {
+
+		e.preventDefault();
+		const { sideDrawerOpen, ...data}  = this.state; //Excluimos sideDrawerOpen
+		console.log(data)
+		
+
+
+/* 		axios({
+			method: "POST",
+			baseURL: process.env.REACT_APP_SERVER_URL,
+			url: '/clients/search/filter',
+			data,
+			headers: {
+				"Content-Type": "application/json",
+			},
+		}).then((response) => {
+			this.setState(response.data)
+			localStorage.setItem("products", JSON.stringify(response))
+			window.location ="/clients/search/filter"
+		/* 	console.log(response.data)
+			
+		}); 
+		
+			his.state.name[0].toUpperCase() +
+			this.state.name.slice(1); */
+
+	}
 
 	drawerToggleClickHandler = () => {
 			this.setState((prevState) => {
@@ -35,6 +73,7 @@ class NavBar extends React.Component{
 			}
 
 
+
 	return (
 		<div className="Home">
 
@@ -44,26 +83,51 @@ class NavBar extends React.Component{
 
 
 			<div className="NavBusqueda-Home">
-				<FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
-				<input
+
+				{/* <FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" /> */}
+
+				<form onSubmit={this.handleSubmit}>
+
+					<input className="NavBusqueda-Busqueda"
 					type="text"
 					placeholder=" Realizar una busqueda."
-					className="NavBusqueda-Busqueda"
-				/>
-				<FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" />
+					name="name"
+					onChange={this.handleChange}
+					value={this.state.name}
+					/>
+					<Link icon={faSearch} to={`/clients/search/${this.state.name}`} >
+						<FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
+						{/* <FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" /> */}
+					</Link>
+				</form>
+
+				
 			</div>
 
 			<div className="Ubicacion">
-				<FontAwesomeIcon icon={faMapMarkerAlt} className="Ubicacion-Icon" />
-				<input
-					type="text"
-					placeholder=" Ubicación."
-					className="Ubicacion-Busqueda"
-				/>
+
+				<form onSubmit={this.handleSubmit}>
+
+					<input className="Ubicacion-Busqueda"
+						type="text"
+						name="ubicacion"
+						placeholder=" Ubicación."
+/* 						onChange={this.handleChange}
+						value={this.state.name} */
+						/>
+
+					<Link icon={faSearch} to={`/clients/search/${this.state.name}`} >
+						<FontAwesomeIcon icon={faMapMarkerAlt} className="Ubicacion-Icon" />
+					</Link>
+				</form>
+
       </div>
+
     </div>
 	);
 }
 }
 
 export default NavBar;
+//'Accept': 'application/json',
+//{`/clients/products/show/${data._id}`}

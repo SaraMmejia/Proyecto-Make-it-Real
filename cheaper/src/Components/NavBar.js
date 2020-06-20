@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SideDrawer from './sideDrower-Toolbar/sideDrawer.js'
 import Backdrop from './sideDrower-Toolbar/Backdrop.js'
 import Toolbar from './sideDrower-Toolbar/toolbar.js'
+import { Link } from "react-router-dom"
 import {
 	faSearch,
 	faCamera,
@@ -15,8 +16,19 @@ import {
 class NavBar extends React.Component{
 
 	state = {
-			sideDrawerOpen: false
+		name: "",
+		sideDrawerOpen: false
 	};
+	handleChange = (e) => {
+		const { name, value } = e.target;
+		this.setState({ [name]: value });
+	};
+
+	handleSubmit = (e) => {
+		e.preventDefault();
+		const { sideDrawerOpen, ...data } = this.state; //Excluimos sideDrawerOpen
+		console.log(data)
+	}
 
 	drawerToggleClickHandler = () => {
 			this.setState((prevState) => {
@@ -44,13 +56,26 @@ class NavBar extends React.Component{
 
 
 			<div className="NavBusqueda-Home">
-				<FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
-				<input
-					type="text"
-					placeholder=" Realizar una busqueda."
-					className="NavBusqueda-Busqueda"
-				/>
-				<FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" />
+
+				{/* <FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" /> */}
+				
+				<form onSubmit={this.handleSubmit}>
+				
+					<input className="NavBusqueda-Busqueda"
+						type="text"
+						placeholder=" Realizar una busqueda."
+						name="name"
+						onChange={this.handleChange}
+						value={this.state.name}
+					/>
+
+					<Link icon={faSearch} to={`/providers/search/${this.state.name}`} >
+						<FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
+						{/* <FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" /> */}
+					</Link>
+					
+				</form>
+			
 			</div>
 
 			<div className="Ubicacion">
