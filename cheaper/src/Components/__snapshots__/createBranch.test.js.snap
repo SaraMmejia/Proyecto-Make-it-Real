@@ -6,6 +6,7 @@ exports[`CreateBranch should render correctly 1`] = `
 >
   <a
     class="btn-createBranch"
+    data-testid="NewBranchLink"
     href="/providers/:id/branch/create"
   >
     Crear Sucursal

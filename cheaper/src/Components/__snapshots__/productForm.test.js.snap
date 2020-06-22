@@ -3,6 +3,7 @@
 exports[`ProductForm should render correctly 1`] = `
 <div
   class="ProductDescription"
+  data-testid="productForm"
 >
   <div
     class="NavBusqueda-NewProduct"

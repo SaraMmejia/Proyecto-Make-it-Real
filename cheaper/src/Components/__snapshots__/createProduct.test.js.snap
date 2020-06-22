@@ -6,6 +6,7 @@ exports[`CreateProduct should render correctly 1`] = `
 >
   <a
     class="btn-createProduct"
+    data-testid="NewProductLink"
     href="/products/create"
   >
     Crear Producto

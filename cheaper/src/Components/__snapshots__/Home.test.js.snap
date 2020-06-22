@@ -3,6 +3,7 @@
 exports[`Home should render correctly 1`] = `
 <div
   class="Home"
+  data-testid="HomeProvider"
 >
   <header
     class="toolbar"
@@ -115,7 +116,8 @@ exports[`Home should render correctly 1`] = `
     </svg>
     <input
       class="NavBusqueda-Busqueda"
-      placeholder=" Realizar una busqueda."
+      data-testid="search"
+      placeholder=" Realizar una búsqueda."
       type="text"
     />
     <svg
@@ -154,6 +156,7 @@ exports[`Home should render correctly 1`] = `
     </svg>
     <input
       class="Ubicacion-Busqueda"
+      data-testid="location"
       placeholder=" Ubicación."
       type="text"
     />
@@ -163,6 +166,7 @@ exports[`Home should render correctly 1`] = `
   >
     <a
       class="btn-createProduct"
+      data-testid="NewProductLink"
       href="/products/create"
     >
       Crear Producto
@@ -173,6 +177,7 @@ exports[`Home should render correctly 1`] = `
   >
     <a
       class="btn-createBranch"
+      data-testid="NewBranchLink"
       href="/providers/:id/branch/create"
     >
       Crear Sucursal
@@ -180,6 +185,7 @@ exports[`Home should render correctly 1`] = `
   </span>
   <div
     class="container-slider carousel slide"
+    data-testid="Slider"
   >
     <ol
       class="carousel-indicators"
@@ -347,6 +353,7 @@ exports[`Home should render correctly 1`] = `
   >
     <div
       class="gridContainer"
+      data-testid="ProductList"
     />
   </div>
 </div>

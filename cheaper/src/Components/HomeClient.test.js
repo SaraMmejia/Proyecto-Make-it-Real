@@ -13,4 +13,14 @@ describe ('HomeClient',() =>{
     );  
     expect (container.firstChild).toMatchSnapshot();
     });
+
+    it('Should render elements with the following Id = "HomeClient" ', () => {
+      const { getByTestId } = render(
+        <MemoryRouter>
+          <HomeClient/>
+        </MemoryRouter>
+      );
+      const id = getByTestId('HomeClient');
+      expect(id).toBeInTheDocument();
+    });
 });

@@ -3,6 +3,7 @@
 exports[`NewProduct should render correctly 1`] = `
 <div
   class="container-pg"
+  data-testid="newProduct"
 >
   <header
     class="toolbar"
@@ -97,6 +98,7 @@ exports[`NewProduct should render correctly 1`] = `
   </nav>
   <div
     class="ProductDescription"
+    data-testid="productForm"
   >
     <div
       class="NavBusqueda-NewProduct"

@@ -25,6 +25,7 @@ exports[`BranchForm should render correctly 1`] = `
       >
         <form
           class="BranchForm"
+          data-testid="BranchForm"
         >
           <input
             class="Branch-Name"

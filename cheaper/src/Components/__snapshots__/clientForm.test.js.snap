@@ -25,6 +25,7 @@ exports[`ClientForm should render correctly 1`] = `
       >
         <form
           class="ClientForm"
+          data-testid="ClientForm"
         >
           <input
             class="Name"

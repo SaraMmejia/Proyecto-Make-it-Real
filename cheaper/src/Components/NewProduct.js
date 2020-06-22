@@ -92,7 +92,7 @@ class NewProduct extends React.Component { //Estado del menu lateral
       }
 
       return (
-        <div className="container-pg">
+        <div className="container-pg" data-testid="newProduct">
              <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
              <SideDrawer show={this.state.sideDrawerOpen} />
               {backdrop}

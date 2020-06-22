@@ -21,7 +21,7 @@ function ProviderForm({
 					<h1 className="TitleProvider">Ingresa tus datos</h1>
 					<div className="InputsNew-Provider">
 
-						<form className="ProviderForm" onSubmit={handleSubmit}>
+						<form className="ProviderForm" onSubmit={handleSubmit} data-testid="ProviderForm">
 							<input  className="Name-Provider"
 								type="text"
 								name="name"
@@ -57,9 +57,9 @@ function ProviderForm({
 							<input className="Correo"
 								type="email"
 								name="providerEmail"
-                id="providerEmail"
+                                id="providerEmail"
 								placeholder="Correo"
-                onChange={handleChange}
+                                onChange={handleChange}
 								value={providerEmail}
 				 			/>
 

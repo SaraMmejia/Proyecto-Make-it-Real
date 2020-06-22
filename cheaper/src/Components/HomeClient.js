@@ -42,7 +42,7 @@ class HomeClient extends React.Component {
 
 
 	return (
-		<div className="Home">
+		<div className="Home" data-testid="HomeClient">
 
 		<Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
 		<SideDrawerClient show={this.state.sideDrawerOpen} />

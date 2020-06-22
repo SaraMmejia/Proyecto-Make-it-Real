@@ -1,27 +1,18 @@
 import React from 'react';
 import {render} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
-import ProductForm from './productForm';
+import ProductListHomeClient from './productListHomeClient';
 
 
 describe ('ProductForm',() =>{
-    it ('should render correctly', ()=>{
-    const {container} = render (
-    <MemoryRouter>
-        <ProductForm/>
-    </MemoryRouter> 
-    
-    ); 
-    expect (container.firstChild).toMatchSnapshot();
-    });
-    it('Should render the element with data-testid="productForm"', () => {
+    it('Should render the element with data-testid="ListHomeClient"', () => {
         const { getByTestId } = render(
             <MemoryRouter>
-                <ProductForm/>
+                <ProductListHomeClient/>
             </MemoryRouter>
         );
-        expect(getByTestId('productForm')).toBeInTheDocument();
-    });
+        expect(getByTestId('ListHomeClient')).toBeInTheDocument();
+    });/*
     it('Should render the element with the following text="Nuevo","Eliminar","Editar"', () => {
         const {getByText } = render(
             <MemoryRouter>
@@ -37,6 +28,6 @@ describe ('ProductForm',() =>{
             </MemoryRouter>
         );
         expect(getByPlaceholderText(/Ingresa/,/Descripcion/,/$/)).toBeInTheDocument();
-    })
+    })*/
     
 });

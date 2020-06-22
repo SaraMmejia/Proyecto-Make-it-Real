@@ -3,6 +3,7 @@
 exports[`HomeClient should render correctly 1`] = `
 <div
   class="Home"
+  data-testid="HomeClient"
 >
   <header
     class="toolbar"
@@ -153,6 +154,7 @@ exports[`HomeClient should render correctly 1`] = `
   </div>
   <div
     class="container-slider carousel slide"
+    data-testid="Slider"
   >
     <ol
       class="carousel-indicators"
@@ -320,6 +322,7 @@ exports[`HomeClient should render correctly 1`] = `
   >
     <div
       class="gridContainer"
+      data-testid="ListHomeClient"
     />
   </div>
 </div>

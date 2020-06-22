@@ -25,6 +25,7 @@ exports[`ProviderForm should render correctly 1`] = `
       >
         <form
           class="ProviderForm"
+          data-testid="ProviderForm"
         >
           <input
             class="Name-Provider"

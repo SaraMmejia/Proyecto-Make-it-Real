@@ -27,7 +27,7 @@ function ProductForm({
 }) {
 
 return (
-  <div className="ProductDescription">
+  <div className="ProductDescription" data-testid="productForm">
 
       <div className="NavBusqueda-NewProduct">
           <FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />

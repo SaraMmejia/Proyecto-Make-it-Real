@@ -3,6 +3,7 @@
 exports[`Slider should render correctly 1`] = `
 <div
   class="container-slider carousel slide"
+  data-testid="Slider"
 >
   <ol
     class="carousel-indicators"

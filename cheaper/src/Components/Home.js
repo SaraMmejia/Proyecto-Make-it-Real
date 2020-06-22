@@ -43,7 +43,7 @@ class Home extends React.Component{
 
 
 	return (
-		<div className="Home">
+		<div className="Home" data-testid="HomeProvider">
 
 		<Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
 		<SideDrawer show={this.state.sideDrawerOpen} />
@@ -53,8 +53,9 @@ class Home extends React.Component{
 			<div className="NavBusqueda-Home">
 				<FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
 				<input
+					data-testid="search"
 					type="text"
-					placeholder=" Realizar una busqueda."
+					placeholder=" Realizar una búsqueda."
 					className="NavBusqueda-Busqueda"
 				/>
 				<FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" />
@@ -63,6 +64,7 @@ class Home extends React.Component{
 			<div className="Ubicacion">
 				<FontAwesomeIcon icon={faMapMarkerAlt} className="Ubicacion-Icon" />
 				<input
+					data-testid="location"
 					type="text"
 					placeholder=" Ubicación."
 					className="Ubicacion-Busqueda"

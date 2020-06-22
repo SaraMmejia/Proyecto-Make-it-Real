@@ -27,7 +27,7 @@ function Login({
 							<input className="Input-Password"
 							type="password"
 							name="password"
-							placeholder=" Constraseña"
+							placeholder=" Contraseña"
 							onChange={handleChange}
 							value={password}></input>
 							<button className="SubmitButton" type="submit">Iniciar Sesión</button>
