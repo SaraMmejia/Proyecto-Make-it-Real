@@ -4,7 +4,7 @@
 	text-align: center;
 }
 
-.FormContainer{
+.FormContainer {
 	width: 100vw;
 	height: 100vh;
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
@@ -18,8 +18,7 @@
 
 .NavBar-Logo-ProvidersCreate {
 	width: 300px;
-	margin-top: 0px;
-	margin-bottom: 2px;
+	margin: 15px;
 }
 
 .TitleProvider {
@@ -29,11 +28,10 @@
 	text-align: center;
 }
 
-.PaginaNew-Provider{
+.PaginaNew-Provider {
 	width: 270px;
 	height: 290px;
-	margin: 0px;
-	padding: 0px;
+	margin: 20px;
 	background-color: rgba(48, 48, 48, 0.8);
 	border-radius: 10px;
 }
@@ -43,7 +41,7 @@
 	justify-content: center;
 }
 
-.ProviderForm{
+.ProviderForm {
 	display: flex;
 	flex-direction: column;
 }
@@ -87,7 +85,7 @@
 	cursor: pointer;
 }
 
-.Nit-Provider{
+.Nit-Provider {
 	display: block;
 	margin-top: 4px;
 	margin-bottom: 4px;
@@ -118,7 +116,7 @@
 	margin-top: 4px;
 	margin-bottom: 4px;
 	padding-left: 10px;
-	height:25px;
+	height: 25px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -126,8 +124,8 @@
 	cursor: pointer;
 }
 
-.SubmitProvider{
-	display:block;
+.SubmitProvider {
+	display: block;
 	margin-top: 5px;
 	margin-left: 27px;
 	height: 40px;
@@ -140,14 +138,11 @@
 	color: white;
 	cursor: pointer;
 	text-decoration: none;
-
 }
 
 .SubmitProvider:hover {
 	background: #e0c308;
 }
-
-
 
 @media screen and (min-width: 768px) {
 	.FormContainer {
@@ -166,53 +161,9 @@
 		height: 620px;
 	}
 
-	.NavBar-Logo {
+	.NavBar-Logo-ProvidersCreate {
 		width: 400px;
-		height: 400px;
-	}
-
-	.PaginaNew-Provider{
-		width: 350px;
-		height: 300px;
-	}
-	.Name-Provider {
-		grid-gap: 30px;
-		font-weight: 500
-	}
-
-	.Lastname-Provider {
-		font-weight: 500
-	}
-	.Empresa-Provider {
-		font-weight: 500
-	}
-
-	.Nit-Provider {
-		font-weight: 500
-	}
-
-	.Correo {
-		font-weight: 500
-	}
-
-	.Password-Provider {
-		font-weight: 500
-	}
-
-	.SubmitProvider {
-		font-weight: 500;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.FormContainer{
-		width: 1440px;
-		height: 620px;
-	}
-
-	.NavBar-Logo {
-		width: 500px;
-		height: 500px;
+		margin: 15px;
 	}
 
 	.PaginaNew-Provider {
@@ -221,27 +172,71 @@
 	}
 	.Name-Provider {
 		grid-gap: 30px;
-		font-weight: 500
+		font-weight: 500;
 	}
 
 	.Lastname-Provider {
-		font-weight: 500
+		font-weight: 500;
 	}
-
 	.Empresa-Provider {
-		font-weight: 500
+		font-weight: 500;
 	}
 
 	.Nit-Provider {
-		font-weight: 500
+		font-weight: 500;
 	}
 
 	.Correo {
-		font-weight: 500
+		font-weight: 500;
 	}
 
 	.Password-Provider {
-		font-weight: 500
+		font-weight: 500;
+	}
+
+	.SubmitProvider {
+		font-weight: 500;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.FormContainer {
+		width: 1440px;
+		height: 620px;
+	}
+
+	.NavBar-Logo-ProvidersCreate {
+		width: 400px;
+		margin: 15px;
+	}
+
+	.PaginaNew-Provider {
+		width: 350px;
+		height: 300px;
+	}
+	.Name-Provider {
+		grid-gap: 30px;
+		font-weight: 500;
+	}
+
+	.Lastname-Provider {
+		font-weight: 500;
+	}
+
+	.Empresa-Provider {
+		font-weight: 500;
+	}
+
+	.Nit-Provider {
+		font-weight: 500;
+	}
+
+	.Correo {
+		font-weight: 500;
+	}
+
+	.Password-Provider {
+		font-weight: 500;
 	}
 
 	.SubmitProvider {
