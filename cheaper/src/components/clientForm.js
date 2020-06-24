@@ -1,5 +1,5 @@
-import React from 'react';
-import logo from '../assets/logo.png';
+import React from "react";
+import logo from "../assets/logo.png";
 import "./clientForm.css";
 
 function ClientForm({
@@ -13,7 +13,7 @@ function ClientForm({
 	return (
 		<div className="App">
 			<div className="FormContainer">
-				<img src={logo} className="NavBar-Logo" alt="Logo"></img>
+				<img src={logo} className="NavBar-Logo-Client" alt="Logo"></img>
 				<div className="PaginaNew-Client">
 					<h1 className="TitleForm">Ingresa tus datos</h1>
 					<div className="InputsNew-Client">
@@ -26,36 +26,39 @@ function ClientForm({
 								onChange={handleChange}
 								value={name}
 							/>
-							<input className="LastName"
+							<input
+								className="LastName"
 								type="text"
 								name="lastname"
 								placeholder=" Apellidos"
 								onChange={handleChange}
 								value={lastname}
-						  	/>
-							  <input className="Correo"
+							/>
+							<input
+								className="Correo"
 								type="email"
 								name="clientEmail"
 								placeholder=" Correo"
 								onChange={handleChange}
 								value={clientEmail}
-						  	/>
-							<input className="Password"
+							/>
+							<input
+								className="Password"
 								type="password"
 								name="password"
 								placeholder="Contraseña"
 								onChange={handleChange}
 								value={password}
-						  	/>
-							<button className="SubmitClient" type="submit">Enviar</button>
+							/>
+							<button className="SubmitClient" type="submit">
+								Enviar
+							</button>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
-  );
+	);
 }
 
 export default ClientForm;

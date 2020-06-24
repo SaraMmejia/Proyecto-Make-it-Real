@@ -1,22 +1,25 @@
 import React from "react";
 import logo from "../assets/logo.png";
- import "./ProviderForm.css";
+import "./ProviderForm.css";
 
 function ProviderForm({
-  name,
-  lastname,
-  company,
-  nit,
-  providerEmail,
-  password,
-  handleChange,
-  handleSubmit,
-
+	name,
+	lastname,
+	company,
+	nit,
+	providerEmail,
+	password,
+	handleChange,
+	handleSubmit,
 }) {
 	return (
 		<div className="App">
 			<div className="FormContainer">
-				<img src={logo} className="NavBar-Logo-ProvidersCreate" alt="Logo"></img>
+				<img
+					src={logo}
+					className="NavBar-Logo-ProvidersCreate"
+					alt="Logo"
+				></img>
 				<div className="PaginaNew-Provider">
 					<h1 className="TitleProvider">Ingresa tus datos</h1>
 					<div className="InputsNew-Provider">
@@ -30,7 +33,8 @@ function ProviderForm({
 								onChange={handleChange}
 								value={name}
 							/>
-							<input className="Lastname-Provider"
+							<input
+								className="Lastname-Provider"
 								type="text"
 								name="lastname"
 								id="lastname"
@@ -38,7 +42,8 @@ function ProviderForm({
 								onChange={handleChange}
 								value={lastname}
 							/>
-							<input className="Empresa-Provider"
+							<input
+								className="Empresa-Provider"
 								type="text"
 								name="company"
 								id="company"
@@ -46,7 +51,8 @@ function ProviderForm({
 								onChange={handleChange}
 								value={company}
 							/>
-							<input className="Nit-Provider"
+							<input
+								className="Nit-Provider"
 								type="number"
 								name="nit"
 								id="nit"
@@ -54,16 +60,18 @@ function ProviderForm({
 								onChange={handleChange}
 								value={nit}
 							/>
-							<input className="Correo"
+							<input
+								className="Correo"
 								type="email"
 								name="providerEmail"
-                                id="providerEmail"
+								id="providerEmail"
 								placeholder="Correo"
-                                onChange={handleChange}
+								onChange={handleChange}
 								value={providerEmail}
-				 			/>
+							/>
 
-							<input className="Password-Provider"
+							<input
+								className="Password-Provider"
 								type="password"
 								name="password"
 								id="password"
@@ -71,15 +79,15 @@ function ProviderForm({
 								onChange={handleChange}
 								value={password}
 							/>
-							<button className="SubmitProvider" type="submit">Enviar</button>
+							<button className="SubmitProvider" type="submit">
+								Enviar
+							</button>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
 	);
 }
 
-export default  ProviderForm;
+export default ProviderForm;

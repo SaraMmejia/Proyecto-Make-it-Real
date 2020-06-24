@@ -98,6 +98,7 @@ exports[`Home should render correctly 1`] = `
   </nav>
   <div
     class="NavBusqueda-Home"
+    data-testid="search"
   >
     <svg
       aria-hidden="true"
@@ -116,7 +117,6 @@ exports[`Home should render correctly 1`] = `
     </svg>
     <input
       class="NavBusqueda-Busqueda"
-      data-testid="search"
       placeholder=" Realizar una búsqueda."
       type="text"
     />
@@ -138,6 +138,7 @@ exports[`Home should render correctly 1`] = `
   </div>
   <div
     class="Ubicacion"
+    data-testid="location"
   >
     <svg
       aria-hidden="true"
@@ -156,7 +157,6 @@ exports[`Home should render correctly 1`] = `
     </svg>
     <input
       class="Ubicacion-Busqueda"
-      data-testid="location"
       placeholder=" Ubicación."
       type="text"
     />

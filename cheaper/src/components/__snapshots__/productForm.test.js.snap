@@ -3,7 +3,6 @@
 exports[`ProductForm should render correctly 1`] = `
 <div
   class="ProductDescription"
-  data-testid="productForm"
 >
   <div
     class="NavBusqueda-NewProduct"
@@ -101,6 +100,7 @@ exports[`ProductForm should render correctly 1`] = `
   </div>
   <form
     class="ProductsForm"
+    data-testid="productForm"
   >
     <div
       class="title"

@@ -9,7 +9,7 @@ exports[`Registry should render correctly 1`] = `
   >
     <img
       alt="Logo"
-      class="NavBar-Logo"
+      class="NavBar-Logo-Registry"
       src="logo.png"
     />
     <div

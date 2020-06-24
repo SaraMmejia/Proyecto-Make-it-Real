@@ -16,48 +16,43 @@
 	align-items: center;
 }
 
-.NavBar-Logo {
+.NavBar-Logo-Provider {
 	width: 300px;
-	margin: 15px; 
+	margin: 15px;
 }
 
-.TitleForm {
+.TitleProvider {
 	font-size: 24px;
 	margin-bottom: 5px;
-	margin-top: 10px;;
+	margin-top: 5px;
 	text-align: center;
 }
-.clientForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.PaginaNew-Client {
+.PaginaNew-Provider {
 	width: 270px;
 	height: 290px;
-	margin: 20px;
-	padding: 10px;
+	margin: 0px;
+	padding: 0px;
 	background-color: rgba(48, 48, 48, 0.8);
 	border-radius: 10px;
 }
 
-.InputsNew-Client {
+.InputsNew-Provider {
 	display: flex;
 	justify-content: center;
 }
 
-.clientForm {
+.ProviderForm {
 	display: flex;
 	flex-direction: column;
 }
-  
-.Name{
+
+.Name-Provider {
 	display: block;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	padding-left: 10px;
-	height: 30px;
+	height: 25px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -65,12 +60,38 @@
 	cursor: pointer;
 }
 
-.LastName {
+.Lastname-Provider {
 	display: block;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	padding-left: 10px;
-	height: 30px;
+	height: 25px;
+	width: 200px;
+	border-radius: 10px;
+	background: white;
+	border-color: rgb(183, 185, 178);
+	cursor: pointer;
+}
+
+.Empresa-Provider {
+	display: block;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding-left: 10px;
+	height: 25px;
+	width: 200px;
+	border-radius: 10px;
+	background: white;
+	border-color: rgb(183, 185, 178);
+	cursor: pointer;
+}
+
+.Nit-Provider {
+	display: block;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding-left: 10px;
+	height: 25px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -80,10 +101,10 @@
 
 .Correo {
 	display: block;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	padding-left: 10px;
-	height: 30px;
+	height: 25px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -91,12 +112,12 @@
 	cursor: pointer;
 }
 
-.Password {
+.Password-Provider {
 	display: block;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	padding-left: 10px;
-	height: 30px;
+	height: 25px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -104,10 +125,10 @@
 	cursor: pointer;
 }
 
-.SubmitClient { 
-	display:block;
-	margin-top: 20px;
-	margin-left: 25px;
+.SubmitProvider {
+	display: block;
+	margin-top: 5px;
+	margin-left: 27px;
 	height: 40px;
 	width: 150px;
 	border-radius: 20px;
@@ -118,20 +139,18 @@
 	color: white;
 	cursor: pointer;
 	text-decoration: none;
-	
-} 
+}
 
-.SubmitClient:hover {
+.SubmitProvider:hover {
 	background: #e0c308;
 }
 
-  
 @media screen and (min-width: 768px) {
-	.FormContainer{
+	.FormContainer {
 		width: 768px;
 		height: 529px;
 	}
-	.PaginaNew-Client {
+	.PaginaNew-Provider {
 		width: 290px;
 		height: 250px;
 	}
@@ -143,21 +162,28 @@
 		height: 620px;
 	}
 
-	.NavBar-Logo {
+	.NavBar-Logo-Provider {
 		width: 400px;
-		height: 400px;
+		margin: 15px;
 	}
 
-	.PaginaNew-Client {
+	.PaginaNew-Provider {
 		width: 350px;
 		height: 300px;
 	}
-	.Name {
+	.Name-Provider {
 		grid-gap: 30px;
 		font-weight: 500;
 	}
 
-	.LastName {
+	.Lastname-Provider {
+		font-weight: 500;
+	}
+	.Empresa-Provider {
+		font-weight: 500;
+	}
+
+	.Nit-Provider {
 		font-weight: 500;
 	}
 
@@ -165,37 +191,44 @@
 		font-weight: 500;
 	}
 
-	.Password {
+	.Password-Provider {
 		font-weight: 500;
 	}
 
-	.SubmitClient {
-			font-weight: 500;
-		}
-	
+	.SubmitProvider {
+		font-weight: 500;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 	.FormContainer {
 		width: 1440px;
-		height: 650px;
+		height: 620px;
 	}
 
-	.NavBar-Logo {
-		width: 500px;
-		height: 500px;
+	.NavBar-Logo-Provider {
+		width: 400px;
+		margin: 15px;
 	}
 
-	.PaginaNew-Client {
+	.PaginaNew-Provider {
 		width: 350px;
 		height: 300px;
 	}
-	.Name {
+	.Name-Provider {
 		grid-gap: 30px;
 		font-weight: 500;
 	}
 
-	.LastName {
+	.Lastname-Provider {
+		font-weight: 500;
+	}
+
+	.Empresa-Provider {
+		font-weight: 500;
+	}
+
+	.Nit-Provider {
 		font-weight: 500;
 	}
 
@@ -203,11 +236,11 @@
 		font-weight: 500;
 	}
 
-	.Password {
+	.Password-Provider {
 		font-weight: 500;
 	}
 
-	.SubmitClient {
-			font-weight: 500;
-		}
-} 
+	.SubmitProvider {
+		font-weight: 500;
+	}
+}

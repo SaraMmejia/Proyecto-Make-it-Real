@@ -174,7 +174,7 @@ exports[`SearchProducts should render correctly 1`] = `
       >
         <img
           alt="Panadería"
-          class="Imagenes"
+          class="Panadería"
           src="panaderia.jpg"
         />
         <h3
@@ -202,7 +202,7 @@ exports[`SearchProducts should render correctly 1`] = `
       >
         <img
           alt="Lácteos"
-          class="Imagenes"
+          class="Lácteos"
           src="lacteos.jpg"
         />
         <h3
@@ -230,7 +230,7 @@ exports[`SearchProducts should render correctly 1`] = `
       >
         <img
           alt="Verduras"
-          class="Imagenes"
+          class="Verduras"
           src="verduras.jpg"
         />
         <h3
@@ -258,7 +258,7 @@ exports[`SearchProducts should render correctly 1`] = `
       >
         <img
           alt="Carnes"
-          class="Imagenes"
+          class="Carnes"
           src="carnes.jpg"
         />
         <h3
@@ -286,7 +286,7 @@ exports[`SearchProducts should render correctly 1`] = `
       >
         <img
           alt="Abarrotes"
-          class="Imagenes"
+          class="Abarrotes"
           src="abarrotes.jpg"
         />
         <h3
@@ -314,7 +314,7 @@ exports[`SearchProducts should render correctly 1`] = `
       >
         <img
           alt="Cuidado"
-          class="Imagenes"
+          class="Cuidado"
           src="cuidadoPersonal.jpg"
         />
         <h3
@@ -342,7 +342,7 @@ exports[`SearchProducts should render correctly 1`] = `
       >
         <img
           alt="Belleza"
-          class="Imagenes"
+          class="Belleza"
           src="belleza.png"
         />
         <h3
@@ -370,7 +370,7 @@ exports[`SearchProducts should render correctly 1`] = `
       >
         <img
           alt="Hogar"
-          class="Imagenes"
+          class="Hogar"
           src="hogar.jpg"
         />
         <h3
@@ -398,7 +398,7 @@ exports[`SearchProducts should render correctly 1`] = `
       >
         <img
           alt="Aseo"
-          class="Imagenes"
+          class="Aseo"
           src="aseoHogar.jpg"
         />
         <h3
@@ -423,6 +423,7 @@ exports[`SearchProducts should render correctly 1`] = `
     class="footer"
   >
     <img
+      alt="Este es el logo de cheaper"
       class="NavBar-Logo-Home"
       src="logo.png"
     />
@@ -433,7 +434,8 @@ exports[`SearchProducts should render correctly 1`] = `
       <span>
         ©
       </span>
-       All rights reserved 2020 
+       All rights reserved 2020
+       
     </p>
   </footer>
 </div>

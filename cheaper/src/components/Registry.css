@@ -17,7 +17,7 @@
 	align-items: center;
 }
 
-.NavBar-Logo {
+.NavBar-Logo-Registry {
 	width: 300px;
 	margin: 20px;
 }
@@ -41,18 +41,18 @@
 }
 
 .Botones-Ingreso {
-	margin-top: 10px;
+	margin-top: 18px;
 	display: flex;
 	justify-content: center;
 	display: grid;
 	grid-template-columns: 250px;
 	grid-template-rows: 40px 40px 40px;
-	grid-gap: 10px;
+	grid-gap: 18px;
 }
 
 .Boton-IniciarSesion {
 	border-radius: 20px;
-	padding-top: 5px;
+	padding-top: 7px;
 	font-weight: 600;
 	font-size: 15px;
 	background: #e0c408c9;
@@ -67,7 +67,7 @@
 
 .Boton-Registrarse {
 	border-radius: 20px;
-	padding-top: 6px;
+	padding-top: 7px;
 	font-weight: 600;
 	font-size: 15px;
 	background: #e0c408c9;
@@ -83,7 +83,7 @@
 
 .Boton-CrearEmpresa {
 	border-radius: 20px;
-	padding-top: 6px;
+	padding-top: 7px;
 	font-weight: 600;
 	font-size: 15px;
 	background: #e0c408c9;
@@ -104,7 +104,7 @@
 	}
 	.PaginaDeRegistro-Formurlario {
 		width: 290px;
-		height: 250px;
+		height: 300px;
 	}
 }
 
@@ -114,14 +114,14 @@
 		height: 529px;
 	}
 
-	.NavBar-Logo {
-		width: 400px;
-		height: 400px;
-	}
+	/* .NavBar-Logo {
+		width: 300px;
+		margin: 15px;
+	} */
 
 	.PaginaDeRegistro-Formurlario {
 		width: 350px;
-		height: 300px;
+		height: 350px;
 	}
 	.Botones-Ingreso {
 		grid-gap: 30px;
@@ -142,9 +142,9 @@
 		height: 620px;
 	}
 
-	.NavBar-Logo {
-		width: 500px;
-		height: 500px;
+	.NavBar-Logo-Registry {
+		width: 400px;
+		margin: 15px;
 	}
 
 	.PaginaDeRegistro-Formurlario {

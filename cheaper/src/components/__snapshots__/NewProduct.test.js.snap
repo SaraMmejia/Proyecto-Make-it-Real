@@ -98,7 +98,6 @@ exports[`NewProduct should render correctly 1`] = `
   </nav>
   <div
     class="ProductDescription"
-    data-testid="productForm"
   >
     <div
       class="NavBusqueda-NewProduct"
@@ -196,6 +195,7 @@ exports[`NewProduct should render correctly 1`] = `
     </div>
     <form
       class="ProductsForm"
+      data-testid="productForm"
     >
       <div
         class="title"
@@ -274,7 +274,8 @@ exports[`NewProduct should render correctly 1`] = `
       <span>
         ©
       </span>
-       All rights reserved 2020 
+       All rights reserved 2020
+       
     </p>
   </footer>
 </div>

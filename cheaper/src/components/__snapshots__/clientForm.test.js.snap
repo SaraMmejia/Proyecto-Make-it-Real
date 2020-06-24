@@ -9,7 +9,7 @@ exports[`ClientForm should render correctly 1`] = `
   >
     <img
       alt="Logo"
-      class="NavBar-Logo"
+      class="NavBar-Logo-Client"
       src="logo.png"
     />
     <div
