@@ -17,9 +17,9 @@ function ClientForm({
 				<div className="PaginaNew-Client">
 					<h1 className="TitleForm">Ingresa tus datos</h1>
 					<div className="InputsNew-Client">
-						<form className="ClientForm" onSubmit={handleSubmit}>
-							<input
-								className="Name"
+
+						<form className="ClientForm" onSubmit={handleSubmit} data-testid="ClientForm">
+							<input className="Name"
 								type="text"
 								name="name"
 								placeholder=" Nombre"

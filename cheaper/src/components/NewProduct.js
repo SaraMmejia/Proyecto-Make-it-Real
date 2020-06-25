@@ -77,7 +77,7 @@ class NewProduct extends React.Component {
     }
 
     return (
-      <div className="container-pg">
+      <div className="container-pg" data-testid="newProduct">
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}

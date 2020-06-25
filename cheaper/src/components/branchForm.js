@@ -16,7 +16,7 @@ function BranchForm({
 					<h1 className="TitleForm">Ingresa los datos de la sucursal</h1>
 					<div className="InputsNew-Branch">
 
-						<form className="BranchForm" onSubmit={handleSubmit}>
+						<form className="BranchForm" onSubmit={handleSubmit} data-testid="BranchForm">
 							<input className="Branch-Name"
 								type="text"
 								name="branchName"

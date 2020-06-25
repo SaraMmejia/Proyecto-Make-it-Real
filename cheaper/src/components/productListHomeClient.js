@@ -31,7 +31,7 @@ useEffect(() => {
 	return (
 		<div className="App">
 
-			<div className="gridContainer">
+			<div className="gridContainer" data-testid="ListHomeClient">
 				{products.map((data) => {
 					return (
 						<div className="row-List">

@@ -52,7 +52,7 @@ function ProductForm({
         </Link>
       </div>
 
-      <form className="ProductsForm" onSubmit={handleSubmit}>
+      <form className="ProductsForm" onSubmit={handleSubmit} data-testid="productForm">
         <div className="title">
           <label htmlFor="name">Nombre del producto</label>
           <input

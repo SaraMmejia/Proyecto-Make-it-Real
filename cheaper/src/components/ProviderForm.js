@@ -23,9 +23,9 @@ function ProviderForm({
 				<div className="PaginaNew-Provider">
 					<h1 className="TitleProvider">Ingresa tus datos</h1>
 					<div className="InputsNew-Provider">
-						<form className="ProviderForm" onSubmit={handleSubmit}>
-							<input
-								className="Name-Provider"
+
+						<form className="ProviderForm" onSubmit={handleSubmit} data-testid="ProviderForm">
+							<input  className="Name-Provider"
 								type="text"
 								name="name"
 								id="name"

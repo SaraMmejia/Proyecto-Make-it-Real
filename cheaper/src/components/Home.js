@@ -36,22 +36,22 @@ class Home extends React.Component {
     }
 
     return (
-      <div className="Home">
+      <div className="Home" data-testid="HomeProvider">
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
 
-        <div className="NavBusqueda-Home">
+        <div className="NavBusqueda-Home" data-testid="search">
           <FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
           <input
             type="text"
-            placeholder=" Realizar una busqueda."
+            placeholder=" Realizar una búsqueda."
             className="NavBusqueda-Busqueda"
           />
           <FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" />
         </div>
 
-        <div className="Ubicacion">
+        <div className="Ubicacion"  data-testid="location">
           <FontAwesomeIcon icon={faMapMarkerAlt} className="Ubicacion-Icon" />
           <input
             type="text"
