@@ -1,6 +1,5 @@
 import React from "react";
 import "./NavBar.css";
-/* import axios from "axios"; */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SideDrawerClient from './sideDrower-Toolbar/sideDrawerClient.js'
 import Backdrop from './sideDrower-Toolbar/Backdrop.js'
@@ -95,7 +94,7 @@ class NavBar extends React.Component{
 					onChange={this.handleChange}
 					value={this.state.name}
 					/>
-					<Link icon={faSearch} to={`/clients/search/${this.state.name}`} >
+					<Link to={`/clients/search/${this.state.name}`} >
 						<FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
 						{/* <FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" /> */}
 					</Link>

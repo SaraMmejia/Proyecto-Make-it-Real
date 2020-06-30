@@ -36,12 +36,35 @@ class SearchProducts extends React.Component {
       })
   }
 
+  componentDidUpdate() {
+    console.log(this.props)
+
+    const { products, ...data } = this.props.match.params
+
+    axios({
+      method: "POST",
+      baseURL: process.env.REACT_APP_SERVER_URL,
+      url: `/providers/search/${this.props.match.params.name}`,
+      data,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then(response => {
+        this.setState({ products: response.data })
+        console.log(response.data);
+      })
+      .catch(error => {
+        // history.push('/');
+      })
+  }
+
   render() {
 
     const { products } = this.state;
 
     return (
-      <div className="ProductSearch">
+      <div className="ProductSearch" key={this.props.match.params.name}>
         <NavBar />
 
         <h5 className="title-search">Te damos las mejores opciones</h5>

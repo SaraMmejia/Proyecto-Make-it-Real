@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import logo from "../assets/logo.png";
-import './SearchProducts.css';
+import './SearchProductsClients.css';
 import NavBarClient from './NavBarClient.js'
 import { Link } from "react-router-dom"
+import agregarCarrito from "../assets/agregarCarrito.png"
 import axios from "axios";
 
 class SearchProductsClients extends React.Component {
     state = {
         name: "",
-        products: []
+        cant: 0,
+        products: [],
+        cartList: []
     };
 
 componentDidMount() {
@@ -34,33 +37,101 @@ componentDidMount() {
         })
 }
 
-    render() {
+/* componentDidUpdate(){
+    console.log(this.props)
+
+    const { products, ...data } = this.props.match.params
+
+    axios({
+        method: "POST",
+        baseURL: process.env.REACT_APP_SERVER_URL,
+        url: `/clients/search/${this.props.match.params.name}`,
+        data,
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+        .then(response => {
+            this.setState({ products: response.data })
+            console.log(response.data);
+        })
+        .catch(error => {
+            // history.push('/');
+        })
+} */
+handleSubmit = (e) => {
+
+    e.preventDefault();
+    let cart = localStorage.setItem("cartList", JSON.stringify(this.state.data._id))//concatenar
+    console.log(this.state);
+    
+}
+
+handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+};
+
+render() {
        
-        const { products } = this.state;
+    const { products } = this.state;
 
     return (
-    <div className="ProductSearch">
+    <div className="ProductSearch" key={this.props.match.params.name}>
     <NavBarClient />
         
     <h5 className="title-search">Te damos las mejores opciones</h5>
-    <div className="gridContainer">
+    <div className="gridClient_Container">
          {products.map((data) => {
             return (
                 <div className="row-List">
 
-                    <div className="cards" key={data._id}>
+                    <div className="cardsClient" key={data._id}>
+                        
+                        
                         <img
                             src={data.picture}
-                            className="Imagenes"
+                            className="img-Products"
                             alt={data.picture} />
-                        <h3 className="H3-Productos">
-                            {data.name}
-                        </h3>
-                        <p className="p-Productos">
-                            {data.description}
-                        </p>
-                        <br />
-                        <Link to={`/clients/products/show/${data._id}`} className="VerMas" >Ver más</Link>
+                        <div>
+                            <h3 className="title-Products">
+                                {data.name}</h3>
+                            <h5 className="desc-Products">
+                            <br />
+                            
+                            {data.description}              
+                            </h5>
+                        </div>
+                        <div className="div-wrapperUno">
+                            <h6 className="price-Products">
+                                Precio:
+                                {<br />}
+                                {data.price}
+                            </h6>
+                            <Link
+                                to={`/clients/products/show/${data._id}`}
+                                className="VerMasClient" >Ver más</Link>
+                        </div>
+                        <form onSubmit={this.handleSubmit} key={data._id}>
+                            <button type="submit"
+                                className="btn-ShopingCart"
+                                alt="Agregar" 
+                                >
+
+                                <img src={agregarCarrito} 
+                                className="shopingCartClients-Products"/>
+
+                            </button>
+
+                            <input type="number" 
+                                className="input-price-Products"
+                                placeholder=" Cantidad"
+                                name="cant"
+                                onChange={this.handleChange}
+                                value={this.state.cant}
+                                />
+                        </form>  
+                        
                     </div>
                 </div>
                 );
@@ -74,7 +145,7 @@ componentDidMount() {
 </div>
 
 )
-        }
+}
 }
 
 
@@ -105,3 +176,12 @@ useEffect(() => {
         })
 
 }, []); */
+{/* <Link to={`/clients/search/${this.state.name}`} */}
+{/* <Link to={`/clients/search/shopingList`}
+    alt="Agregar"
+>
+
+    <img src={agregarCarrito}
+        className="shopingCartClients-Products" />
+
+</Link> */}

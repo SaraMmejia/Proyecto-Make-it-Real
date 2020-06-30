@@ -69,7 +69,7 @@ class NavBar extends React.Component{
 						value={this.state.name}
 					/>
 
-					<Link icon={faSearch} to={`/providers/search/${this.state.name}`} >
+					<Link to={`/providers/search/${this.state.name}`} >
 						<FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
 						{/* <FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" /> */}
 					</Link>
