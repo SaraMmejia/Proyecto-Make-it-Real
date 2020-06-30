@@ -63,9 +63,16 @@ handleSubmit = (e) => {
 
     e.preventDefault();
     let cart = localStorage.setItem("cartList", JSON.stringify(this.state.data._id))//concatenar
-    console.log(this.state);
+    console.log(cart);
     
-}
+} 
+/* handleSubmit  = (id) => {
+        return (e) => {
+            e.preventDefault();
+            let cart = localStorage.setItem("cartList", JSON.stringify(id))//concatenar
+            console.log(cart);
+        }
+    }  */
 
 handleChange = (e) => {
     const { name, value } = e.target;
@@ -184,4 +191,4 @@ useEffect(() => {
     <img src={agregarCarrito}
         className="shopingCartClients-Products" />
 
-</Link> */}
+</Link> this.handleSubmit*/}
