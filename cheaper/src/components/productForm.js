@@ -1,13 +1,7 @@
-import React from "react";
+import React from 'react';
 import "./NewProduct.css";
-// import image from '../assets/hogar.jpg';
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faSearch,
-  faCamera,
-  faMapMarkerAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom"
+
 
 function ProductForm({
   id,
@@ -18,41 +12,21 @@ function ProductForm({
   category,
   handleChange,
   handleSubmit,
+
 }) {
+
   return (
     <div className="ProductDescription">
-      <div className="NavBusqueda-NewProduct">
-        <FontAwesomeIcon icon={faSearch} className="NavBusqueda-Icon" />
-        <input
-          type="text"
-          placeholder=" Realizar una busqueda."
-          className="NavBusqueda-Busqueda"
-        />
-        <FontAwesomeIcon icon={faCamera} className="NavBusqueda-Icon" />
-      </div>
-
-      <div className="Ubicacion">
-        <FontAwesomeIcon icon={faMapMarkerAlt} className="Ubicacion-Icon" />
-        <input
-          type="text"
-          placeholder=" Ubicación."
-          className="Ubicacion-Busqueda"
-        />
-      </div>
 
       <div className="buttons">
-        <Link to="/products/edit/:id">
-          <button className="edit">Editar producto</button>
-        </Link>
-        <Link to="/products/delete/:id">
-          <button className="delete">Eliminar producto</button>
-        </Link>
-        <Link to="/products/create">
-          <button className="create">Nuevo producto</button>
-        </Link>
+
+        <Link to="/products/edit/:id"><button className="edit">Editar producto</button></Link>
+        <Link to="/products/delete/:id"><button className="delete">Eliminar producto</button></Link>
+        <Link to="/products/create"><button className="create">Nuevo producto</button></Link>
       </div>
 
-      <form className="ProductsForm" onSubmit={handleSubmit} data-testid="productForm">
+      <form className="ProductsForm" onSubmit={handleSubmit}>
+
         <div className="title">
           <label htmlFor="name">Nombre del producto</label>
           <input
@@ -75,8 +49,7 @@ function ProductForm({
             onChange={picture}
           />
         </div>
-        <textarea
-          className="description-text"
+        <textarea className="description-text"
           name="description"
           id="description"
           cols="35"
@@ -87,8 +60,7 @@ function ProductForm({
         />
         <div className="description-article  ">
           <div className="price-gral">
-            <input
-              className="price"
+            <input className="price"
               type="text"
               name="price"
               id="price"
@@ -98,27 +70,13 @@ function ProductForm({
             />
             <h6>Precio</h6>
           </div>
-
-          {
-            //<div className="cant-gral">
-            // <input
-            // type="text"
-            // className="cant"
-            // placeholder="#"
-            // // onChange={handleChange}
-            // // value={price}
-            // />
-            // <h6>Cantidad</h6>
-            //</div>
-          }
         </div>
 
-        <button className="create-product" type="submit">
-          Publicar
-        </button>
+        <button className="create-product" type="submit">Publicar</button>
       </form>
+
     </div>
-  );
+  )
 }
 
 export default ProductForm;
