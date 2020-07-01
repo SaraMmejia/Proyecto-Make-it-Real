@@ -1,17 +1,37 @@
 import React from "react";
 import "../components/clientForm.css";
-import axios from 'axios';
+import axios from "axios";
 import ClientForm from "../components/clientForm.js";
 
 class ClientFormCreate extends React.Component {
-	state = {
-		name: "",
-		lastname: "",
-		clientEmail: "",
-		password: "",
-		clients: [],
-	};
+  state = {
+    name: "",
+    lastname: "",
+    clientEmail: "",
+    password: "",
+    clients: [],
+  };
 
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { ...data } = this.state;
+    axios({
+      method: "POST",
+      baseURL: process.env.REACT_APP_SERVER_URL,
+      url: "/clients/create",
+      data,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(({ data }) => {
+      localStorage.setItem("token", data.token);
+      this.props.history.push("/home");
+    });
+  };
 
 	handleChange = (e) => {
 		const { name, value } = e.target;
@@ -29,9 +49,6 @@ class ClientFormCreate extends React.Component {
 			headers: {
 				"Content-Type": "application/json",
 			},
-		})
-		
-		.then(({data}) => {
 		}).then(({data}) => {
 			localStorage.setItem("token", data.token)
 			this.props.history.push("/clients")
