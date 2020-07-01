@@ -3,7 +3,7 @@ import "./productListHome.css";
 import axios from "axios";
 import {Link} from "react-router-dom"
 
-function ProductListHome({ history }) {
+function ProductListHomeClient({ history }) {
 
 let [products, setProducts] = useState([]);
 
@@ -31,7 +31,7 @@ useEffect(() => {
 	return (
 		<div className="App">
 
-			<div className="gridContainer" data-testid="ProductList">
+			<div className="gridContainer" data-testid="ListHomeClient">
 				{products.map((data) => {
 					return (
 						<div className="row-List">
@@ -48,7 +48,7 @@ useEffect(() => {
 								{data.description}
 								</p>
 								<br />
-								<Link to={`/providers/products/show/${data._id}`} className="VerMas" >Ver más</Link>
+								<Link to={`/clients/products/show/${data._id}`} className="VerMas" >Ver más</Link>
 							</div>
 						</div>
 					);
@@ -58,5 +58,5 @@ useEffect(() => {
 	);
 }
 
-export default ProductListHome;
+export default ProductListHomeClient;
 //{`/products/show/${data._id}`}
