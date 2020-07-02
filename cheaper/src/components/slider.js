@@ -11,7 +11,7 @@ class Slider extends React.Component {
 
     render() {
       return (
-        <Carousel className="container-slider">
+        <Carousel className="container-slider" data-testid="Slider">
             <Carousel.Item>
                 <img
                     className="Food"

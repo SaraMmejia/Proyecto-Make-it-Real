@@ -16,43 +16,48 @@
 	align-items: center;
 }
 
-.NavBar-Logo-Provider {
+.NavBar-Logo-Client {
 	width: 300px;
 	margin: 15px;
 }
 
-.TitleProvider {
+.TitleForm {
 	font-size: 24px;
 	margin-bottom: 5px;
-	margin-top: 5px;
+	margin-top: 10px;
 	text-align: center;
 }
+.clientForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
-.PaginaNew-Provider {
+.PaginaNew-Client {
 	width: 270px;
 	height: 290px;
-	margin: 0px;
-	padding: 0px;
+	margin: 20px;
+	padding: 10px;
 	background-color: rgba(48, 48, 48, 0.8);
 	border-radius: 10px;
 }
 
-.InputsNew-Provider {
+.InputsNew-Client {
 	display: flex;
 	justify-content: center;
 }
 
-.ProviderForm {
+.clientForm {
 	display: flex;
 	flex-direction: column;
 }
 
-.Name-Provider {
+.Name {
 	display: block;
-	margin-top: 4px;
-	margin-bottom: 4px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	padding-left: 10px;
-	height: 25px;
+	height: 30px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -60,38 +65,12 @@
 	cursor: pointer;
 }
 
-.Lastname-Provider {
+.LastName {
 	display: block;
-	margin-top: 4px;
-	margin-bottom: 4px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	padding-left: 10px;
-	height: 25px;
-	width: 200px;
-	border-radius: 10px;
-	background: white;
-	border-color: rgb(183, 185, 178);
-	cursor: pointer;
-}
-
-.Empresa-Provider {
-	display: block;
-	margin-top: 4px;
-	margin-bottom: 4px;
-	padding-left: 10px;
-	height: 25px;
-	width: 200px;
-	border-radius: 10px;
-	background: white;
-	border-color: rgb(183, 185, 178);
-	cursor: pointer;
-}
-
-.Nit-Provider {
-	display: block;
-	margin-top: 4px;
-	margin-bottom: 4px;
-	padding-left: 10px;
-	height: 25px;
+	height: 30px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -101,10 +80,10 @@
 
 .Correo {
 	display: block;
-	margin-top: 4px;
-	margin-bottom: 4px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	padding-left: 10px;
-	height: 25px;
+	height: 30px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -112,12 +91,12 @@
 	cursor: pointer;
 }
 
-.Password-Provider {
+.Password {
 	display: block;
-	margin-top: 4px;
-	margin-bottom: 4px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	padding-left: 10px;
-	height: 25px;
+	height: 30px;
 	width: 200px;
 	border-radius: 10px;
 	background: white;
@@ -125,10 +104,10 @@
 	cursor: pointer;
 }
 
-.SubmitProvider {
+.SubmitClient {
 	display: block;
-	margin-top: 5px;
-	margin-left: 27px;
+	margin-top: 20px;
+	margin-left: 25px;
 	height: 40px;
 	width: 150px;
 	border-radius: 20px;
@@ -141,7 +120,7 @@
 	text-decoration: none;
 }
 
-.SubmitProvider:hover {
+.SubmitClient:hover {
 	background: #e0c308;
 }
 
@@ -150,9 +129,9 @@
 		width: 768px;
 		height: 529px;
 	}
-	.PaginaNew-Provider {
+	.PaginaNew-Client {
 		width: 290px;
-		height: 250px;
+		height: 280px;
 	}
 }
 
@@ -162,28 +141,21 @@
 		height: 620px;
 	}
 
-	.NavBar-Logo-Provider {
+	.NavBar-Logo-Client {
 		width: 400px;
 		margin: 15px;
 	}
 
-	.PaginaNew-Provider {
+	.PaginaNew-Client {
 		width: 350px;
 		height: 300px;
 	}
-	.Name-Provider {
+	.Name {
 		grid-gap: 30px;
 		font-weight: 500;
 	}
 
-	.Lastname-Provider {
-		font-weight: 500;
-	}
-	.Empresa-Provider {
-		font-weight: 500;
-	}
-
-	.Nit-Provider {
+	.LastName {
 		font-weight: 500;
 	}
 
@@ -191,11 +163,11 @@
 		font-weight: 500;
 	}
 
-	.Password-Provider {
+	.Password {
 		font-weight: 500;
 	}
 
-	.SubmitProvider {
+	.SubmitClient {
 		font-weight: 500;
 	}
 }
@@ -203,32 +175,24 @@
 @media screen and (min-width: 1200px) {
 	.FormContainer {
 		width: 1440px;
-		height: 620px;
+		height: 650px;
 	}
 
-	.NavBar-Logo-Provider {
+	.NavBar-Logo-Client {
 		width: 400px;
 		margin: 15px;
 	}
 
-	.PaginaNew-Provider {
+	.PaginaNew-Client {
 		width: 350px;
 		height: 300px;
 	}
-	.Name-Provider {
+	.Name {
 		grid-gap: 30px;
 		font-weight: 500;
 	}
 
-	.Lastname-Provider {
-		font-weight: 500;
-	}
-
-	.Empresa-Provider {
-		font-weight: 500;
-	}
-
-	.Nit-Provider {
+	.LastName {
 		font-weight: 500;
 	}
 
@@ -236,11 +200,11 @@
 		font-weight: 500;
 	}
 
-	.Password-Provider {
+	.Password {
 		font-weight: 500;
 	}
 
-	.SubmitProvider {
+	.SubmitClient {
 		font-weight: 500;
 	}
 }

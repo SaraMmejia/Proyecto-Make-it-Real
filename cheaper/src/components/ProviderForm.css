@@ -16,7 +16,7 @@
 	align-items: center;
 }
 
-.NavBar-Logo-Provider {
+.NavBar-Logo-ProvidersCreate {
 	width: 300px;
 	margin: 15px;
 }
@@ -31,8 +31,7 @@
 .PaginaNew-Provider {
 	width: 270px;
 	height: 290px;
-	margin: 0px;
-	padding: 0px;
+	margin: 20px;
 	background-color: rgba(48, 48, 48, 0.8);
 	border-radius: 10px;
 }
@@ -162,7 +161,7 @@
 		height: 620px;
 	}
 
-	.NavBar-Logo-Provider {
+	.NavBar-Logo-ProvidersCreate {
 		width: 400px;
 		margin: 15px;
 	}
@@ -206,7 +205,7 @@
 		height: 620px;
 	}
 
-	.NavBar-Logo-Provider {
+	.NavBar-Logo-ProvidersCreate {
 		width: 400px;
 		margin: 15px;
 	}
