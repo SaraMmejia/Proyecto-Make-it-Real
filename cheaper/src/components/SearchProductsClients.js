@@ -37,7 +37,7 @@ componentDidMount() {
         })
 }
 
-/* componentDidUpdate(){
+componentDidUpdate(){
     console.log(this.props)
 
     const { products, ...data } = this.props.match.params
@@ -58,15 +58,7 @@ componentDidMount() {
         .catch(error => {
             // history.push('/');
         })
-}  */
-/* handleSubmit = (e) => {
-
-    e.preventDefault();
-    let cart = localStorage.setItem("cartList", JSON.stringify(this.state.data._id))//concatenar
-    console.log(cart);
-    
-}  */
-
+}
  
 
 handleChange = (e) => {

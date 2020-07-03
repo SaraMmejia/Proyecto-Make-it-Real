@@ -82,8 +82,6 @@ class NavBar extends React.Component{
 						type="text"
 						name="ubicacion"
 						placeholder=" Ubicación."
-					/* 						onChange={this.handleChange}
-											value={this.state.name} */
 					/>
 
 					<Link icon={faSearch} to={`/clients/search/${this.state.name}`} >
