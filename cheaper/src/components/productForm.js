@@ -18,12 +18,12 @@ function ProductForm({
   return (
     <div className="ProductDescription">
 
-      <div className="buttons">
+{/*       <div className="buttons">
 
         <Link to="/products/edit/:id"><button className="edit">Editar producto</button></Link>
         <Link to="/products/delete/:id"><button className="delete">Eliminar producto</button></Link>
         <Link to="/products/create"><button className="create">Nuevo producto</button></Link>
-      </div>
+      </div> */}
 
       <form className="ProductsForm" onSubmit={handleSubmit}>
 
