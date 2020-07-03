@@ -34,9 +34,9 @@ class EditProduct extends React.Component { //Estado del menu lateral
 
 
       axios({
-        method: "GET",
+        method: "PUT",
         baseURL: process.env.REACT_APP_SERVER_URL,
-        url: `/products/show/${this.props.match.params.id}`,
+        url: `/products/edit/${this.props.match.params.id}`,
         data,
         headers: {
           "Content-Type": "multipart/form-data",
@@ -45,6 +45,7 @@ class EditProduct extends React.Component { //Estado del menu lateral
     		.then(response  => {
     			this.setState(response.data)
           console.log(data)
+          /* history.push('/providers'); */
     		})
     		.catch(error => {
     			localStorage.removeItem('token');

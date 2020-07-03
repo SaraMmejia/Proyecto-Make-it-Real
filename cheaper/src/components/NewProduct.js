@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 import "./NewProduct.css";
 import ProductForm from './productForm.js'
 import NavBar from './NavBar.js'
+import { Link } from "react-router-dom"
 
 
 
@@ -64,7 +65,9 @@ class NewProduct extends React.Component { //Estado del menu lateral
 
     return (
       <div className="container-pg">
+
         <NavBar />
+
         <ProductForm
           name={this.state.name}
           picture={this.handleImage}
