@@ -18,6 +18,14 @@
   background-color: transparent;
   border-style: none;
 }
+.btn-ShopingCart:hover{
+  border-style: none;
+}
+
+.btn-ShopingCart:focus{
+  border-style: none;
+}
+
   .desc-Products{
     color: white;
     font-weight: 400;

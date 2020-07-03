@@ -15,7 +15,7 @@ const Toolbar = props => (
             </div>
 
             <img src={logo} className="toolbar-logo" alt="Logo"></img>
-
+            <FontAwesomeIcon icon={faShoppingCart} className="NavBar-Icons" />
 
 
         </nav>
