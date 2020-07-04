@@ -16,6 +16,7 @@ const SideDrawerClient = props => {
                 <li><a href="/home">Mis lista de mercado</a></li>
                 <li><a href="/home">Inicio</a></li>
                 <li><a href="/home">Configuracion</a></li>
+                <li><a href="/logout">Salir</a></li>
                 <img src={logo} className="side-drawer-logo" alt="Logo"></img>
             </ul>
         </nav>
