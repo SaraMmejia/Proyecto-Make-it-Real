@@ -56,6 +56,7 @@ class NavBar extends React.Component {
               type="text"
               placeholder=" Realizar una busqueda."
               name="name"
+              onChange={this.handleChange}
               value={this.state.name}
             />
 
@@ -66,12 +67,21 @@ class NavBar extends React.Component {
         </div>
 
         <div className="Ubicacion">
-          <FontAwesomeIcon icon={faMapMarkerAlt} className="Ubicacion-Icon" />
-          <input
-            type="text"
-            placeholder=" Ubicación."
-            className="Ubicacion-Busqueda"
-          />
+          <form onSubmit={this.handleSubmit}>
+            <input
+              className="Ubicacion-Busqueda"
+              type="text"
+              name="ubicacion"
+              placeholder=" Ubicación."
+            />
+
+            <Link icon={faSearch} to={`/clients/search/${this.state.name}`}>
+              <FontAwesomeIcon
+                icon={faMapMarkerAlt}
+                className="Ubicacion-Icon"
+              />
+            </Link>
+          </form>
         </div>
       </div>
     );

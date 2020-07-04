@@ -36,16 +36,11 @@ class ProductDescription extends React.Component {
     return (
       <div className="ProductDescription">
         <NavBar />
+
         <div className="buttons">
-          <Link to={`/products/edit/${this.props.match.params.id}`}>
-            <button className="edit">Editar producto</button>
-          </Link>
-          <Link to={`/products/destroy/${this.props.match.params.id}`}>
-            <button className="delete">Eliminar producto</button>
-          </Link>
-          <Link to={"/products/create"}>
-            <button className="create">Nuevo producto</button>
-          </Link>
+          <Link to={`/products/edit/${this.props.match.params.id}`}><button className="edit">Editar producto</button></Link>
+          <Link to={`/products/destroy/${this.props.match.params.id}`}><button className="delete">Eliminar producto</button></Link>
+          <Link to={"/products/create"}><button className="create">Nuevo producto</button></Link>
         </div>
 
         <div className="ProductDescription-Card" key={this.state._id}>
