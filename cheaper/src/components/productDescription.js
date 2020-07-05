@@ -42,7 +42,7 @@ class ProductDescription extends React.Component {
         <NavBar />
         <div className="buttons">
           <Link to={`/products/edit/${this.props.match.params.id}`}><button className="edit">Editar producto</button></Link>
-          <Link to="/products/destroy/:id"><button className="delete">Eliminar producto</button></Link>
+          <Link to={`/products/destroy/${this.props.match.params.id}`}><button className="delete">Eliminar producto</button></Link>
           <Link to={"/products/create"}><button className="create">Nuevo producto</button></Link>
         </div>
 

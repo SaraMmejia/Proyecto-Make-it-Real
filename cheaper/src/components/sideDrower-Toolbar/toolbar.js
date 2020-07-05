@@ -6,6 +6,38 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 
+
+  function handlePayment (){
+       const handler =  window.ePayco.checkout.configure({
+        key: process.env.REACT_APP_EPAYCO_PUBLIC_KEY,
+        test: true
+
+      });
+
+      handler.open({
+        external: 'false',
+        
+        key:'491d6a0b6e992cf924edd8d3d088aff1',
+        tax: '0',
+        tax_base:'0',
+        currency: 'cop',
+        country:'Colombia',
+        lang: 'en',
+        invoice: '12345',
+        methodsDisable:['PSE','DP', 'SP', 'CASH'],
+        address_billing: 'cra 58f # 58-35',
+        type_doc_billing:'cc',
+        name_billing: 'Pedro Perez',
+        num_doc_billing: '12345678',
+        mobilephone_billing: '3153152222',
+        amount: '12000',
+        name: 'Articulos de hogar',
+        description: 'Brillapisos',
+      })
+  }
+
+
+  
 const Toolbar = props => (
 
     <header className="toolbar">
@@ -15,7 +47,7 @@ const Toolbar = props => (
             </div>
 
             <img src={logo} className="toolbar-logo" alt="Logo"></img>
-            <FontAwesomeIcon icon={faShoppingCart} className="NavBar-Icons" />
+            <FontAwesomeIcon icon={faShoppingCart} className="NavBar-Icons" onClick={handlePayment}/>
 
 
         </nav>
