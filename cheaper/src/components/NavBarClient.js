@@ -3,7 +3,7 @@ import "./NavBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SideDrawerClient from './sideDrower-Toolbar/sideDrawerClient.js'
 import Backdrop from './sideDrower-Toolbar/Backdrop.js'
-import Toolbar from './sideDrower-Toolbar/toolbar.js'
+import Toolbar from './sideDrower-Toolbar/toolbarClient.js'
 import { Link } from "react-router-dom"
 import {
 	faSearch,

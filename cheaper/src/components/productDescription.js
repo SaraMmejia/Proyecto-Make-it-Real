@@ -31,8 +31,22 @@ class ProductDescription extends React.Component {
         localStorage.removeItem('token');
         // history.push('/');
       })
-  }
+  };
 
+deleteProduct() { 
+  axios({
+    method: "DELETE",
+    baseURL: process.env.REACT_APP_SERVER_URL,
+    url: `/products/destroy/${this.props.match.params.id}`
+    }
+  )
+  .then(({ data }) => {
+    this.props.history.push("/providers")
+  });
+}
+ 
+
+    
   render() {
 
     return (
@@ -40,9 +54,10 @@ class ProductDescription extends React.Component {
       <div className="ProductDescription">
 
         <NavBar />
+
         <div className="buttons">
           <Link to={`/products/edit/${this.props.match.params.id}`}><button className="edit">Editar producto</button></Link>
-          <Link to={`/products/destroy/${this.props.match.params.id}`}><button className="delete">Eliminar producto</button></Link>
+          <Link to={`/products/destroy/${this.props.match.params.id}`}><button className="delete" onClick={()=> this.deleteProduct()}>Eliminar producto</button></Link>
           <Link to={"/products/create"}><button className="create">Nuevo producto</button></Link>
         </div>
 

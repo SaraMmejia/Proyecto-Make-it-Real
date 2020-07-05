@@ -37,7 +37,7 @@ componentDidMount() {
         })
 }
 
-/* componentDidUpdate(){
+componentDidUpdate(){
     console.log(this.props)
 
     const { products, ...data } = this.props.match.params
@@ -58,21 +58,8 @@ componentDidMount() {
         .catch(error => {
             // history.push('/');
         })
-} */
-handleSubmit = (e) => {
-
-    e.preventDefault();
-    let cart = localStorage.setItem("cartList", JSON.stringify(this.state.data._id))//concatenar
-    console.log(cart);
-    
-} 
-/* handleSubmit  = (id) => {
-        return (e) => {
-            e.preventDefault();
-            let cart = localStorage.setItem("cartList", JSON.stringify(id))//concatenar
-            console.log(cart);
-        }
-    }  */
+}
+ 
 
 handleChange = (e) => {
     const { name, value } = e.target;
@@ -82,6 +69,20 @@ handleChange = (e) => {
 render() {
        
     const { products } = this.state;
+
+    const handleSubmit = (id) => {
+        let arr = [];
+        return (e) => {
+            e.preventDefault();
+            arr = localStorage.getItem("cartList");
+            if (arr === null) {
+                arr = localStorage.setItem("cartList", id);
+            } else {
+                arr = localStorage.setItem("cartList", arr.concat(",",id));
+            }
+            console.log(arr)
+        }
+    }
 
     return (
     <div className="ProductSearch" key={this.props.match.params.name}>
@@ -119,11 +120,11 @@ render() {
                                 to={`/clients/products/show/${data._id}`}
                                 className="VerMasClient" >Ver más</Link>
                         </div>
-                        <form onSubmit={this.handleSubmit} key={data._id}>
+                        <form onSubmit={handleSubmit(data._id)} key={data._id}>
                             <button type="submit"
                                 className="btn-ShopingCart"
                                 alt="Agregar" 
-                                >
+                            >
 
                                 <img src={agregarCarrito} 
                                 className="shopingCartClients-Products"/>
@@ -157,3 +158,17 @@ render() {
 
 
 export default SearchProductsClients;
+/* 
+const handleSubmit = (id) => {
+    return (e) => {
+        e.preventDefault();
+        let prevCart = localStorage.getItem("cartList");
+
+        if (prevCart === null) {
+
+            localStorage.setItem("cartList", id);
+        } else {
+            localStorage.setItem("cartList", prevCart.concat(id));
+        }
+    }
+} */
