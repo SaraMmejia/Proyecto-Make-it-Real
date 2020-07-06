@@ -9,6 +9,10 @@ const SideDrawer = props => {
     if (props.show) {
         drawerClasses = 'side-drawer open';
     }
+    function handleClick(e) {
+        localStorage.clear();
+        this.props.history.push('/');
+    }
     return (
         <nav className={drawerClasses}>
             <ul>
@@ -17,7 +21,7 @@ const SideDrawer = props => {
                 <li><a href="/home">Inicio</a></li>
                 <li><a href="/">Configuracion</a></li>
                 <li><a href="/providers/:id/branch/create">Crear sucursal</a></li>
-                <li><a href="/logout">Salir</a></li>
+                <li><a href="/logout" onClick={handleClick}>Salir</a></li>
                 <img src={logo} className="side-drawer-logo" alt="Logo"></img>
             </ul>
         </nav>

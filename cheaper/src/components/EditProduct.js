@@ -42,13 +42,11 @@ class EditProduct extends React.Component { //Estado del menu lateral
           "Content-Type": "multipart/form-data",
         },
       }).then(({ data })   => {
-    			/* this.setState(response.data)*/
-          console.log(data)
+    			console.log(data)
           this.props.history.push('/providers');
     		})
     		.catch(error => {
     			localStorage.removeItem('token');
-    			// history.push('/');
     		});
   }
 

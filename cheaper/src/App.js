@@ -82,4 +82,3 @@ function App() {
 }
 
 export default App;
-{/* <Route exact path="/products/destroy/:id" component={} /> */}

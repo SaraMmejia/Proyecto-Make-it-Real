@@ -9,6 +9,11 @@ const SideDrawerClient = props => {
     if (props.show) {
         drawerClasses = 'side-drawer open';
     }
+    function handleClick(e) {
+        localStorage.clear();
+        this.props.history.push('/');
+    }
+    
     return (
         <nav className={drawerClasses}>
             <ul>
@@ -16,7 +21,7 @@ const SideDrawerClient = props => {
                 <li><a href="/home">Mis lista de mercado</a></li>
                 <li><a href="/home">Inicio</a></li>
                 <li><a href="/home">Configuracion</a></li>
-                <li><a href="/logout">Salir</a></li>
+                <li><a href="/logout" onClick={handleClick}>Salir</a></li>
                 <img src={logo} className="side-drawer-logo" alt="Logo"></img>
             </ul>
         </nav>
