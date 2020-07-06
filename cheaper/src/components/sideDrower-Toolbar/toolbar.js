@@ -16,10 +16,12 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
       handler.open({
         external: 'false',
-        
+        amount:'12000',
         key:'491d6a0b6e992cf924edd8d3d088aff1',
         tax: '0',
         tax_base:'0',
+        name: 'Articulos de hogar',
+        description: 'Brillapisos',
         currency: 'cop',
         country:'Colombia',
         lang: 'en',
@@ -31,8 +33,8 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
         num_doc_billing: '12345678',
         mobilephone_billing: '3153152222',
         amount: '12000',
-        name: 'Articulos de hogar',
-        description: 'Brillapisos',
+        
+       
       })
   }
 
