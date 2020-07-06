@@ -9,10 +9,16 @@ import { Link } from "react-router-dom";
 class ProductDescriptionClient extends React.Component {
   state = {
     sideDrawerOpen: false,
+ functionCar
     name: "",
     description: "",
     price: "",
     cant: 1,
+
+    id:'',
+    name: '',
+    description: '',
+    price: 0,
   };
 
   componentDidMount() {
@@ -40,6 +46,7 @@ class ProductDescriptionClient extends React.Component {
       return (e) => {
         e.preventDefault();
 
+ functionCar
         let newArr = localStorage.getItem("list");
         // let arr = [];
         if (newArr === null) {
@@ -68,11 +75,36 @@ class ProductDescriptionClient extends React.Component {
         localStorage.setItem("list", JSON.stringify(newArr));
       };
     };
+    const handleSubmit = (id) => {
+      let arr = [];
+      return (e) => {
+        e.preventDefault();
+        arr = localStorage.getItem("cartList");
+        if (arr === null) {
+          arr = localStorage.setItem("cartList", id);
+        } else {
+          arr = localStorage.setItem("cartList", arr.concat(",", id));
+        }
+        console.log(arr)
+      }
+    }
     return (
       <div className="ProductDescription">
         <NavBarClient />
 
+ functionCar
         <h3 className="description-title">{this.state.name}</h3>
+
+        <form onSubmit={handleSubmit(`${this.props.match.params.id}`)}>
+ 
+            <button type="submit"
+              className="btn-add-shoppingList"
+              alt="Agregar">
+            Agregar a lista de compras
+            </button>
+
+        </form>
+
         <div className="ProductDescription-Card" key={this.state._id}>
           <div className="container-img">
             <img

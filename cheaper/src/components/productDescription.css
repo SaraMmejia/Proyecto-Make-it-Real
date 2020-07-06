@@ -64,6 +64,39 @@
   color: #e0c308;
   border-style: solid;
   border-color: #e0c308;
+	margin-bottom:10%;
+    align-items: flex-end;
+	font-size: small;
+}
+
+.btn-add-shoppingList {
+
+    align-items: flex-end;
+		font-size: small;
+	  border-radius: 20px;
+    padding: 7px;
+    font-weight: 600;
+    font-size: 15px;
+    background: #e0c408c9;
+    border-style: none;
+    color: white;
+    cursor: pointer;
+}
+.edit{
+    width:  25%;
+	margin : 3% 2%;
+	font-weight: 500;
+	background-color:#e0c308 ;
+	border-style: hidden;
+	border-radius: 8px;
+	color: white;
+	padding: 2%;
+}
+.edit:hover{
+	background-color:white;
+	color: #e0c308;
+	border-style: solid;
+	border-color: #e0c308; ;
 }
 .delete {
   width: 25%;
