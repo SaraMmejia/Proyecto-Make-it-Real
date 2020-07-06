@@ -41,15 +41,12 @@ class EditProduct extends React.Component { //Estado del menu lateral
         headers: {
           "Content-Type": "multipart/form-data",
         },
-      })
-    		.then(response  => {
-    			this.setState(response.data)
-          console.log(data)
-          /* history.push('/providers'); */
+      }).then(({ data })   => {
+    			console.log(data)
+          this.props.history.push('/providers');
     		})
     		.catch(error => {
     			localStorage.removeItem('token');
-    			// history.push('/');
     		});
   }
 
@@ -71,6 +68,7 @@ class EditProduct extends React.Component { //Estado del menu lateral
       return (
         <div className="container-pg">
               <NavBar />
+              
               <ProductForm
                 name={this.state.name}
                 picture={this.handleImage}

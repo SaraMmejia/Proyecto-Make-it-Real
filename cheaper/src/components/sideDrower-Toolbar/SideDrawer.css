@@ -37,6 +37,17 @@
     font-size: 1.2rem;
 
 }
+.btn_logout {
+    color:white;
+    text-decoration: none;
+    font-size: 1.2rem; 
+}
+
+.btn_logout: hover,
+.btn_logout: active{
+    color:gray;
+    text-decoration: none;
+    }
 .side-drawer a:hover,
 .side-drawer a:active{
     color:gray;

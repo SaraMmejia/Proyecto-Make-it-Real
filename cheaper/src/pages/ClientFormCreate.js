@@ -33,41 +33,40 @@ class ClientFormCreate extends React.Component {
     });
   };
 
-	handleChange = (e) => {
-		const { name, value } = e.target;
-		this.setState({ [name]: value });
-	};
-	handleSubmit = (e) => {
-		e.preventDefault();
-		const { ...data } = this.state;
-		
-		axios({
-			method: "POST",
-			baseURL: process.env.REACT_APP_SERVER_URL,
-			url: "/clients/create",
-			data,
-			headers: {
-				"Content-Type": "application/json",
-			},
-		}).then(({data}) => {
-			localStorage.setItem("token", data.token)
-			this.props.history.push("/clients")
-		});
-	}
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { ...data } = this.state;
 
+    axios({
+      method: "POST",
+      baseURL: process.env.REACT_APP_SERVER_URL,
+      url: "/clients/create",
+      data,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(({ data }) => {
+      localStorage.setItem("token", data.token);
+      this.props.history.push("/clients");
+    });
+  };
 
-	render() {
-		return (
-			<ClientForm
-				name={this.state.name}
-				lastname={this.state.lastname}
-				clientEmail={this.state.clientEmail}
-				password={this.state.password}
-				handleChange={this.handleChange}
-				handleSubmit={this.handleSubmit}
-			/>
-		);
-	}
+  render() {
+    return (
+      <ClientForm
+        name={this.state.name}
+        lastname={this.state.lastname}
+        clientEmail={this.state.clientEmail}
+        password={this.state.password}
+        handleChange={this.handleChange}
+        handleSubmit={this.handleSubmit}
+      />
+    );
+  }
 }
 
 export default ClientFormCreate;

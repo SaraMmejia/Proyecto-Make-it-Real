@@ -1,34 +1,33 @@
-import React from 'react';
+import React from "react";
 import axios from "axios";
 import logo from "../assets/logo.png";
-import NavBar from './NavBar.js'
+import NavBar from "./NavBar.js";
 import "./productDescription.css";
-import { Link } from "react-router-dom"
-
+import { Link } from "react-router-dom";
 
 class ProductDescription extends React.Component {
   state = {
-    name: '',
-    description: '',
+    name: "",
+    description: "",
     price: 0,
   };
 
   componentDidMount() {
-    console.log(this.props)
-    const token = localStorage.getItem('token');
+    console.log(this.props);
+    const token = localStorage.getItem("token");
     axios({
-      method: 'GET',
+      method: "GET",
       baseURL: process.env.REACT_APP_SERVER_URL,
       url: `/products/show/${this.props.match.params.id}`,
       headers: {
-        'Authorization': token
-      }
+        Authorization: token,
+      },
     })
-      .then(response => {
-        this.setState(response.data)
+      .then((response) => {
+        this.setState(response.data);
       })
-      .catch(error => {
-        localStorage.removeItem('token');
+      .catch((error) => {
+        localStorage.removeItem("token");
         // history.push('/');
       })
   };
@@ -48,11 +47,8 @@ deleteProduct() {
 
     
   render() {
-
     return (
-
       <div className="ProductDescription">
-
         <NavBar />
 
         <div className="buttons">
@@ -62,26 +58,22 @@ deleteProduct() {
         </div>
 
         <div className="ProductDescription-Card" key={this.state._id}>
-          <h4 className="description-title">
-            {this.state.name}
-          </h4>
+          <h4 className="description-title">{this.state.name}</h4>
 
           <div className="container-img">
-            <img className="img"
+            <img
+              className="img"
               src={this.state.picture}
-              alt={this.state.picture} />
+              alt={this.state.picture}
+            />
           </div>
 
-          <p className="paragraph-description">
-            {this.state.description}
-          </p>
+          <p className="paragraph-description">{this.state.description}</p>
 
           <div className="description-article  ">
             <div className="price-gral">
               <h5>Precio</h5>
-              <h6 className="price">
-                {this.state.price}
-              </h6>
+              <h6 className="price">{this.state.price}</h6>
             </div>
             <div className="cant-gral">
               <h5 className="cant">1</h5>
@@ -91,11 +83,14 @@ deleteProduct() {
         </div>
         <footer className="footer">
           <img src={logo} className="NavBar-Logo-Home" alt="Logo"></img>
-          <p className="copyright"> <span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> All rights reserved 2020 </p>
+          <p className="copyright">
+            {" "}
+            <span dangerouslySetInnerHTML={{ __html: "&copy;" }} /> All rights
+            reserved 2020{" "}
+          </p>
         </footer>
       </div>
-    )
+    );
   }
 }
 export default ProductDescription;
-
