@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 function FunctionCarClient({ history }) {
-  let [lists, setLists] = useState([]);
+ let [lists, setLists] = useState([]);
 
   const cartList = JSON.parse(localStorage.getItem("list"));
 
@@ -15,6 +15,7 @@ function FunctionCarClient({ history }) {
     total = total + item.price * item.cant;
   });
 
+ 
 
   function handlePayment (){
     const handler =  window.ePayco.checkout.configure({
@@ -24,7 +25,6 @@ function FunctionCarClient({ history }) {
 
    handler.open({
      external: 'false',
-     amount:'12000',
      tax: '0',
      tax_base:'0',
      name: 'Total de compra',
@@ -34,18 +34,18 @@ function FunctionCarClient({ history }) {
      lang: 'en',
      invoice: '12345678',
      methodsDisable:['PSE','DP', 'SP', 'CASH'],
-     address_billing: 'cra 58f # 58-35',
+     address_billing: '',
      type_doc_billing:'cc',
-     name_billing: 'Pedro Perez',
-     num_doc_billing: '12345678',
-     mobilephone_billing: '3153152222',
-     amount: '12000',  
+     name_billing: 'Tu nombre',
+     num_doc_billing: '',
+     mobilephone_billing: '',
+     amount: total
    })
 }
   return (
     <div>
       <ToolbarClient />
-      <ul className="ulListProduct">
+       <ul className="ulListProduct">
         {cartList.map((item) => (
           <li className="productListCar">
             <div className="card-productCar">
@@ -75,7 +75,8 @@ function FunctionCarClient({ history }) {
           <span dangerouslySetInnerHTML={{ __html: "&copy;" }} /> All rights
           reserved 2020{" "}
         </p>
-      </footer>
+      </footer> */
+       
     </div>
   );
 }
