@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 import "./NewProduct.css";
-import { Link } from "react-router-dom"
-
+import { Link } from "react-router-dom";
 
 function ProductForm({
   id,
@@ -12,14 +11,10 @@ function ProductForm({
   category,
   handleChange,
   handleSubmit,
-
 }) {
-
   return (
     <div className="ProductDescription">
-
       <form className="ProductsForm" onSubmit={handleSubmit}>
-
         <div className="title">
           <label htmlFor="name">Nombre del producto</label>
           <input
@@ -42,7 +37,8 @@ function ProductForm({
             onChange={picture}
           />
         </div>
-        <textarea className="description-text"
+        <textarea
+          className="description-text"
           name="description"
           id="description"
           cols="35"
@@ -53,7 +49,8 @@ function ProductForm({
         />
         <div className="description-article  ">
           <div className="price-gral">
-            <input className="price"
+            <input
+              className="price"
               type="text"
               name="price"
               id="price"
@@ -65,11 +62,12 @@ function ProductForm({
           </div>
         </div>
 
-        <button className="create-product" type="submit">Publicar</button>
+        <button className="create-product" type="submit">
+          Publicar
+        </button>
       </form>
-
     </div>
-  )
+  );
 }
 
 export default ProductForm;
