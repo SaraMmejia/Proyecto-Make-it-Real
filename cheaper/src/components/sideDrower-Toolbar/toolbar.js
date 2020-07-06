@@ -17,7 +17,6 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
       handler.open({
         external: 'false',
         amount:'12000',
-        key:'491d6a0b6e992cf924edd8d3d088aff1',
         tax: '0',
         tax_base:'0',
         name: 'Articulos de hogar',
@@ -48,7 +47,7 @@ const Toolbar = props => (
                 <DrawerToggleButton click={props.drawerClickHandler} />
             </div>
 
-            <img src={logo} className="toolbar-logo" alt="Logo"></img>
+       
             <FontAwesomeIcon icon={faShoppingCart} className="NavBar-Icons" onClick={handlePayment}/>
 
 
