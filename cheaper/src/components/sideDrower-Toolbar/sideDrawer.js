@@ -1,17 +1,18 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import logo from '../../assets/logo.png';
 import './SideDrawer.css';
 
 
 const SideDrawer = props => {
-
+    let history = useHistory();
     let drawerClasses = 'side-drawer';
     if (props.show) {
         drawerClasses = 'side-drawer open';
     }
     function handleClick(e) {
         localStorage.clear();
-        this.props.history.push('/');
+        history.push('/');
     }
     return (
         <nav className={drawerClasses}>
@@ -21,7 +22,7 @@ const SideDrawer = props => {
                 <li><a href="/home">Inicio</a></li>
                 <li><a href="/">Configuracion</a></li>
                 <li><a href="/providers/:id/branch/create">Crear sucursal</a></li>
-                <li><a href="/logout" onClick={handleClick}>Salir</a></li>
+                <li className='btn_logout' onClick={handleClick}>Salir</li>
                 <img src={logo} className="side-drawer-logo" alt="Logo"></img>
             </ul>
         </nav>

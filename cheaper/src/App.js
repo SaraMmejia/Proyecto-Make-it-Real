@@ -7,7 +7,6 @@ import Home from "./components/Home.js";
 import HomeClient from "./components/HomeClient.js";
 import Registry from "./components/Registry.js"
 import LoginSignin from "./pages/LoginSignin.js"
-import Logout from "./components/Logout.js"
 import SearchProductsClients from './components/SearchProductsClients.js'
 import SearchProducts from './components/SearchProducts.js'
 import ProductDescription from './components/productDescription.js'
@@ -73,7 +72,6 @@ function App() {
           <Route exact path="/products/create" component={NewProduct} />
           <Route exact path="/products/show/:id" component={EditProduct} />
           <Route exact path="/providers/:id/branch/create" component={BranchFormCreate} />
-          <Route exact path="/logout" component={Logout} />
           <Route exact from="*" to="/" />
         </Switch>
       </Router>

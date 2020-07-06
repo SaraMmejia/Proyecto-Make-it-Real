@@ -1,17 +1,18 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
 import './SideDrawer.css';
+import { useHistory } from "react-router-dom";
 
 
 const SideDrawerClient = props => {
-
+    let history = useHistory();
     let drawerClasses = 'side-drawer';
     if (props.show) {
         drawerClasses = 'side-drawer open';
     }
-    function handleClick(e) {
+    function handleClick() {
         localStorage.clear();
-        this.props.history.push('/');
+        history.push('/');
     }
     
     return (
@@ -21,7 +22,7 @@ const SideDrawerClient = props => {
                 <li><a href="/home">Mis lista de mercado</a></li>
                 <li><a href="/home">Inicio</a></li>
                 <li><a href="/home">Configuracion</a></li>
-                <li><a href="/logout" onClick={handleClick}>Salir</a></li>
+                <li className='btn_logout' onClick={handleClick}>Salir</li>
                 <img src={logo} className="side-drawer-logo" alt="Logo"></img>
             </ul>
         </nav>
