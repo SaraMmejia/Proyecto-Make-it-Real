@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 function FunctionCarClient({ history }) {
-  let [lists, setLists] = useState([]);
+ let [lists, setLists] = useState([]);
 
   const cartList = JSON.parse(localStorage.getItem("list"));
 
@@ -15,10 +15,37 @@ function FunctionCarClient({ history }) {
     total = total + item.price * item.cant;
   });
 
+ 
+
+  function handlePayment (){
+    const handler =  window.ePayco.checkout.configure({
+     key: process.env.REACT_APP_EPAYCO_PUBLIC_KEY,
+     test: true
+   });
+
+   handler.open({
+     external: 'false',
+     tax: '0',
+     tax_base:'0',
+     name: 'Total de compra',
+     description: 'Total',
+     currency: 'cop',
+     country:'Colombia',
+     lang: 'en',
+     invoice: '12345678',
+     methodsDisable:['PSE','DP', 'SP', 'CASH'],
+     address_billing: '',
+     type_doc_billing:'cc',
+     name_billing: 'Tu nombre',
+     num_doc_billing: '',
+     mobilephone_billing: '',
+     amount: total
+   })
+}
   return (
     <div>
       <ToolbarClient />
-      <ul className="ulListProduct">
+       <ul className="ulListProduct">
         {cartList.map((item) => (
           <li className="productListCar">
             <div className="card-productCar">
@@ -40,7 +67,7 @@ function FunctionCarClient({ history }) {
         <h4 className="shoppingTotalText">Total Compra</h4>
         <h4 className="shoppingValue">{total}</h4>
       </div>
-      <button className="buy">Comprar</button>
+      <button className="buy" onClick={handlePayment}>Comprar</button>
       <footer className="footer">
         <img src={logo} className="NavBar-Logo-Home" alt="Logo"></img>
         <p className="copyright">
@@ -48,7 +75,8 @@ function FunctionCarClient({ history }) {
           <span dangerouslySetInnerHTML={{ __html: "&copy;" }} /> All rights
           reserved 2020{" "}
         </p>
-      </footer>
+      </footer> */
+       
     </div>
   );
 }

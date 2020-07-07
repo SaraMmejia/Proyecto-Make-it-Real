@@ -9,12 +9,10 @@ import { Link } from "react-router-dom";
 class ProductDescriptionClient extends React.Component {
   state = {
     sideDrawerOpen: false,
- functionCar
     name: "",
     description: "",
     price: "",
     cant: 1,
-
     id:'',
     name: '',
     description: '',
@@ -46,7 +44,7 @@ class ProductDescriptionClient extends React.Component {
       return (e) => {
         e.preventDefault();
 
- functionCar
+ 
         let newArr = localStorage.getItem("list");
         // let arr = [];
         if (newArr === null) {
@@ -75,7 +73,7 @@ class ProductDescriptionClient extends React.Component {
         localStorage.setItem("list", JSON.stringify(newArr));
       };
     };
-    const handleSubmit = (id) => {
+     handleSubmit = (id) => {
       let arr = [];
       return (e) => {
         e.preventDefault();

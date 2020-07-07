@@ -7,15 +7,15 @@ import NavBarClient from './NavBarClient.js'
 
 class HomeClient extends React.Component {
 
+
+
   render() {
 
     return (
       <div className="Home">
-
         <NavBarClient />
         <Slider />
         <ProductListHomeClient />
-
       </div>
     );
   }
